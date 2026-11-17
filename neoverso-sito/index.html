@@ -149,6 +149,14 @@ section{padding:clamp(64px,10vw,100px) 0}
 .mcard li::before{content:"→";position:absolute;left:0;color:var(--violet-t)}
 @media(max-width:600px){.pcard,.mcard{padding:28px}.pcard .amt{font-size:60px}}
 
+.small{font-size:15px;margin-top:16px;color:var(--muted-l)}
+.bundle{margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-radius:22px;padding:28px 34px;background:linear-gradient(var(--paper),var(--paper)) padding-box,linear-gradient(135deg,var(--cyan),var(--violet)) border-box;border:2px solid transparent}
+.bundle h3{font-size:24px;margin:8px 0 4px}
+.bundle p{color:var(--muted-l);font-size:17px}
+.bundle .tag{display:inline-block;font:600 13px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--violet-t);background:#efeaff;padding:5px 10px;border-radius:999px}
+.bamt{font:700 52px "Space Grotesk",sans-serif;letter-spacing:-.03em;text-align:right}
+.bamt small{display:block;font:400 16px Inter;color:var(--muted-l);letter-spacing:0}
+.nomaint{margin-top:20px;color:var(--muted-l);font-size:17px;max-width:820px}
 .who{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;margin-top:34px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px;max-width:900px}
 @media(max-width:640px){.who{grid-template-columns:1fr;gap:18px}}
 .avatar{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;font:700 40px "Space Grotesk",sans-serif;color:#0b0d1a;background:linear-gradient(135deg,#2fd5e8,#a08cff)}
@@ -203,7 +211,7 @@ footer a{text-decoration:underline}
     <h1 id="h-hero">Rifacciamo il sito della vostra attività. <span>Prima lo vedete, poi decidete.</span></h1>
     <p class="sub">Vi mostriamo gratis la nuova homepage. Se vi piace, il sito completo costa 500 €: metà all'inizio, metà alla consegna. Se non vi interessa, non dovete fare niente.</p>
     <div class="ctas">
-      <a class="btn btn-g" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%20%0ATelefono%20(facoltativo)%3A%20%0A">Scrivete a Stefano</a>
+      <a class="btn btn-g" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%20%0ATelefono%20(facoltativo)%3A%20%0A">Scriveteci</a>
       <a class="btn btn-o" href="#come">Come funziona</a>
     </div>
     <div class="compare" aria-hidden="true">
@@ -238,7 +246,8 @@ footer a{text-decoration:underline}
       <div class="step"><h3>Sito completo</h3><p>Realizziamo tutte le pagine e ve le facciamo vedere. Potete chiedere modifiche per due volte, comprese nel prezzo.</p></div>
       <div class="step"><h3>Online</h3><p>Pubblichiamo il sito sul vostro dominio. I 250 € restanti si pagano solo alla consegna.</p></div>
     </div>
-    <div class="ctas" style="margin-top:34px"><a class="btn btn-g" href="#contatti">Mi interessa</a></div>
+    <p class="lead">Il sito completo è pronto in <b>7 giorni</b> da quando riceviamo foto e informazioni. Avete fretta? Con la consegna express è online in <b>48 ore</b>.</p>
+    <div class="ctas" style="margin-top:28px"><a class="btn btn-g" href="#contatti">Mi interessa</a></div>
   </div>
 </section>
 
@@ -287,17 +296,24 @@ footer a{text-decoration:underline}
       <div class="pcard dark">
         <h3>Sito completo</h3>
         <div class="amt">500 €</div>
-        <div class="note">250 € all'inizio, 250 € alla consegna</div>
+        <div class="note">250 € all'inizio, 250 € alla consegna · pronto in 7 giorni</div>
         <ul><li>Anteprima della homepage gratis, prima di decidere</li><li>Acconto solo se l'anteprima vi piace, saldo alla consegna</li><li>Homepage e tutte le pagine della vostra attività</li><li>Due giri di modifiche compresi</li><li>Se avete già un dominio, teniamo quello</li><li>Il dominio resta sempre intestato a voi</li></ul>
-        <a class="btn btn-g" href="#contatti">Scrivete a Stefano</a>
+        <p class="note">Consegna express in 48 ore: +200 €</p>
+        <div style="margin-top:22px"><a class="btn btn-g" href="#contatti">Scriveteci</a></div>
       </div>
       <div class="mcard">
         <h3>Manutenzione</h3>
-        <div class="amt">25–30 € <small>/ mese</small></div>
-        <p>Facoltativa. Ci pensiamo noi, voi non toccate niente.</p>
-        <ul><li>Hosting del sito</li><li>Aggiornamenti di orari, prezzi e notizie</li><li>Piccole modifiche quando servono</li><li>Controllo che tutto funzioni</li></ul>
+        <div class="amt">29 € <small>/ mese</small></div>
+        <p>Oppure <b>300 € all'anno</b>. Ci pensiamo noi, voi non toccate niente.</p>
+        <ul><li>Il sito online, ospitato e controllato da noi</li><li>1 aggiornamento al mese: orari, prezzi, notizie o piccole modifiche</li><li>Controllo che tutto funzioni</li><li>Mensile: si disdice quando volete, senza preavviso</li></ul>
+        <p class="small">Se disdite, il servizio termina 30 giorni dopo l'ultimo pagamento e vi consegniamo il sito in un file e gli accessi al dominio.</p>
       </div>
     </div>
+    <div class="bundle">
+      <div><span class="tag">Il più conveniente</span><h3>Sito + 12 mesi di manutenzione</h3><p>Il sito completo e un anno di manutenzione, tutto compreso.</p></div>
+      <div class="bamt">700 €<small>invece di 800 €</small></div>
+    </div>
+    <p class="nomaint"><b>Senza manutenzione?</b> Nessun problema: vi consegniamo il sito completo in un file pronto da caricare sul vostro spazio web, da voi o dal vostro tecnico.</p>
   </div>
 </section>
 
@@ -306,11 +322,11 @@ footer a{text-decoration:underline}
     <div class="kick">Chi siamo</div>
     <h2 class="h2" id="h-chi">Chi c'è dietro</h2>
     <div class="who">
-      <div class="avatar" aria-hidden="true">SI</div>
+      <div class="avatar" aria-hidden="true"><svg viewBox="0 0 32 32" width="60" height="60"><circle cx="16" cy="16" r="13" fill="none" stroke="#0b0d1a" stroke-width="3"/><path d="M11 21 L21 11 M14 11 H21 V18" fill="none" stroke="#0b0d1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div>
-        <p>Mi chiamo <b>Stefano Iacomi</b> e realizzo siti per piccole attività, soprattutto del Veneto.</p>
-        <p>Neoverso è un progetto nuovo: per questo, invece di un elenco di clienti, vi mostro il lavoro fatto sul vostro sito.</p>
-        <p>Seguo ogni sito dall'inizio alla fine e alle email rispondo io, di persona.</p>
+        <p><b>Neoverso è un progetto nuovo e piccolo</b>, che lavora soprattutto con attività del Veneto.</p>
+        <p>Per questo, invece di un elenco di clienti, vi mostriamo il lavoro fatto sul vostro sito.</p>
+        <p>Avete un solo referente dall'anteprima alla pubblicazione, e rispondiamo entro un giorno lavorativo.</p>
       </div>
     </div>
   </div>
@@ -329,7 +345,9 @@ footer a{text-decoration:underline}
       <details><summary>Possiamo usare le nostre foto?</summary><p>Certo, anzi è consigliato: le foto vere della vostra attività convincono più di qualsiasi immagine presa da internet. Vanno benissimo anche quelle fatte col telefono.</p></details>
       <details><summary>Devo cambiare indirizzo email?</summary><p>No. Le vostre caselle restano dove sono e funzionano come prima: cambia solo il sito.</p></details>
       <details><summary>Il dominio resta nostro?</summary><p>Sì, è sempre intestato a voi. Se un giorno volete cambiare fornitore, lo portate dove volete.</p></details>
-      <details><summary>E se dopo vogliamo delle modifiche?</summary><p>Durante il lavoro avete due giri di modifiche compresi. Dopo la consegna, con la manutenzione le piccole modifiche (orari, prezzi, notizie) le facciamo noi; senza, vi diciamo prima quanto costa.</p></details>
+      <details><summary>Quanto tempo ci vuole?</summary><p>Il sito completo è pronto in 7 giorni da quando riceviamo foto e informazioni. Con la consegna express (+200 €) è online in 48 ore.</p></details>
+      <details><summary>E se dopo vogliamo delle modifiche?</summary><p>Durante il lavoro avete due giri di modifiche compresi. Dopo la consegna, con la manutenzione è compreso un aggiornamento al mese (orari, prezzi, notizie o piccole modifiche); per lavori più grandi o senza manutenzione, vi diciamo prima quanto costa.</p></details>
+      <details><summary>Cosa succede se non prendiamo la manutenzione, o la disdiciamo?</summary><p>Vi consegniamo il sito completo in un file pronto da caricare sul vostro spazio web. Se disdite la manutenzione mensile non serve preavviso: il servizio termina 30 giorni dopo l'ultimo pagamento e vi mandiamo il sito e gli accessi al dominio.</p></details>
       <details><summary>C'è da firmare qualcosa?</summary><p>Prima di iniziare vi mandiamo per email un riepilogo con cosa è compreso e il prezzo. Nessun costo nascosto.</p></details>
       <details><summary>Fate anche negozi online o prenotazioni?</summary><p>Per ora no: ci concentriamo su siti di presentazione per attività locali, artigiani, studi e ristoranti.</p></details>
     </div>
@@ -339,11 +357,11 @@ footer a{text-decoration:underline}
 <section id="contatti" aria-labelledby="h-contatti">
   <div class="wrap">
     <div class="contact dark">
-      <div><h2 id="h-contatti">Vi è piaciuta l'anteprima?</h2><p>Rispondete pure alla nostra email o scrivete a info@neoverso.it: vi risponde Stefano, di persona.</p><p>Non avete ricevuto un'anteprima? Mandateci l'indirizzo del vostro sito o il nome della vostra attività e ve la prepariamo.</p></div>
+      <div><h2 id="h-contatti">Vi è piaciuta l'anteprima?</h2><p>Rispondete pure alla nostra email o scrivete a info@neoverso.it: rispondiamo entro un giorno lavorativo.</p><p>Non avete ricevuto un'anteprima? Mandateci l'indirizzo del vostro sito o il nome della vostra attività e ve la prepariamo.</p></div>
       <div class="mailbox">
         <small>Scriveteci a</small>
         <span class="addr">info@neoverso.it</span>
-        <a class="btn btn-g" href="mailto:info@neoverso.it?subject=Sito%20nuovo&amp;body=Nome%20attivit%C3%A0%3A%20%0ASito%20attuale%3A%20%0A">Scrivete a Stefano</a>
+        <a class="btn btn-g" href="mailto:info@neoverso.it?subject=Sito%20nuovo&amp;body=Nome%20attivit%C3%A0%3A%20%0ASito%20attuale%3A%20%0A">Scriveteci</a>
       </div>
     </div>
   </div>
@@ -353,7 +371,7 @@ footer a{text-decoration:underline}
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Neoverso · un progetto di Stefano Iacomi · <a href="mailto:info@neoverso.it">info@neoverso.it</a></div>
+    <div>© 2026 Neoverso · <a href="mailto:info@neoverso.it">info@neoverso.it</a></div>
     <div><a href="privacy.html">Privacy e cookie</a></div>
   </div>
 </footer>
