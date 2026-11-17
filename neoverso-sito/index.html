@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Neoverso · Anteprima gratis, sito completo a 500 €</title>
-<meta name="description" content="Rifacciamo gratis la homepage della vostra attività e ve la mostriamo. Se vi piace, il sito completo costa 500 €, con l'acconto solo dopo averla vista.">
+<meta name="description" content="Rifacciamo gratis la homepage della vostra attività e ve la mostriamo. Se vi piace, il sito completo costa 500&nbsp;€, con l'acconto solo dopo averla vista.">
 <meta property="og:title" content="Neoverso · Anteprima gratis, sito completo a 500 €">
 <meta property="og:description" content="Prima vedete il vostro nuovo sito, poi decidete. Prezzo fisso, dominio sempre vostro.">
 <meta property="og:image" content="og.png">
@@ -28,8 +28,8 @@
  --r:10px;--wrap:1180px
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--stone);color:var(--ink);font:400 18px/1.6 var(--body)}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;background:var(--stone);color:var(--ink);font:400 18px/1.6 var(--body)}
 img,svg{display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--verde);outline-offset:3px;border-radius:4px}
@@ -47,7 +47,7 @@ p{margin:0}
 .btn.light:hover{background:var(--paper)}
 .alt{font-size:15px;color:var(--muted);margin-top:12px}
 .alt a{font-weight:600}
-.terrazzo{background:#E1DDD4 url(assets/terrazzo.svg) 0 0/420px}
+.terrazzo{background:#E1DDD4 url(assets/terrazzo.svg) 0 0/600px}
 
 /* banner personalizzato */
 #mail-banner{display:none;background:var(--ink);color:#E8EBF2;font-size:16px}
@@ -78,7 +78,7 @@ nav.main .btn{padding:11px 20px;font-size:15px}
 .hero .lead{margin-bottom:32px}
 .hero .note{font-size:15px;color:var(--muted);margin-top:16px;max-width:40ch}
 .stage{position:relative;padding:44px 0 56px}
-.stage:before{content:"";position:absolute;inset:0 -28px 0 12%;border-radius:18px;background:#E1DDD4 url(assets/terrazzo.svg) 0 0/420px;box-shadow:inset 0 0 0 1px rgba(20,33,61,.06)}
+.stage:before{content:"";position:absolute;inset:0 -28px 0 12%;border-radius:18px;background:#E1DDD4 url(assets/terrazzo.svg) 0 0/600px;box-shadow:inset 0 0 0 1px rgba(20,33,61,.06)}
 
 /* laptop + slider */
 .laptop{position:relative;z-index:1}
@@ -98,7 +98,7 @@ nav.main .btn{padding:11px 20px;font-size:15px}
 .tag{position:absolute;top:12px;z-index:2;font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;pointer-events:none}
 .tag.l{left:12px;background:var(--ink);color:#fff}
 .tag.r{right:12px;background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.15)}
-.caption{position:relative;z-index:1;font-size:15px;color:var(--ink2);margin-top:22px;text-align:center}
+.caption{position:relative;z-index:1;font-size:14px;color:var(--ink2);margin:22px auto 0;width:fit-content;max-width:100%;text-align:center;background:var(--paper);padding:6px 14px;border-radius:999px}
 
 section{padding:104px 0}
 .head{margin-bottom:52px}
@@ -108,6 +108,7 @@ section{padding:104px 0}
 .fix{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .fix .wrap{display:grid;grid-template-columns:4fr 8fr;gap:64px}
 .fix .head{position:sticky;top:120px;align-self:start;margin:0}
+.fix h2,.faq h2{font-size:clamp(32px,3.4vw,44px)}
 .rows{list-style:none;margin:0;padding:0}
 .rows li{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:26px 0;border-top:1px solid var(--line)}
 .rows li:last-child{border-bottom:1px solid var(--line)}
@@ -123,8 +124,8 @@ section{padding:104px 0}
 /* esempi */
 .demo-row{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center;padding:40px 0}
 .demo-row+.demo-row{border-top:1px solid var(--line)}
-.demo-row:nth-of-type(even){grid-template-columns:5fr 7fr}
-.demo-row:nth-of-type(even) .mock{order:2}
+.demo-row:nth-child(even){grid-template-columns:5fr 7fr}
+.demo-row:nth-child(even) .mock{order:2}
 .mock{position:relative;padding:0 64px 36px 0}
 .phone{position:absolute;right:0;bottom:0;width:150px;background:#1B2233;border-radius:26px;padding:8px;box-shadow:0 24px 50px -16px rgba(20,33,61,.5);z-index:2}
 .phone .pscreen{position:relative;aspect-ratio:390/844;overflow:hidden;border-radius:19px;background:#fff}
@@ -151,11 +152,11 @@ section{padding:104px 0}
 .prices{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
 .price{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:40px;display:flex;flex-direction:column}
 .price.best{background:var(--ink);color:#fff;border-color:var(--ink);position:relative;overflow:hidden}
-.price.best:after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:url(assets/terrazzo-fitto.svg) 0 0/300px;opacity:.9}
+.price.best:after{content:"";position:absolute;right:-70px;bottom:-70px;width:220px;height:220px;border-radius:50%;background:url(assets/terrazzo-fitto.svg) 0 0/300px;opacity:.9}
 .pill{align-self:flex-start;font-size:14px;font-weight:600;background:var(--ocra);color:var(--ink);padding:5px 12px;border-radius:999px;margin-bottom:18px;position:relative;z-index:1}
 .price h3{font-size:28px;position:relative;z-index:1}
 .amount{font:500 76px/1 var(--display);margin:20px 0 6px;letter-spacing:-.02em}
-.amount small{font:400 18px var(--body);color:var(--muted);margin-left:6px;letter-spacing:0}
+.amount small{font:400 18px var(--body);color:var(--muted);margin-left:6px;letter-spacing:0;white-space:nowrap}
 .best .amount small{color:#B9C1D3}
 .price .terms{color:var(--muted);font-size:16px}
 .best .terms{color:#C9D0DE}
@@ -163,7 +164,7 @@ section{padding:104px 0}
 .price li{padding:9px 0 9px 32px;position:relative;border-top:1px solid var(--line);font-size:17px}
 .best li{border-top-color:rgba(255,255,255,.14)}
 .price li svg{position:absolute;left:0;top:12px;width:20px;height:20px}
-.price .btn{align-self:flex-start}
+.price .btn{align-self:flex-start;position:relative;z-index:1}
 .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
 .extras div{padding:22px 0;border-top:1px solid var(--line)}
 .extras b{display:block;font-size:17px;margin-bottom:4px}
@@ -172,7 +173,7 @@ section{padding:104px 0}
 /* sicurezza */
 .safe{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .safe .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
-.safe svg{width:34px;height:34px;margin-bottom:16px}
+.safe svg{width:44px;height:44px;margin-bottom:16px}
 .safe h3{font-size:22px;margin-bottom:8px}
 .safe p{color:var(--muted);font-size:16px}
 .about{display:grid;grid-template-columns:4fr 8fr;gap:64px;margin-top:96px;padding-top:56px;border-top:1px solid var(--line)}
@@ -209,14 +210,14 @@ footer a{color:#fff}
 @media (max-width:980px){
  nav.main{display:none}.mnav{display:block}
  .hero{padding:24px 0 64px}
- .hero .wrap{grid-template-columns:1fr;gap:24px}
+ .hero .wrap{grid-template-columns:minmax(0,1fr);gap:24px}
  .stage{padding:28px 0 40px}
  .stage:before{inset:0 -28px}
  section{padding:72px 0}
  .fix .wrap,.faq .wrap,.about{grid-template-columns:1fr;gap:28px}
  .fix .head,.faq .head{position:static}
- .demo-row,.demo-row:nth-of-type(even){grid-template-columns:1fr;gap:28px}
- .demo-row:nth-of-type(even) .mock{order:0}
+ .demo-row,.demo-row:nth-child(even){grid-template-columns:1fr;gap:28px}
+ .demo-row:nth-child(even) .mock{order:0}
  .steps{grid-template-columns:1fr 1fr;row-gap:20px}
  .prices,.extras{grid-template-columns:1fr}
  .safe .grid{grid-template-columns:1fr 1fr}
@@ -225,6 +226,7 @@ footer a{color:#fff}
 @media (max-width:680px){
  body{font-size:17px}
  .wrap{padding:0 20px}
+ .stage:before{inset:0 -20px}
  .lead{font-size:18px}
  .rows li{grid-template-columns:1fr;gap:12px}
  .colhead{display:none}
@@ -236,6 +238,11 @@ footer a{color:#fff}
  .steps li{padding-right:0}
  .price{padding:30px 24px}
  .amount{font-size:64px}
+ .amount small{display:block;margin:10px 0 0}
+ .price.best{order:-1}
+ .steps li{display:grid;grid-template-columns:52px 1fr;column-gap:8px;padding-top:22px}
+ .steps li:before{font-size:44px;margin:0;grid-row:span 2}
+ .phone{width:210px}
  .safe .grid{grid-template-columns:1fr;gap:28px}
  .about{margin-top:64px}
  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(248,247,244,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
@@ -268,7 +275,7 @@ footer a{color:#fff}
 <div class="hero"><div class="wrap">
  <div>
   <h1>Il vostro sito, rifatto. Prima lo vedete, poi decidete.</h1>
-  <p class="lead">Rifacciamo gratis la homepage della vostra attività e ve la mostriamo. Se vi piace, il sito completo costa 500 €, con l'acconto solo dopo averla vista.</p>
+  <p class="lead">Rifacciamo gratis la homepage della vostra attività e ve la mostriamo. Se vi piace, il sito completo costa 500&nbsp;€, con l'acconto solo dopo averla vista.</p>
   <a class="btn js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
   <p class="note">Nessun pagamento finché non avete visto l'anteprima. Rispondiamo entro un giorno lavorativo.</p>
  </div>
@@ -312,6 +319,7 @@ footer a{color:#fff}
   <p class="lead">Sono attività inventate, così potete vedere il risultato senza esporre nessuno. Il vostro sito avrà i vostri testi, le vostre foto e il vostro carattere.</p>
  </div>
 
+ <div class="demos">
  <div class="demo-row">
   <div class="mock">
    <div class="laptop"><div class="bezel"><div class="screen" data-w="1280"><div class="layer"><iframe src="../esempi/falegnameria-larice/" title="Anteprima desktop: Falegnameria Larice" tabindex="-1" loading="lazy"></iframe></div></div></div><div class="base"></div></div>
@@ -352,6 +360,7 @@ footer a{color:#fff}
    <ul><li>Promessa chiara in apertura</li><li>Servizi spiegati in parole semplici</li><li>Revisione e orari sempre in vista</li></ul>
    <a class="textlink" href="../esempi/officina-ventisette/" target="_blank" rel="noopener">Apri l'esempio</a>
   </div>
+ </div>
  </div>
 </div></section>
 
@@ -441,7 +450,7 @@ footer a{color:#fff}
  <div class="card">
   <div>
    <h2 id="cta-t">Vi è piaciuta l'anteprima?</h2>
-   <p>Rispondete alla nostra email oppure scriveteci qui. Non avete ricevuto un'anteprima? Mandateci l'indirizzo del vostro sito e ve la prepariamo gratis.</p>
+   <p id="cta-p">Rispondete alla nostra email oppure scriveteci qui: vi spieghiamo i passi successivi, senza impegno.</p>
   </div>
   <div class="side">
    <a class="btn light js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
@@ -490,6 +499,7 @@ footer a{color:#fff}
   document.getElementById('mail-banner').classList.add('on');
  } else {
   document.getElementById('cta-t').textContent='Volete vedere il vostro sito rifatto?';
+  document.getElementById('cta-p').textContent='Mandateci l’indirizzo del vostro sito: prepariamo gratis l’anteprima della nuova homepage e ve la mandiamo per email.';
  }
 })();
 </script>
