@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Officina Ventisette · Autoriparazioni e revisioni (sito dimostrativo)</title>
+<style>
+@font-face{font-family:Barlow;src:url(../fonts/barlow-condensed-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Barlow;src:url(../fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+:root{--dark:#1C2024;--steel:#2A3036;--yellow:#F2C230;--light:#F3F4F2;--muted:#9AA2A8;--ink:#1C2024}
+*{box-sizing:border-box}
+body{margin:0;background:var(--light);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif}
+img{display:block;max-width:100%}a{color:inherit}
+.demo{background:var(--yellow);color:var(--dark);font-size:13px;text-align:center;padding:7px 12px;font-weight:600}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.top{background:var(--dark);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font:700 26px/1 Barlow,sans-serif;text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--yellow)}
+nav a{text-decoration:none;margin-left:26px;font-weight:600;font-size:15px;color:#D5DADE}
+nav .tel{background:var(--yellow);color:var(--dark);padding:10px 18px;border-radius:4px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding-top:40px;padding-bottom:72px}
+h1{font:700 clamp(46px,6.4vw,88px)/.95 Barlow,sans-serif;margin:0 0 20px;text-transform:none;letter-spacing:-.005em}
+h1 em{font-style:normal;color:var(--yellow)}
+.hero p{color:#C9CFD3;font-size:18px;max-width:44ch;margin:0 0 28px}
+.btn{display:inline-block;background:var(--yellow);color:var(--dark);font-weight:600;text-decoration:none;padding:15px 24px;border-radius:4px}
+.btn.line{background:transparent;color:#fff;border:1.5px solid #59626A;margin-left:8px}
+.hero img{border-radius:4px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.facts{display:flex;gap:36px;margin-top:36px;color:#C9CFD3;font-size:14px}
+.facts b{display:block;font:700 30px/1 Barlow,sans-serif;color:#fff}
+section{padding:84px 0}
+h2{font:700 clamp(34px,4vw,52px)/1 Barlow,sans-serif;margin:0 0 12px}
+.lead{color:#5B646B;max-width:56ch;margin:0}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:40px;background:#D9DCDA;border:2px solid #D9DCDA}
+.svc div{background:#fff;padding:28px 24px}
+.svc b{display:block;font:700 24px/1.1 Barlow,sans-serif;margin:14px 0 6px}
+.svc p{margin:0;color:#5B646B;font-size:15px}
+.svc svg{width:30px;height:30px;stroke:var(--ink);fill:none;stroke-width:1.8}
+.rev{background:var(--steel);color:#fff}
+.rev .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.rev img{border-radius:4px;aspect-ratio:16/10;object-fit:cover}
+.rev p{color:#C9CFD3}
+.where .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.box{background:#fff;border-left:4px solid var(--yellow);padding:28px}
+.box dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 24px}
+.box dt{color:#5B646B}.box dd{margin:0;font-weight:600}
+.big{font:700 40px/1 Barlow,sans-serif;text-decoration:none;display:inline-block;margin:6px 0 20px}
+footer{background:var(--dark);color:var(--muted);padding:26px 0;font-size:14px}
+@media (max-width:860px){
+ nav a:not(.tel){display:none}
+ .hero .wrap,.rev .wrap,.where .wrap{grid-template-columns:1fr;gap:32px}
+ .hero .wrap{padding-top:24px;padding-bottom:52px}
+ .svc{grid-template-columns:1fr 1fr}
+ section{padding:60px 0}
+ .btn.line{margin:10px 0 0}
+ .facts{gap:24px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Sito dimostrativo realizzato da Neoverso: attività inventata, dati di fantasia</div>
+<div class="top">
+<header><div class="wrap"><a class="logo" href="#">OFFICINA <span>27</span></a><nav><a href="#servizi">Servizi</a><a href="#revisione">Revisione</a><a href="#dove">Dove siamo</a><a class="tel" href="#dove">Chiama</a></nav></div></header>
+<div class="hero"><div class="wrap">
+ <div>
+  <h1>Auto sistemata, <em>prezzo detto prima</em></h1>
+  <p>Tagliandi, freni, gomme e revisione per tutte le marche. Vi chiamiamo con il preventivo prima di mettere mano all'auto.</p>
+  <a class="btn" href="#dove">Prenota un controllo</a><a class="btn line" href="#servizi">Tutti i servizi</a>
+  <div class="facts"><div><b>Tutte</b>le marche</div><div><b>Auto</b>di cortesia</div><div><b>Sabato</b>mattina aperti</div></div>
+ </div>
+ <img src="https://images.unsplash.com/photo-1767681092416-bccf9410bda4?w=1100&q=70&auto=format&fit=crop" alt="Auto sul ponte sollevatore in officina">
+</div></div>
+</div>
+<main>
+<section id="servizi"><div class="wrap">
+ <h2>Cosa facciamo</h2>
+ <p class="lead">Lavoriamo su auto e furgoni fino a 35 quintali, a benzina, diesel, GPL e ibride.</p>
+ <div class="svc">
+  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Tagliando</b><p>Olio, filtri e controlli secondo il libretto, senza perdere la garanzia.</p></div>
+  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><b>Freni</b><p>Pastiglie, dischi e liquido, con prova su strada.</p></div>
+  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg><b>Gomme</b><p>Cambio stagionale, convergenza e deposito pneumatici.</p></div>
+  <div><svg viewBox="0 0 24 24"><path d="M4 17h16M6 17l2-6h8l2 6M9 11V7h6v4"/></svg><b>Diagnosi</b><p>Spia accesa? Leggiamo la centralina e vi spieghiamo cosa c'è.</p></div>
+ </div>
+</div></section>
+<section class="rev" id="revisione"><div class="wrap">
+ <img loading="lazy" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1000&q=70&auto=format&fit=crop" alt="Vano motore di un'auto">
+ <div>
+  <h2>Revisione in mattinata</h2>
+  <p>Portate l'auto entro le 9 e la riprendete a pranzo. Se serve sistemare qualcosa prima, ve lo diciamo con il prezzo e decidete voi.</p>
+  <a class="btn" href="#dove">Prenota la revisione</a>
+ </div>
+</div></section>
+<section class="where" id="dove"><div class="wrap">
+ <div>
+  <h2>Chiamate o passate</h2>
+  <p class="lead">Per il tagliando bastano due giorni di preavviso. Per un'urgenza chiamate: se possiamo, vi prendiamo in giornata.</p>
+  <a class="big" href="#dove">0444 000 000</a><br>
+  <a class="btn" href="#dove">Chiama ora</a>
+ </div>
+ <div class="box"><dl>
+  <dt>Indirizzo</dt><dd>Via dell'Artigianato 27, Paese di Esempio (VI)</dd>
+  <dt>Orari</dt><dd>Lun–Ven 8–12:30 e 14–18:30<br>Sabato 8–12</dd>
+  <dt>WhatsApp</dt><dd>Mandate una foto della spia o del danno</dd>
+ </dl></div>
+</div></section>
+</main>
+<footer><div class="wrap">Officina Ventisette è un'attività inventata per mostrare un esempio di sito. Foto: Unsplash.</div></footer>
+</body>
+</html>
