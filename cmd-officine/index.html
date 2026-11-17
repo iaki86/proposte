@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bozza di proposta · CMD Officine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0d1620;--muted:#5b6774;--bg:#f3f5f7;--paper:#fff;--navy:#0c1824;--navy-2:#13263a;--blue:#1d6fb8;--blue-d:#155a96;--steel:#c9d2db;--line:#e1e6eb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Archivo,sans-serif;line-height:1.1;letter-spacing:-.02em}
+[hidden]{display:none!important}
+.photo{filter:contrast(1.05) saturate(1.06)}
+.proposal{background:#000;color:#ddd;font-size:13px;text-align:center;padding:9px 16px}
+.proposal b{color:#fff}
+
+header{position:sticky;top:0;z-index:50;background:rgba(12,24,36,.96);backdrop-filter:blur(8px);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .logo{background:#fff;border-radius:8px;padding:6px 10px}
+.brand .logo img{height:34px;width:auto}
+.brand span{font:800 17px Archivo;letter-spacing:.02em}
+.brand small{display:block;font:500 12px Inter;color:#9fb1c2;letter-spacing:0}
+.menu{display:flex;gap:26px;font-size:15px;font-weight:500;color:#d7e0e8}
+.menu a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:8px;font-weight:600;font-size:15px;transition:.2s;white-space:nowrap}
+.btn-b{background:var(--blue);color:#fff}.btn-b:hover{background:var(--blue-d)}
+.btn-w{background:#fff;color:var(--ink)}
+.btn-line{border:1.5px solid rgba(255,255,255,.6);color:#fff}.btn-line:hover{background:rgba(255,255,255,.08)}
+.burger{display:none;background:none;border:0;font-size:26px;cursor:pointer;padding:6px;color:#fff}
+@media(max-width:960px){.menu{display:none}.burger{display:block}.nav .btn{padding:10px 14px;font-size:14px}
+.menu.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.1)}
+.menu.open a{padding:16px 24px;border-top:1px solid rgba(255,255,255,.08)}}
+@media(max-width:560px){.brand span{display:none}.nav .btn .t{display:none}}
+
+.hero{position:relative;color:#fff;padding:130px 0 120px;overflow:hidden;background:var(--navy)}
+.hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(9,18,28,.95) 0%,rgba(9,18,28,.82) 48%,rgba(9,18,28,.35) 100%)}
+.hero .wrap{position:relative;z-index:1}
+.tag{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:999px;font-size:13px;margin-bottom:22px;color:#d5dee7}
+.tag i{width:8px;height:8px;border-radius:50%;background:#4fa3ea;display:inline-block}
+.hero h1{font-size:clamp(38px,5.4vw,66px);max-width:780px;font-weight:800}
+.hero h1 span{color:#6cb6f2}
+.hero p{font-size:19px;max-width:600px;margin:22px 0 34px;color:#cfdae4}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:48px;margin-top:60px}
+@media(max-width:760px){.facts{grid-template-columns:1fr 1fr;gap:28px}}
+.facts b{display:block;font:800 32px Archivo}
+.facts span{font-size:14px;color:#a9b9c8}
+
+section{padding:96px 0}
+.kick{color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.h2{font-size:clamp(32px,3.8vw,46px);font-weight:800;max-width:680px}
+.lead{color:var(--muted);font-size:17px;max-width:600px;margin-top:14px}
+
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px}
+@media(max-width:1020px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.svc{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(13,22,32,.45)}
+.card .ph{height:180px;width:100%;object-fit:cover;background:#dfe5ea}
+.card .bd{padding:22px;flex:1;display:flex;flex-direction:column}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px;flex:1}
+.card ul{list-style:none;margin:14px 0 0;font-size:14px}
+.card li{padding:5px 0;border-top:1px solid var(--line)}
+.card li::before{content:"— ";color:var(--blue);font-weight:700}
+
+.park{background:var(--navy);color:#fff}
+.park .lead{color:#a9b9c8}
+.park-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+@media(max-width:960px){.park-grid{grid-template-columns:1fr;gap:36px}}
+.park-img{border-radius:16px;overflow:hidden;aspect-ratio:4/3}
+.park-img img{width:100%;height:100%;object-fit:cover}
+.mach{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+@media(max-width:520px){.mach{grid-template-columns:1fr}}
+.mach div{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px}
+.mach b{display:block;font:800 40px Archivo;color:#6cb6f2;line-height:1}
+.mach span{font-size:14px;color:#c4d1dd}
+.mach small{display:block;color:#8396a8;font-size:12.5px;margin-top:6px}
+.qc{margin-top:22px;font-size:15px;color:#c4d1dd}
+
+.why{background:var(--paper);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:960px){.why-grid{grid-template-columns:1fr;gap:36px}}
+.points{margin-top:28px;display:grid;gap:18px}
+.pt{display:flex;gap:16px}
+.pt .ic{flex:none;width:44px;height:44px;border-radius:10px;background:#e7f0f9;color:var(--blue);display:grid;place-items:center;font:800 18px Archivo}
+.pt b{display:block;font-size:17px}
+.pt span{color:var(--muted);font-size:15px}
+.sectors{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.sectors span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+@media(max-width:820px){.gal{grid-template-columns:1fr 1fr}}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#dfe5ea}
+
+.cta{background:linear-gradient(120deg,var(--blue),var(--navy-2));color:#fff;border-radius:20px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{font-size:clamp(28px,3.4vw,40px);font-weight:800;max-width:600px}
+.cta p{color:#d3e2f0;margin-top:10px;max-width:560px}
+
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+@media(max-width:960px){.contact{grid-template-columns:1fr}}
+.row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row span{width:100px;flex:none;color:var(--muted);font-size:14px}
+.map{border-radius:16px;overflow:hidden;border:1px solid var(--line);min-height:360px}
+.map iframe{width:100%;height:100%;min-height:360px;border:0}
+
+footer{background:var(--navy);color:#9aacbd;font-size:14px;padding:38px 0;margin-top:96px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;background:var(--blue);color:#fff;border-radius:999px;padding:14px 20px;font-weight:700;box-shadow:0 10px 28px -8px rgba(0,0,0,.45)}
+@media(max-width:960px){.fab{display:inline-flex}}
+
+.wip{min-height:70vh;display:grid;place-items:center;text-align:center;padding:80px 24px}
+.wip .ic{font-size:52px;margin-bottom:8px}
+.wip h1{font-size:clamp(36px,5vw,58px);font-weight:800;margin:6px 0 14px}
+.wip p{color:var(--muted);max-width:520px;margin:0 auto 28px;font-size:17px}
+.wip .ctas{justify-content:center}
+</style>
+</head>
+<body>
+
+<div class="proposal"><b>Bozza di proposta</b> realizzata da Orbyn per il nuovo sito di CMD Officine · Non è il sito ufficiale</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="logo"><img src="https://www.cmdofficine.it/wp-content/themes/cmd-theme/img/logo-cmd.png" alt="CMD Officine"></span><span>CMD OFFICINE<small>Lavorazioni meccaniche di precisione</small></span></a>
+    <nav class="menu" id="menu">
+      <a href="#p-azienda">Azienda</a>
+      <a href="#p-lavorazioni">Lavorazioni</a>
+      <a href="#p-macchinari">Macchinari</a>
+      <a href="#p-chioschi">Chioschi mobili</a>
+      <a href="#p-contatti">Contatti</a>
+      <a href="#p-en">EN</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a class="btn btn-b" href="tel:+390438701956">☎ <span class="t">0438 701956</span></a>
+      <button class="burger" aria-label="Apri il menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <img class="bgimg photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/IMG_990221.jpg" alt="" loading="eager">
+  <div class="wrap">
+    <div class="tag"><i></i> Santa Lucia di Piave · Treviso</div>
+    <h1>Lavorazioni meccaniche di precisione, <span>dal disegno al pezzo finito</span></h1>
+    <p>Fresatura, tornitura, erosione a filo, costruzione stampi e automazioni. Un ufficio tecnico interno con progettazione 3D e CAM e un'officina CNC per lavorazioni su metallo e plastica.</p>
+    <div class="ctas">
+      <a class="btn btn-b" href="mailto:info@cmdofficine.it?subject=Richiesta%20preventivo">Invia il tuo disegno</a>
+      <a class="btn btn-line" href="#lavorazioni">Cosa realizziamo</a>
+    </div>
+    <div class="facts">
+      <div><b>dal 1998</b><span>officina meccanica a Treviso</span></div>
+      <div><b>23</b><span>macchine CNC in officina</span></div>
+      <div><b>5 assi</b><span>centri di lavoro in continuo</span></div>
+      <div><b>CE</b><span>prodotti chiavi in mano certificati</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="lavorazioni">
+  <div class="wrap">
+    <div class="kick">Cosa facciamo</div>
+    <h2 class="h2">Dalla progettazione alla consegna, tutto in un'unica officina</h2>
+    <p class="lead">Partiamo dal disegno del cliente o dal progetto del nostro ufficio tecnico e seguiamo ogni commessa fino al collaudo.</p>
+    <div class="svc">
+      <div class="card"><img class="ph photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/IMG_20200618_1024312.jpg" alt="Lavorazione su centro CNC" loading="lazy">
+        <div class="bd"><h3>Lavorazioni CNC</h3><p>Lavorazioni di alta precisione su metallo e materie plastiche.</p>
+        <ul><li>Fresatura 3D e 5 assi</li><li>Tornitura</li><li>Rettifiche ed erosione a filo</li><li>Tempre e cementazioni</li></ul></div></div>
+      <div class="card"><img class="ph photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/32_187.jpg" alt="Particolare di stampo" loading="lazy">
+        <div class="bd"><h3>Stampi e ricambi</h3><p>Costruzione stampi e ricostruzione di ricambi e parti di macchine a campione.</p>
+        <ul><li>Stampi per soffiaggio PET</li><li>Ricambi a campione</li><li>Revisione cilindri idraulici</li></ul></div></div>
+      <div class="card"><img class="ph photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/12/IMG_20200618_102326.jpg" alt="Ufficio tecnico e controllo qualità" loading="lazy">
+        <div class="bd"><h3>Progettazione</h3><p>Ufficio tecnico interno con software 3D ed elaborazione CAM.</p>
+        <ul><li>Progettazione 3D</li><li>Studio del ciclo produttivo</li><li>Documentazione tecnica e CE</li></ul></div></div>
+      <div class="card"><img class="ph photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/44.jpg" alt="Chiosco mobile su ruote CMD" loading="lazy">
+        <div class="bd"><h3>Chioschi mobili</h3><p>Progetti speciali su misura, dalla progettazione alla realizzazione completa.</p>
+        <ul><li>Carri da spiaggia</li><li>Chioschi refrigerati</li><li>Per mercati e sagre</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="park" id="macchinari">
+  <div class="wrap park-grid">
+    <div class="park-img"><img class="photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/IMG_20200618_140514.jpg" alt="Parco macchine CMD" loading="lazy"></div>
+    <div>
+      <div class="kick" style="color:#6cb6f2">Il parco macchine</div>
+      <h2 class="h2">Le macchine giuste per pezzi singoli e serie</h2>
+      <p class="lead">Torni multifunzione, centri di lavoro a 3, 4 e 5 assi ed erosione a filo, con macchine Mazak, Agie Mikron, Ibarmia e Sigma.</p>
+      <div class="mach">
+        <div><b>9</b><span>torni</span><small>fino a ø 760 mm</small></div>
+        <div><b>12</b><span>centri di lavoro</span><small>corse fino a 2.200 mm</small></div>
+        <div><b>2</b><span>erosioni a filo</span><small>Agie Challenge 3</small></div>
+      </div>
+      <p class="qc">Controllo qualità con macchina di misura tridimensionale COORD 3 e altimetro TESA.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="kick">Perché CMD</div>
+      <h2 class="h2">Precisione e controllo su ogni commessa</h2>
+      <div class="points">
+        <div class="pt"><span class="ic">01</span><div><b>Tracciabilità completa</b><span>Per ogni progetto tracciamo materiali, trattamenti, certificati e schede di collaudo dimensionale.</span></div></div>
+        <div class="pt"><span class="ic">02</span><div><b>Chiavi in mano</b><span>Forniamo prodotti completi di documentazione tecnica e certificati CE.</span></div></div>
+        <div class="pt"><span class="ic">03</span><div><b>Staff qualificato</b><span>Formazione continua e aggiornamento tecnico per lavorazioni di alta precisione.</span></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="kick">Settori</div>
+      <h2 class="h2" style="font-size:clamp(26px,3vw,34px)">Lavoriamo per settori professionali, chimici e industriali</h2>
+      <div class="sectors">
+        <span>Confezionamento prodotti chimici</span><span>Cartiere</span><span>Ricambi meccanici industriali</span><span>Stampi per soffiaggio PET</span><span>Componenti metallici per l'edilizia</span><span>Automazione</span><span>Arredamento a disegno</span><span>Velivoli d'epoca</span><span>Articoli per grandi cucine</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kick">L'officina</div>
+    <h2 class="h2">Dentro CMD</h2>
+    <div class="gal">
+      <img class="photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/26_166.jpg" alt="Reparto lavorazioni" loading="lazy">
+      <img class="photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/slider3.jpg" alt="Particolare lavorato" loading="lazy">
+      <img class="photo" src="https://www.cmdofficine.it/wp-content/uploads/2020/06/IMG_20200618_140607.jpg" alt="Centri di lavoro" loading="lazy">
+      <img class="photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/16_196.jpg" alt="Lavorazione in corso" loading="lazy">
+      <img class="photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/22_221.jpg" alt="Macchina utensile" loading="lazy">
+      <img class="photo" src="https://www.cmdofficine.it/wp-content/uploads/2014/11/85.jpg" alt="Chioschi mobili" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cta">
+    <div><h2>Hai un pezzo da realizzare o un ricambio da ricostruire?</h2><p>Mandaci il disegno o il campione: valutiamo la lavorazione e ti rispondiamo con un preventivo.</p></div>
+    <div class="ctas"><a class="btn btn-w" href="mailto:info@cmdofficine.it?subject=Richiesta%20preventivo">✉ info@cmdofficine.it</a><a class="btn btn-line" href="tel:+390438701956">☎ 0438 701956</a></div>
+  </div>
+</div>
+
+<section id="contatti">
+  <div class="wrap contact">
+    <div>
+      <div class="kick">Contatti</div>
+      <h2 class="h2" style="margin-bottom:22px">Dove siamo</h2>
+      <div class="row"><span>Indirizzo</span><div>Vicolo Gorizia, 10<br>31025 Santa Lucia di Piave (TV)</div></div>
+      <div class="row"><span>Telefono</span><div><a href="tel:+390438701956"><b>0438 701956</b></a></div></div>
+      <div class="row"><span>Fax</span><div>0438 468612</div></div>
+      <div class="row"><span>Email</span><div><a href="mailto:info@cmdofficine.it">info@cmdofficine.it</a></div></div>
+    </div>
+    <div class="map"><iframe title="Mappa" loading="lazy" src="https://www.google.com/maps?q=Vicolo+Gorizia+10,+31025+Santa+Lucia+di+Piave+TV&output=embed"></iframe></div>
+  </div>
+</section>
+
+</main>
+
+<main id="wip" class="wip" hidden>
+  <div>
+    <div class="ic">🛠️</div>
+    <div class="kick" id="wip-k">CMD Officine</div>
+    <h1>Pagina in costruzione</h1>
+    <p>Questa sezione sarà disponibile nel nuovo sito completo. Nel frattempo scrivici o chiamaci per un preventivo.</p>
+    <div class="ctas"><a class="btn btn-b" href="#">← Torna alla home</a><a class="btn btn-w" style="border:1px solid var(--line)" href="tel:+390438701956">☎ 0438 701956</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>CMD S.R.L. · Vicolo Gorizia 10, 31025 Santa Lucia di Piave (TV) · P.IVA 05048180268<br>Foto: Bottega dell'Immagine di Tadiotto Claudio</div>
+    <div>Bozza di proposta grafica · non è il sito ufficiale</div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+390438701956">☎ Chiama</a>
+
+<script>
+(function(){
+  var titles={"p-azienda":"Azienda","p-lavorazioni":"Lavorazioni","p-macchinari":"Macchinari","p-chioschi":"Chioschi mobili","p-contatti":"Contatti","p-en":"English version"};
+  var home=document.getElementById('home'),wip=document.getElementById('wip'),menu=document.getElementById('menu');
+  function route(){var h=location.hash.slice(1);menu.classList.remove('open');
+    if(titles[h]){home.hidden=true;wip.hidden=false;document.getElementById('wip-k').textContent=titles[h];window.scrollTo(0,0);}
+    else{home.hidden=false;wip.hidden=true;}}
+  window.addEventListener('hashchange',route);route();
+})();
+</script>
+</body>
+</html>
