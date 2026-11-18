@@ -10,103 +10,200 @@
 @font-face{font-family:Barlow;src:url(../fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
 @font-face{font-family:Inter;src:url(../fonts/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Inter;src:url(../fonts/inter-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
-:root{--dark:#1C2024;--steel:#2A3036;--yellow:#F2C230;--light:#F3F4F2;--muted:#9AA2A8;--ink:#1C2024}
+:root{--dark:#15181B;--steel:#20252A;--steel2:#2A3036;--y:#F5C518;--light:#F2F3F1;--muted:#A3ABB2;--ink:#15181B;--line:#2F363C}
 *{box-sizing:border-box}
-body{margin:0;background:var(--light);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif}
-img{display:block;max-width:100%}a{color:inherit}
-.demo{background:var(--yellow);color:var(--dark);font-size:13px;text-align:center;padding:7px 12px;font-weight:600}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-.top{background:var(--dark);color:#fff}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
-.logo{font:700 26px/1 Barlow,sans-serif;text-decoration:none;letter-spacing:.01em}
-.logo span{color:var(--yellow)}
-nav a{text-decoration:none;margin-left:26px;font-weight:600;font-size:15px;color:#D5DADE}
-nav .tel{background:var(--yellow);color:var(--dark);padding:10px 18px;border-radius:4px}
-.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding-top:40px;padding-bottom:72px}
-h1{font:700 clamp(46px,6.4vw,88px)/.95 Barlow,sans-serif;margin:0 0 20px;text-transform:none;letter-spacing:-.005em}
-h1 em{font-style:normal;color:var(--yellow)}
-.hero p{color:#C9CFD3;font-size:18px;max-width:44ch;margin:0 0 28px}
-.btn{display:inline-block;background:var(--yellow);color:var(--dark);font-weight:600;text-decoration:none;padding:15px 24px;border-radius:4px}
-.btn.line{background:transparent;color:#fff;border:1.5px solid #59626A;margin-left:8px}
-.hero img{border-radius:4px;aspect-ratio:4/3;object-fit:cover;width:100%}
-.facts{display:flex;gap:36px;margin-top:36px;color:#C9CFD3;font-size:14px}
-.facts b{display:block;font:700 30px/1 Barlow,sans-serif;color:#fff}
-section{padding:84px 0}
-h2{font:700 clamp(34px,4vw,52px)/1 Barlow,sans-serif;margin:0 0 12px}
-.lead{color:#5B646B;max-width:56ch;margin:0}
-.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:40px;background:#D9DCDA;border:2px solid #D9DCDA}
-.svc div{background:#fff;padding:28px 24px}
-.svc b{display:block;font:700 24px/1.1 Barlow,sans-serif;margin:14px 0 6px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--light);color:var(--ink);font:400 16px/1.65 Inter,system-ui,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+.demo{background:var(--y);color:var(--dark);font-size:13px;text-align:center;padding:7px 12px;font-weight:600}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.top{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.top:before{content:"";position:absolute;right:-120px;top:-40px;width:520px;height:140%;background:repeating-linear-gradient(-55deg,rgba(245,197,24,.07) 0 22px,transparent 22px 44px);pointer-events:none}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;position:relative}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 26px/1 Barlow,sans-serif;letter-spacing:.02em}
+.logo i{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:var(--y);color:var(--dark);border-radius:6px;font-style:normal;font-size:22px}
+nav{display:flex;align-items:center;gap:28px}
+nav a{text-decoration:none;font-weight:600;font-size:15px;color:#C8CED3}
+nav a:not(.btn):hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--y);color:var(--dark);font-weight:600;text-decoration:none;padding:15px 24px;border-radius:6px;transition:transform .2s,box-shadow .2s;border:0;font-size:16px;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px -10px rgba(245,197,24,.6)}
+.btn svg{width:18px;height:18px}
+.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #4A535B}
+.btn.line:hover{box-shadow:inset 0 0 0 1.5px #fff}
+nav .btn{padding:11px 18px;font-size:14px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding-top:40px;padding-bottom:88px;position:relative}
+h1{font:700 clamp(52px,7vw,104px)/.92 Barlow,sans-serif;margin:0 0 24px;letter-spacing:-.005em}
+h1 span{color:var(--y)}
+.hero p{color:#C3CACF;font-size:19px;max-width:44ch;margin:0 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:36px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line);color:#A3ABB2;font-size:14px}
+.facts b{display:block;font:700 30px/1 Barlow,sans-serif;color:#fff;margin-bottom:4px}
+.shot{position:relative}
+.shot img{border-radius:8px;aspect-ratio:4/3.3;object-fit:cover;width:100%}
+.shot .tag{position:absolute;left:-28px;bottom:36px;background:#fff;color:var(--dark);border-radius:8px;padding:16px 20px;box-shadow:0 24px 50px -20px rgba(0,0,0,.6);display:flex;gap:14px;align-items:center}
+.shot .tag b{display:block;font:700 22px/1 Barlow,sans-serif}
+.shot .tag span{font-size:13px;color:#5B646B}
+.shot .tag i{width:42px;height:42px;border-radius:50%;background:var(--y);display:flex;align-items:center;justify-content:center;font-style:normal}
+.shot .tag svg{width:22px;height:22px}
+
+section{padding:100px 0}
+h2{font:700 clamp(40px,4.6vw,62px)/.98 Barlow,sans-serif;margin:0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px}
+.head p{color:#5B646B;max-width:46ch;margin:0}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc div{background:#fff;border-radius:10px;padding:30px 28px;border:1px solid #E1E4E2;transition:border-color .3s,transform .3s}
+.svc div:hover{border-color:var(--dark);transform:translateY(-3px)}
+.svc svg{width:34px;height:34px;stroke:var(--dark);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.svc b{display:block;font:700 26px/1.05 Barlow,sans-serif;margin:18px 0 8px}
 .svc p{margin:0;color:#5B646B;font-size:15px}
-.svc svg{width:30px;height:30px;stroke:var(--ink);fill:none;stroke-width:1.8}
-.rev{background:var(--steel);color:#fff}
-.rev .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.rev img{border-radius:4px;aspect-ratio:16/10;object-fit:cover}
-.rev p{color:#C9CFD3}
-.where .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-.box{background:#fff;border-left:4px solid var(--yellow);padding:28px}
-.box dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 24px}
-.box dt{color:#5B646B}.box dd{margin:0;font-weight:600}
-.big{font:700 40px/1 Barlow,sans-serif;text-decoration:none;display:inline-block;margin:6px 0 20px}
-footer{background:var(--dark);color:var(--muted);padding:26px 0;font-size:14px}
-@media (max-width:860px){
- nav a:not(.tel){display:none}
- .hero .wrap,.rev .wrap,.where .wrap{grid-template-columns:1fr;gap:32px}
- .hero .wrap{padding-top:24px;padding-bottom:52px}
+.how{background:var(--steel);color:#fff}
+.how .head p{color:var(--muted)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;list-style:none;padding:0;margin:0;counter-reset:f}
+.flow li{counter-increment:f;background:var(--steel2);border-radius:10px;padding:28px 24px;position:relative}
+.flow li:before{content:counter(f);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--y);color:var(--dark);font:700 20px/1 Barlow,sans-serif;margin-bottom:18px}
+.flow b{display:block;font:700 24px/1.1 Barlow,sans-serif;margin-bottom:6px}
+.flow p{margin:0;color:var(--muted);font-size:15px}
+.rev{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:88px}
+.rev img{border-radius:10px;aspect-ratio:16/11;object-fit:cover}
+.calc{background:#fff;color:var(--dark);border-radius:12px;padding:30px;margin-top:26px}
+.calc label{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+.calc .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.calc select{font:inherit;padding:12px 14px;border:1.5px solid #CDD2D0;border-radius:6px;background:#fff}
+.calc .chk{display:flex;gap:8px;align-items:center;font-size:14px;margin:14px 0 18px;color:#3C444A}
+.calc output{display:block;margin-top:18px;font:700 26px/1.2 Barlow,sans-serif}
+.calc small{display:block;color:#6B747A;font-size:13px;margin-top:6px}
+.where .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.big{font:700 clamp(46px,5vw,64px)/1 Barlow,sans-serif;text-decoration:none;display:inline-block;margin:20px 0 22px}
+.box{background:#fff;border-left:5px solid var(--y);border-radius:0 10px 10px 0;padding:30px}
+.box dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 26px}
+.box dt{color:#5B646B}
+.box dd{margin:0;font-weight:600}
+footer{background:var(--dark);color:var(--muted);padding:28px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.callbar{display:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (max-width:900px){
+ nav a:not(.btn){display:none}
+ .hero .wrap,.rev,.where .wrap{grid-template-columns:1fr;gap:36px}
+ .hero .wrap{padding-top:16px;padding-bottom:64px}
+ .shot .tag{left:12px;bottom:12px}
+ section{padding:72px 0}
+ .head{display:block}.head p{margin-top:12px}
  .svc{grid-template-columns:1fr 1fr}
- section{padding:60px 0}
- .btn.line{margin:10px 0 0}
- .facts{gap:24px}
+ .flow{grid-template-columns:1fr 1fr}
+ .rev{margin-top:56px}
 }
+@media (max-width:560px){
+ .wrap{padding:0 20px}
+ nav .btn{display:none}
+ .facts{gap:20px}
+ .svc,.flow{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30}
+ .callbar a{flex:1;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+ footer{padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div class="demo">Sito dimostrativo realizzato da Neoverso: attività inventata, dati di fantasia</div>
+<div class="demo">Sito dimostrativo realizzato da Neoverso: attività di fantasia, dati inventati</div>
 <div class="top">
-<header><div class="wrap"><a class="logo" href="#">OFFICINA <span>27</span></a><nav><a href="#servizi">Servizi</a><a href="#revisione">Revisione</a><a href="#dove">Dove siamo</a><a class="tel" href="#dove">Chiama</a></nav></div></header>
+<header><div class="wrap">
+ <a class="logo" href="#"><i>27</i>OFFICINA VENTISETTE</a>
+ <nav><a href="#servizi">Servizi</a><a href="#come">Come lavoriamo</a><a href="#revisione">Revisione</a><a class="btn" href="#dove">Chiama ora</a></nav>
+</div></header>
 <div class="hero"><div class="wrap">
  <div>
-  <h1>Auto sistemata, <em>prezzo detto prima</em></h1>
-  <p>Tagliandi, freni, gomme e revisione per tutte le marche. Vi chiamiamo con il preventivo prima di mettere mano all'auto.</p>
-  <a class="btn" href="#dove">Prenota un controllo</a><a class="btn line" href="#servizi">Tutti i servizi</a>
-  <div class="facts"><div><b>Tutte</b>le marche</div><div><b>Auto</b>di cortesia</div><div><b>Sabato</b>mattina aperti</div></div>
+  <h1 class="rv">Auto sistemata, <span>prezzo detto prima.</span></h1>
+  <p class="rv">Tagliandi, freni, gomme e revisione per tutte le marche. Vi chiamiamo con il preventivo prima di mettere mano all'auto, e decidete voi.</p>
+  <div class="btns rv"><a class="btn" href="#dove"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Prenota un controllo</a><a class="btn line" href="#revisione">Quando scade la revisione?</a></div>
+  <div class="facts rv"><div><b>Tutte</b>le marche</div><div><b>Auto</b>di cortesia</div><div><b>Sabato</b>mattina aperti</div></div>
  </div>
- <img src="https://images.unsplash.com/photo-1767681092416-bccf9410bda4?w=1100&q=70&auto=format&fit=crop" alt="Auto sul ponte sollevatore in officina">
+ <div class="shot rv">
+  <img src="https://images.unsplash.com/photo-1781621462379-0c706acb8988?w=1100&q=72&auto=format&fit=crop" alt="Officina con auto in riparazione sui ponti sollevatori">
+  <div class="tag"><i><svg viewBox="0 0 24 24" fill="none" stroke="#15181B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><div><b>Revisione in mattinata</b><span>Portate l'auto entro le 9</span></div></div>
+ </div>
 </div></div>
 </div>
+
 <main>
 <section id="servizi"><div class="wrap">
- <h2>Cosa facciamo</h2>
- <p class="lead">Lavoriamo su auto e furgoni fino a 35 quintali, a benzina, diesel, GPL e ibride.</p>
+ <div class="head rv"><h2>Cosa facciamo</h2><p>Auto e furgoni fino a 35 quintali, a benzina, diesel, GPL e ibride. Pezzi originali o equivalenti, li scegliete voi.</p></div>
  <div class="svc">
-  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Tagliando</b><p>Olio, filtri e controlli secondo il libretto, senza perdere la garanzia.</p></div>
-  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><b>Freni</b><p>Pastiglie, dischi e liquido, con prova su strada.</p></div>
-  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg><b>Gomme</b><p>Cambio stagionale, convergenza e deposito pneumatici.</p></div>
-  <div><svg viewBox="0 0 24 24"><path d="M4 17h16M6 17l2-6h8l2 6M9 11V7h6v4"/></svg><b>Diagnosi</b><p>Spia accesa? Leggiamo la centralina e vi spieghiamo cosa c'è.</p></div>
+  <div class="rv"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Tagliando</b><p>Olio, filtri e controlli secondo il libretto, senza perdere la garanzia della casa.</p></div>
+  <div class="rv"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><b>Freni</b><p>Pastiglie, dischi e liquido, con prova su strada prima della riconsegna.</p></div>
+  <div class="rv"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg><b>Gomme</b><p>Cambio stagionale, convergenza ed equilibratura. Deposito pneumatici incluso.</p></div>
+  <div class="rv"><svg viewBox="0 0 24 24"><path d="M3 13h3l2-6 4 12 2-6h7"/></svg><b>Diagnosi</b><p>Spia accesa? Leggiamo la centralina e vi spieghiamo in parole semplici cosa c'è.</p></div>
+  <div class="rv"><svg viewBox="0 0 24 24"><path d="M12 3v6M8 5l4 4 4-4M5 13h14l-2 8H7z"/></svg><b>Aria condizionata</b><p>Ricarica, sanificazione e controllo perdite prima dell'estate.</p></div>
+  <div class="rv"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M9 15l2 2 4-4"/></svg><b>Revisione</b><p>In sede, su appuntamento. Se serve sistemare qualcosa prima, ve lo diciamo con il prezzo.</p></div>
  </div>
 </div></section>
-<section class="rev" id="revisione"><div class="wrap">
- <img loading="lazy" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1000&q=70&auto=format&fit=crop" alt="Vano motore di un'auto">
- <div>
-  <h2>Revisione in mattinata</h2>
-  <p>Portate l'auto entro le 9 e la riprendete a pranzo. Se serve sistemare qualcosa prima, ve lo diciamo con il prezzo e decidete voi.</p>
-  <a class="btn" href="#dove">Prenota la revisione</a>
+
+<section class="how" id="come"><div class="wrap">
+ <div class="head rv"><h2>Niente sorprese sul conto</h2><p>Ogni lavoro segue gli stessi quattro passaggi. Se il prezzo cambia, vi chiamiamo prima.</p></div>
+ <ol class="flow">
+  <li class="rv"><b>Diagnosi</b><p>Controlliamo l'auto e capiamo cosa serve davvero.</p></li>
+  <li class="rv"><b>Preventivo al telefono</b><p>Vi chiamiamo con il prezzo e i tempi. Senza il vostro sì non tocchiamo niente.</p></li>
+  <li class="rv"><b>Lavoro</b><p>Ripariamo con pezzi garantiti. Vi teniamo i pezzi vecchi, se volete vederli.</p></li>
+  <li class="rv"><b>Ritiro</b><p>Vi spieghiamo cosa abbiamo fatto. La fattura corrisponde al preventivo.</p></li>
+ </ol>
+ <div class="rev" id="revisione">
+  <img class="rv" loading="lazy" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1000&q=72&auto=format&fit=crop" alt="Vano motore di un'auto">
+  <div class="rv">
+   <h2>Quando scade la vostra revisione?</h2>
+   <p style="color:var(--muted);margin:14px 0 0;max-width:44ch">La prima va fatta 4 anni dopo l'immatricolazione, poi ogni 2 anni, entro la fine del mese indicato.</p>
+   <form class="calc" id="calc" onsubmit="return false">
+    <label for="m">Mese e anno dell'ultima revisione (o dell'immatricolazione)</label>
+    <div class="row">
+     <select id="m" aria-label="Mese"><option value="1">Gennaio</option><option value="2">Febbraio</option><option value="3">Marzo</option><option value="4">Aprile</option><option value="5">Maggio</option><option value="6">Giugno</option><option value="7">Luglio</option><option value="8">Agosto</option><option value="9">Settembre</option><option value="10">Ottobre</option><option value="11">Novembre</option><option value="12">Dicembre</option></select>
+     <select id="y" aria-label="Anno"></select>
+    </div>
+    <label class="chk"><input type="checkbox" id="nuova"> Auto nuova, mai revisionata</label>
+    <output id="out" aria-live="polite"></output>
+    <small>Indicativo: controllate sempre la data sul libretto di circolazione.</small>
+   </form>
+  </div>
  </div>
 </div></section>
+
 <section class="where" id="dove"><div class="wrap">
- <div>
+ <div class="rv">
   <h2>Chiamate o passate</h2>
-  <p class="lead">Per il tagliando bastano due giorni di preavviso. Per un'urgenza chiamate: se possiamo, vi prendiamo in giornata.</p>
+  <p style="color:#5B646B;margin:14px 0 0;max-width:46ch">Per il tagliando bastano due giorni di preavviso. Per un'urgenza chiamate: se possiamo, vi prendiamo in giornata.</p>
   <a class="big" href="#dove">0444 000 000</a><br>
   <a class="btn" href="#dove">Chiama ora</a>
  </div>
- <div class="box"><dl>
-  <dt>Indirizzo</dt><dd>Via dell'Artigianato 27, Paese di Esempio (VI)</dd>
+ <div class="box rv"><dl>
+  <dt>Indirizzo</dt><dd>Via dell'Artigianato 27<br>Paese di Esempio (VI)</dd>
   <dt>Orari</dt><dd>Lun–Ven 8–12:30 e 14–18:30<br>Sabato 8–12</dd>
   <dt>WhatsApp</dt><dd>Mandate una foto della spia o del danno</dd>
  </dl></div>
 </div></section>
 </main>
-<footer><div class="wrap">Officina Ventisette è un'attività inventata per mostrare un esempio di sito. Foto: Unsplash.</div></footer>
+
+<footer><div class="wrap"><span>Officina Ventisette è un'attività di fantasia, creata da Neoverso per mostrare un esempio di sito.</span><span>Foto: Unsplash</span></div></footer>
+<div class="callbar"><a class="btn" href="#dove">Chiama l'officina</a></div>
+
+<script>
+(function(){
+ var y=document.getElementById('y'),m=document.getElementById('m'),n=document.getElementById('nuova'),out=document.getElementById('out');
+ var now=new Date(),cy=now.getFullYear();
+ for(var i=cy;i>=cy-12;i--){var o=document.createElement('option');o.value=i;o.textContent=i;y.appendChild(o);}
+ y.value=cy-2;m.value=now.getMonth()+1;
+ var mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+ function calc(){var mm=+m.value,yy=+y.value+(n.checked?4:2);
+  var cur=cy*12+now.getMonth(),due=yy*12+(mm-1),diff=due-cur;
+  var txt='Scadenza: entro fine '+mesi[mm-1]+' '+yy;
+  if(diff<0)txt+=' (già scaduta: chiamateci)';else if(diff<=2)txt+=' (manca poco: prenotate)';
+  out.textContent=txt;}
+ [y,m,n].forEach(function(e){e.addEventListener('change',calc);});calc();
+ var els=document.querySelectorAll('.rv');
+ if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in');});return;}
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px'});
+ els.forEach(function(e,i){e.style.transitionDelay=(i%4)*70+'ms';io.observe(e);});
+})();
+</script>
 </body>
 </html>

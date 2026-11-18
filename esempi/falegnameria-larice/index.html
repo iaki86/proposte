@@ -4,116 +4,213 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Falegnameria Larice · Mobili su misura (sito dimostrativo)</title>
+<title>Falegnameria Larice · Mobili su misura in legno massello (sito dimostrativo)</title>
 <style>
 @font-face{font-family:Fraunces;src:url(../fonts/fraunces-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Fraunces;src:url(../fonts/fraunces-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:Nunito;src:url(../fonts/nunito-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Nunito;src:url(../fonts/nunito-sans-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
-:root{--bg:#F1EBE1;--ink:#1F2A22;--forest:#24392C;--larch:#B8652F;--line:#D9CFC0;--muted:#5A5F55}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Nunito,system-ui,sans-serif}
+:root{--paper:#EEE7DB;--paper2:#E4DACA;--ink:#1F1B16;--muted:#5E574D;--larch:#B5602A;--larch-d:#97501F;--forest:#26372B;--line:#D3C7B4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 Nunito,system-ui,sans-serif}
 img{display:block;max-width:100%}
 a{color:inherit}
-.demo{background:#1F2A22;color:#E9E3D8;font-size:13px;text-align:center;padding:7px 12px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-header{position:absolute;left:0;right:0;z-index:5;color:#fff}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
-.logo{font:600 24px/1 Fraunces,serif;text-decoration:none;letter-spacing:-.01em}
-.logo small{display:block;font:400 12px/1.4 Nunito,sans-serif;opacity:.8;letter-spacing:.02em}
-nav a{text-decoration:none;margin-left:28px;font-weight:700;font-size:15px}
-nav .tel{background:#fff;color:var(--forest);padding:10px 18px;border-radius:999px}
-.hero{position:relative;min-height:640px;display:flex;align-items:flex-end;color:#fff;background:#2b2a24}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,24,20,.72) 0%,rgba(20,24,20,.35) 55%,rgba(20,24,20,.1) 100%),linear-gradient(180deg,rgba(20,24,20,.5) 0%,rgba(20,24,20,0) 30%)}
-.hero .wrap{position:relative;z-index:2;padding-bottom:72px;width:100%}
-.hero h1{font:400 clamp(40px,6vw,76px)/1.02 Fraunces,serif;margin:0 0 18px;max-width:13ch;letter-spacing:-.02em}
-.hero p{max-width:46ch;font-size:19px;margin:0 0 28px;color:#EDE7DC}
+.demo{background:var(--ink);color:#E9E1D3;font-size:13px;text-align:center;padding:7px 12px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+header{position:sticky;top:0;z-index:20;background:rgba(238,231,219,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.s{border-bottom-color:var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo b{display:block;font:600 21px/1 Fraunces,serif;letter-spacing:-.01em}
+.logo small{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+nav{display:flex;align-items:center;gap:30px}
+nav a{text-decoration:none;font-weight:700;font-size:15px}
+nav a:not(.btn):hover{color:var(--larch)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--larch);color:#fff;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:999px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--larch-d);transform:translateY(-1px)}
+.btn svg{width:18px;height:18px}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.line:hover{background:var(--ink);color:var(--paper)}
+nav .btn{padding:11px 20px;font-size:14px}
+
+.hero{padding:56px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;color:var(--larch);margin-bottom:22px}
+.kicker:before{content:"";width:28px;height:1.5px;background:var(--larch)}
+h1{font:400 clamp(44px,5.6vw,78px)/1.02 Fraunces,serif;letter-spacing:-.025em;margin:0 0 26px}
+.hero p{font-size:19px;color:var(--muted);max-width:42ch;margin:0 0 34px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;background:var(--larch);color:#fff;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px}
-.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.7)}
-section{padding:96px 0}
-h2{font:400 clamp(30px,3.6vw,46px)/1.1 Fraunces,serif;margin:0 0 18px;letter-spacing:-.015em}
-.lead{max-width:56ch;color:var(--muted);font-size:18px;margin:0}
-.work{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
-.work figure{margin:0}
-.work img{aspect-ratio:4/5;object-fit:cover;border-radius:4px}
-.work figcaption{padding-top:14px}
-.work b{font:600 21px/1.2 Fraunces,serif;display:block;margin-bottom:4px}
-.work span{color:var(--muted);font-size:16px}
-.band{background:var(--forest);color:#E8E4DA}
-.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.band img{border-radius:4px;aspect-ratio:5/4;object-fit:cover}
-.steps{list-style:none;padding:0;margin:28px 0 0;counter-reset:s}
-.steps li{counter-increment:s;padding:18px 0 18px 56px;border-top:1px solid rgba(255,255,255,.15);position:relative}
-.steps li:before{content:counter(s);position:absolute;left:0;top:16px;font:400 30px/1 Fraunces,serif;color:#E09A63}
-.steps b{display:block;color:#fff;font-size:18px}
-.contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px}
-.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:32px}
-.card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 24px}
-.card dt{color:var(--muted)}.card dd{margin:0;font-weight:700}
-.big{font:400 34px/1.1 Fraunces,serif;color:var(--forest);text-decoration:none;display:inline-block;margin:10px 0 22px}
-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
-@media (max-width:820px){
- nav a:not(.tel){display:none}
- .hero{min-height:560px}.hero .wrap{padding-bottom:44px}
- section{padding:64px 0}
- .work{grid-template-columns:1fr;gap:32px}
- .work img{aspect-ratio:4/3}
- .band .wrap,.contact .wrap{grid-template-columns:1fr;gap:32px}
+.trust{display:flex;gap:28px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line)}
+.trust div{font-size:14px;color:var(--muted)}
+.trust b{display:block;font:600 22px/1.1 Fraunces,serif;color:var(--ink);margin-bottom:2px}
+.hero figure{margin:0;position:relative}
+.hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 10px 10px}
+.badge{position:absolute;left:-36px;bottom:48px;background:var(--forest);color:#EDE6D8;border-radius:14px;padding:18px 22px;max-width:230px;box-shadow:0 24px 50px -20px rgba(38,55,43,.6)}
+.badge b{display:block;font:600 19px/1.2 Fraunces,serif;color:#fff;margin-bottom:4px}
+.badge span{font-size:14px}
+
+section{padding:104px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:52px}
+h2{font:400 clamp(34px,4vw,54px)/1.05 Fraunces,serif;letter-spacing:-.02em;margin:0}
+.head p{color:var(--muted);max-width:44ch;margin:0}
+.gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto;gap:22px}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:10px;background:var(--paper2)}
+.gallery figure:first-child{grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figure:first-child img{min-height:560px}
+.gallery figure:not(:first-child) img{aspect-ratio:4/3}
+.gallery figcaption{position:absolute;left:16px;bottom:16px;right:16px;color:#fff;font-weight:700;text-shadow:0 1px 10px rgba(0,0,0,.5);display:flex;justify-content:space-between;align-items:end}
+.gallery figcaption span{font:400 22px/1.1 Fraunces,serif}
+.gallery figcaption small{font-weight:400;font-size:13px;opacity:.9}
+
+.band{background:var(--forest);color:#DAD5C9;position:relative;overflow:hidden}
+.band:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(96deg,rgba(255,255,255,.025) 0 2px,transparent 2px 14px);pointer-events:none}
+.band .wrap{position:relative}
+.band h2{color:#F3EEE4}
+.band .head p{color:#B8BFB1}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;padding:30px 28px 0 0;border-top:1px solid rgba(255,255,255,.18);position:relative}
+.steps li:before{content:"0" counter(s);display:block;font:400 46px/1 Fraunces,serif;color:#E2965F;margin-bottom:18px}
+.steps b{display:block;color:#fff;font-size:19px;margin-bottom:6px}
+.quote{margin:96px auto 0;max-width:820px;text-align:center;font:400 clamp(26px,3vw,38px)/1.3 Fraunces,serif;color:#F3EEE4}
+
+.wood{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wood div{background:#F6F1E8;border:1px solid var(--line);border-radius:12px;padding:28px}
+.wood i{display:block;height:84px;border-radius:8px;margin-bottom:20px;background:repeating-linear-gradient(92deg,rgba(0,0,0,.06) 0 1.5px,transparent 1.5px 9px),var(--c)}
+.wood b{font:600 22px/1.2 Fraunces,serif;display:block;margin-bottom:6px}
+.wood p{margin:0;color:var(--muted);font-size:16px}
+
+.contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+.big{font:400 clamp(36px,4vw,52px)/1 Fraunces,serif;text-decoration:none;display:inline-block;margin:22px 0 26px;color:var(--forest)}
+.card{background:#F6F1E8;border:1px solid var(--line);border-radius:14px;padding:34px}
+.card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:14px 28px}
+.card dt{color:var(--muted)}
+.card dd{margin:0;font-weight:700}
+.card .open{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--forest);background:#DDE5D9;padding:6px 12px;border-radius:99px;margin-bottom:22px}
+.card .open:before{content:"";width:8px;height:8px;border-radius:50%;background:#3E8A55}
+.card .open.closed{color:#7A3B2A;background:#F0DDD3}
+.card .open.closed:before{background:#B5602A}
+footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.callbar{display:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (max-width:900px){
+ nav a:not(.btn){display:none}
+ .hero{padding:24px 0 64px}
+ .hero .wrap,.contact .wrap{grid-template-columns:1fr;gap:40px}
+ .hero figure{order:-1}
+ .hero figure img{aspect-ratio:5/4;border-radius:160px 160px 10px 10px}
+ .badge{left:16px;bottom:16px}
+ section{padding:72px 0}
+ .head{display:block}.head p{margin-top:14px}
+ .gallery{grid-template-columns:1fr 1fr}
+ .gallery figure:first-child{grid-column:span 2;grid-row:auto}
+ .gallery figure:first-child img{min-height:0;aspect-ratio:4/3}
+ .steps{grid-template-columns:1fr 1fr;row-gap:34px}
+ .wood{grid-template-columns:1fr}
 }
+@media (max-width:560px){
+ .wrap{padding:0 20px}
+ nav .btn{display:none}
+ .trust{gap:18px}
+ .gallery{grid-template-columns:1fr}.gallery figure:first-child{grid-column:auto}
+ .steps{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:10px}
+ .callbar a{flex:1;justify-content:center}
+ footer{padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div class="demo">Sito dimostrativo realizzato da Neoverso: attività inventata, dati di fantasia</div>
-<header><div class="wrap">
- <a class="logo" href="#">Falegnameria Larice<small>Mobili su misura in legno massello</small></a>
- <nav><a href="#lavori">Lavori</a><a href="#come">Come lavoriamo</a><a href="#contatti">Contatti</a><a class="tel" href="#contatti">Chiamaci</a></nav>
+<div class="demo">Sito dimostrativo realizzato da Neoverso: attività di fantasia, dati inventati</div>
+<header id="hd"><div class="wrap">
+ <a class="logo" href="#"><svg viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="9" fill="#26372B"/><path d="M17 6c-5 5-7 9-7 13a7 7 0 0 0 14 0c0-4-2-8-7-13z" fill="#E2965F"/><path d="M17 12v15M17 18l-3-2M17 22l3-2" stroke="#26372B" stroke-width="1.6" stroke-linecap="round"/></svg><span><b>Falegnameria Larice</b><small>Mobili su misura dal 1990</small></span></a>
+ <nav><a href="#lavori">Lavori</a><a href="#come">Come lavoriamo</a><a href="#legni">I legni</a><a class="btn" href="#contatti">Chiedi un sopralluogo</a></nav>
 </div></header>
+
 <main>
-<div class="hero">
- <img src="https://images.unsplash.com/photo-1788296817269-8df0458ab799?w=1800&q=70&auto=format&fit=crop" alt="Banco da lavoro con attrezzi da falegname illuminato dal sole">
- <div class="wrap">
-  <h1>Mobili su misura, fatti a mano in montagna</h1>
-  <p>Cucine, armadi e scale in larice e rovere. Veniamo a prendere le misure, disegniamo con voi e montiamo tutto a casa vostra.</p>
-  <div class="btns"><a class="btn" href="#contatti">Chiedi un sopralluogo</a><a class="btn ghost" href="#lavori">Guarda i lavori</a></div>
+<section class="hero"><div class="wrap">
+ <div>
+  <span class="kicker rv">Laboratorio artigiano in montagna</span>
+  <h1 class="rv">Mobili su misura, fatti a mano per la vostra casa.</h1>
+  <p class="rv">Cucine, armadi, scale e tavoli in larice, rovere e noce. Veniamo a prendere le misure, disegniamo con voi e montiamo tutto noi.</p>
+  <div class="btns rv"><a class="btn" href="#contatti">Chiedi un sopralluogo gratuito</a><a class="btn line" href="#lavori">Guarda i lavori</a></div>
+  <div class="trust rv"><div><b>Su misura</b>al centimetro</div><div><b>Legno massello</b>niente truciolare</div><div><b>Montaggio</b>sempre incluso</div></div>
  </div>
-</div>
-<section id="lavori"><div class="wrap">
- <h2>Cosa facciamo</h2>
- <p class="lead">Ogni pezzo nasce in laboratorio, dal legno grezzo alla finitura a olio. Niente pannelli, niente misure standard.</p>
- <div class="work">
-  <figure><img loading="lazy" src="https://images.unsplash.com/photo-1722888799634-c5093906feae?w=900&q=70&auto=format&fit=crop" alt="Cucina con ante in legno massello"><figcaption><b>Cucine</b><span>Ante in massello, piani in legno o pietra, misure al centimetro.</span></figcaption></figure>
-  <figure><img loading="lazy" src="https://images.unsplash.com/photo-1597960194599-22929afc25b1?w=900&q=70&auto=format&fit=crop" alt="Tavolo e sedie in legno"><figcaption><b>Tavoli e arredi</b><span>Tavoli da pranzo, librerie e armadi a muro su disegno.</span></figcaption></figure>
-  <figure><img loading="lazy" src="https://images.unsplash.com/photo-1786480390442-ae9ce7db4c7e?w=900&q=70&auto=format&fit=crop" alt="Banco da lavoro vicino a una finestra"><figcaption><b>Restauro</b><span>Rimettiamo in sesto mobili di famiglia e serramenti in legno.</span></figcaption></figure>
+ <figure class="rv">
+  <img src="https://images.unsplash.com/photo-1788296817269-8df0458ab799?w=1100&q=72&auto=format&fit=crop" alt="Banco da lavoro con attrezzi da falegname illuminato dal sole">
+  <div class="badge"><b>Sopralluogo gratuito</b><span>Veniamo noi a vedere lo spazio e prendere le misure.</span></div>
+ </figure>
+</div></section>
+
+<section id="lavori" style="padding-top:24px"><div class="wrap">
+ <div class="head rv"><h2>Alcuni lavori</h2><p>Ogni pezzo nasce in laboratorio, dal legno grezzo alla finitura a olio. Nessun mobile uguale all'altro.</p></div>
+ <div class="gallery">
+  <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1722888799634-c5093906feae?w=1000&q=72&auto=format&fit=crop" alt="Cucina con ante in legno massello"><figcaption><span>Cucine</span><small>Larice e rovere</small></figcaption></figure>
+  <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1597960194599-22929afc25b1?w=700&q=72&auto=format&fit=crop" alt="Tavolo e sedie in legno"><figcaption><span>Tavoli</span><small>Su disegno</small></figcaption></figure>
+  <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1786480390442-ae9ce7db4c7e?w=700&q=72&auto=format&fit=crop" alt="Banco da lavoro vicino a una finestra"><figcaption><span>Restauro</span><small>Mobili di famiglia</small></figcaption></figure>
+  <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1761544775659-aaa6fa2e5b3d?w=700&q=72&auto=format&fit=crop" alt="Attrezzi da falegname su una parete scura"><figcaption><span>Scale e serramenti</span><small>Interni ed esterni</small></figcaption></figure>
+  <figure class="rv"><img loading="lazy" src="https://images.unsplash.com/photo-1499744349893-0c6de53516e6?w=700&q=72&auto=format&fit=crop" alt="Utensili manuali su uno scaffale in legno"><figcaption><span>Armadi a muro</span><small>Ogni spazio sfruttato</small></figcaption></figure>
  </div>
 </div></section>
+
 <section class="band" id="come"><div class="wrap">
- <img loading="lazy" src="https://images.unsplash.com/photo-1761544775659-aaa6fa2e5b3d?w=1000&q=70&auto=format&fit=crop" alt="Attrezzi da falegname appesi a una parete scura">
- <div>
-  <h2>Come lavoriamo</h2>
-  <ol class="steps">
-   <li><b>Sopralluogo gratuito</b>Veniamo a vedere lo spazio e prendiamo le misure.</li>
-   <li><b>Disegno e preventivo</b>Vi mandiamo il progetto con il prezzo, senza sorprese.</li>
-   <li><b>Lavorazione</b>Costruiamo tutto nel nostro laboratorio.</li>
-   <li><b>Montaggio</b>Portiamo e montiamo noi, e lasciamo pulito.</li>
-  </ol>
+ <div class="head rv"><h2>Come lavoriamo</h2><p>Quattro passaggi, sempre gli stessi. Sapete cosa succede e quanto spendete prima che tocchiamo il legno.</p></div>
+ <ol class="steps">
+  <li class="rv"><b>Sopralluogo</b>Veniamo a vedere lo spazio e prendiamo le misure, senza impegno.</li>
+  <li class="rv"><b>Disegno e preventivo</b>Vi mandiamo il progetto con il prezzo finale scritto.</li>
+  <li class="rv"><b>Lavorazione</b>Costruiamo tutto nel nostro laboratorio, con il legno che avete scelto.</li>
+  <li class="rv"><b>Montaggio</b>Portiamo e montiamo noi, e lasciamo la casa pulita.</li>
+ </ol>
+ <p class="quote rv">Un mobile fatto bene dura più di chi l'ha costruito. Per questo usiamo solo legno vero.</p>
+</div></section>
+
+<section id="legni"><div class="wrap">
+ <div class="head rv"><h2>I legni che usiamo</h2><p>Vi aiutiamo a scegliere quello giusto per l'uso, la luce della stanza e il budget.</p></div>
+ <div class="wood">
+  <div class="rv"><i style="--c:#C9905A"></i><b>Larice</b><p>Caldo e resistente, profuma di montagna. Ideale per cucine, rivestimenti ed esterni.</p></div>
+  <div class="rv"><i style="--c:#A9784A"></i><b>Rovere</b><p>Solido e senza tempo. Perfetto per tavoli, pavimenti e scale.</p></div>
+  <div class="rv"><i style="--c:#6E4A33"></i><b>Noce</b><p>Scuro ed elegante, per i mobili che devono durare una vita.</p></div>
  </div>
 </div></section>
-<section class="contact" id="contatti"><div class="wrap">
- <div>
+
+<section class="contact" id="contatti" style="padding-top:24px"><div class="wrap">
+ <div class="rv">
   <h2>Raccontateci cosa vi serve</h2>
-  <p class="lead">Una telefonata basta per fissare il sopralluogo. Se preferite, mandate una foto dello spazio su WhatsApp.</p>
+  <p style="color:var(--muted);max-width:44ch;margin:18px 0 0">Una telefonata basta per fissare il sopralluogo. Se preferite, mandate una foto dello spazio su WhatsApp.</p>
   <a class="big" href="#contatti">0437 000 000</a>
-  <div class="btns"><a class="btn" href="#contatti">Chiama ora</a></div>
+  <div class="btns"><a class="btn" href="#contatti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Chiama ora</a><a class="btn line" href="#contatti">Scrivi su WhatsApp</a></div>
  </div>
- <div class="card"><dl>
-  <dt>Laboratorio</dt><dd>Via del Bosco 12, Paese di Esempio (BL)</dd>
-  <dt>Orari</dt><dd>Lun–Ven 8–12 e 14–18<br>Sabato su appuntamento</dd>
-  <dt>Email</dt><dd>info@esempio.it</dd>
- </dl></div>
+ <div class="card rv">
+  <span class="open" id="open">Aperto ora</span>
+  <dl>
+   <dt>Laboratorio</dt><dd>Via del Bosco 12<br>Paese di Esempio (BL)</dd>
+   <dt>Orari</dt><dd>Lun–Ven 8–12 e 14–18<br>Sabato su appuntamento</dd>
+   <dt>Email</dt><dd>info@esempio.it</dd>
+  </dl>
+ </div>
 </div></section>
 </main>
-<footer><div class="wrap">Falegnameria Larice è un'attività inventata per mostrare un esempio di sito. Foto: Unsplash.</div></footer>
+
+<footer><div class="wrap"><span>Falegnameria Larice è un'attività di fantasia, creata da Neoverso per mostrare un esempio di sito.</span><span>Foto: Unsplash</span></div></footer>
+<div class="callbar"><a class="btn" href="#contatti">Chiama</a><a class="btn line" href="#contatti" style="background:var(--paper)">WhatsApp</a></div>
+
+<script>
+(function(){
+ var h=document.getElementById('hd');addEventListener('scroll',function(){h.classList.toggle('s',scrollY>10);},{passive:true});
+ var d=new Date(),day=d.getDay(),t=d.getHours()+d.getMinutes()/60,o=document.getElementById('open');
+ var isOpen=day>=1&&day<=5&&((t>=8&&t<12)||(t>=14&&t<18));
+ if(!isOpen){o.textContent='Chiuso ora: lasciate un messaggio';o.classList.add('closed');}
+ var els=document.querySelectorAll('.rv');
+ if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in');});return;}
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px'});
+ els.forEach(function(e,i){e.style.transitionDelay=(i%4)*70+'ms';io.observe(e);});
+})();
+</script>
 </body>
 </html>

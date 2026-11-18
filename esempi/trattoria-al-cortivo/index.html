@@ -4,115 +4,199 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Trattoria Al Cortivo · Cucina veneta (sito dimostrativo)</title>
+<title>Trattoria Al Cortivo · Cucina veneta di famiglia (sito dimostrativo)</title>
 <style>
 @font-face{font-family:Young;src:url(../fonts/young-serif-latin-400-normal.woff2) format("woff2");font-display:swap}
 @font-face{font-family:Figtree;src:url(../fonts/figtree-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Figtree;src:url(../fonts/figtree-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
-:root{--paper:#F6F0E4;--wine:#6E1F26;--olive:#56622F;--ink:#2A1E1A;--line:#E2D6C2;--muted:#6C5E55}
+:root{--wine:#5A171D;--wine2:#6F1F26;--paper:#F7F0E3;--cream:#FBF7EF;--olive:#5A6631;--gold:#D9A441;--ink:#2A1D19;--muted:#6E5F55;--line:#E5D8C3}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
-img{display:block;max-width:100%}a{color:inherit}
-.demo{background:var(--ink);color:#F1E8DA;font-size:13px;text-align:center;padding:7px 12px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;border-bottom:1px solid var(--line)}
-.logo{font:400 26px/1 Young,serif;color:var(--wine);text-decoration:none}
-nav a{text-decoration:none;margin-left:26px;font-weight:600;font-size:15px}
-nav .tel{color:#fff;background:var(--wine);padding:10px 18px;border-radius:6px}
-.hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center;padding-top:56px;padding-bottom:80px}
-.kicker{color:var(--olive);font-weight:600;margin:0 0 14px}
-h1{font:400 clamp(40px,5.4vw,70px)/1.04 Young,serif;color:var(--wine);margin:0 0 20px;letter-spacing:-.01em}
-.hero p.sub{font-size:19px;color:var(--muted);max-width:42ch;margin:0 0 28px}
-.btn{display:inline-block;background:var(--wine);color:#fff;text-decoration:none;font-weight:600;padding:15px 26px;border-radius:6px}
-.btn.alt{background:transparent;color:var(--wine);border:1.5px solid var(--wine);margin-left:8px}
-.hero figure{margin:0;position:relative}
-.hero figure img{border-radius:200px 200px 8px 8px;aspect-ratio:4/5;object-fit:cover;width:100%}
-.hours{position:absolute;left:-28px;bottom:32px;background:#fff;border-radius:8px;padding:18px 22px;box-shadow:0 12px 30px rgba(60,30,20,.16);font-size:15px}
-.hours b{display:block;font:400 18px/1.2 Young,serif;color:var(--wine);margin-bottom:4px}
-section{padding:88px 0}
-h2{font:400 clamp(30px,3.4vw,44px)/1.1 Young,serif;color:var(--wine);margin:0 0 14px}
-.menu{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.menu .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
-.menu ul{list-style:none;padding:0;margin:0}
-.menu li{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px dashed var(--line)}
-.menu li b{font:400 20px/1.3 Young,serif;display:block}
-.menu li span{color:var(--muted);font-size:15px}
-.menu li em{font-style:normal;font-weight:600;white-space:nowrap;color:var(--olive)}
-.note{color:var(--muted);font-size:15px;margin-top:18px}
-.gal{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;margin-top:36px}
-.gal img{width:100%;height:320px;object-fit:cover;border-radius:8px}
-.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-table{border-collapse:collapse;width:100%;font-size:16px}
-td{padding:10px 0;border-bottom:1px solid var(--line)}td:last-child{text-align:right;font-weight:600}
-.closed{color:var(--muted);font-weight:400!important}
-.big{font:400 32px/1.1 Young,serif;color:var(--wine);text-decoration:none;display:inline-block;margin:8px 0 20px}
-footer{background:var(--wine);color:#F1E2D8;padding:28px 0;font-size:14px}
-@media (max-width:860px){
- nav a:not(.tel){display:none}
- .hero .wrap,.menu .wrap,.visit .wrap{grid-template-columns:1fr;gap:36px}
- .hero .wrap{padding-top:32px;padding-bottom:56px}
- .hours{left:12px;bottom:12px}
- section{padding:60px 0}
- .gal{grid-template-columns:1fr 1fr}.gal img{height:180px}.gal img:first-child{grid-column:1/3}
- .btn.alt{margin:10px 0 0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+.demo{background:#1C1210;color:#EFE3D2;font-size:13px;text-align:center;padding:7px 12px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.top{background:var(--wine);color:#F6EADB;position:relative;overflow:hidden}
+.top:after{content:"";position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(transparent,rgba(0,0,0,.12));pointer-events:none}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{text-decoration:none;text-align:left}
+.logo b{display:block;font:400 28px/1 Young,serif;letter-spacing:.01em}
+.logo small{display:block;font-size:12px;color:#E2C9A8;margin-top:4px;letter-spacing:.04em}
+nav{display:flex;align-items:center;gap:30px}
+nav a{text-decoration:none;font-weight:600;font-size:15px;color:#F0DFC9}
+nav a:not(.btn):hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#2A1608;text-decoration:none;font-weight:600;padding:15px 26px;border-radius:8px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px);background:#E6B456}
+.btn svg{width:18px;height:18px}
+.btn.ghost{background:transparent;color:#F6EADB;box-shadow:inset 0 0 0 1.5px rgba(246,234,219,.5)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px #F6EADB}
+.btn.wine{background:var(--wine);color:#fff}
+.btn.wine:hover{background:var(--wine2)}
+nav .btn{padding:11px 20px;font-size:14px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;padding-top:40px}
+.hero .txt{padding-bottom:96px}
+.status{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;background:rgba(255,255,255,.1);padding:7px 14px;border-radius:99px;margin-bottom:26px}
+.status:before{content:"";width:8px;height:8px;border-radius:50%;background:#8FD28F;box-shadow:0 0 0 4px rgba(143,210,143,.2)}
+.status.closed:before{background:#E9A07A;box-shadow:0 0 0 4px rgba(233,160,122,.2)}
+h1{font:400 clamp(44px,5.6vw,80px)/1.02 Young,serif;margin:0 0 24px;letter-spacing:-.01em}
+.hero p{font-size:19px;color:#E8D6C0;max-width:40ch;margin:0 0 34px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.arch{position:relative;align-self:end}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:300px 300px 0 0}
+.arch .stamp{position:absolute;left:-44px;top:90px;width:132px;height:132px;border-radius:50%;background:var(--gold);color:#2A1608;display:flex;align-items:center;justify-content:center;text-align:center;font:400 16px/1.2 Young,serif;transform:rotate(-10deg);box-shadow:0 18px 40px -16px rgba(0,0,0,.5)}
+
+section{padding:104px 0}
+h2{font:400 clamp(34px,4vw,54px)/1.05 Young,serif;margin:0;color:var(--wine)}
+.lead{color:var(--muted);max-width:48ch;margin:16px 0 0}
+.menu .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+.menu .side{position:sticky;top:40px}
+.menucard{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:44px 48px;box-shadow:0 30px 60px -40px rgba(90,23,29,.35)}
+.menucard h3{font:400 15px/1 Figtree,sans-serif;font-weight:600;letter-spacing:.02em;color:var(--olive);margin:0 0 8px}
+.menucard h3:not(:first-child){margin-top:34px}
+.dish{display:grid;grid-template-columns:1fr auto;gap:2px 18px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.dish b{font:400 21px/1.3 Young,serif}
+.dish em{font-style:normal;font-weight:600;color:var(--wine);align-self:start;padding-top:4px}
+.dish span{grid-column:1/-1;color:var(--muted);font-size:15px}
+.note{font-size:14px;color:var(--muted);margin-top:22px}
+
+.gal{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:18px}
+.gal img{width:100%;height:340px;object-fit:cover;border-radius:12px;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.gal div{overflow:hidden;border-radius:12px}
+.gal div:hover img{transform:scale(1.04)}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:96px}
+.story p{color:var(--muted);margin:16px 0 0;max-width:46ch}
+.story blockquote{margin:0;font:400 clamp(24px,2.6vw,34px)/1.35 Young,serif;color:var(--wine);border-left:3px solid var(--gold);padding-left:28px}
+
+.visit{background:var(--olive);color:#EEF0E2}
+.visit h2{color:#fff}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.visit .lead{color:#D5DBC0}
+.big{font:400 clamp(36px,4vw,50px)/1 Young,serif;color:#fff;text-decoration:none;display:inline-block;margin:24px 0 26px}
+.hours{background:rgba(0,0,0,.14);border-radius:16px;padding:34px}
+.hours table{width:100%;border-collapse:collapse;font-size:17px}
+.hours td{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:var(--gold)}
+.hours tr.today td:first-child:after{content:"oggi";margin-left:10px;font-size:12px;background:var(--gold);color:#2A1608;padding:2px 8px;border-radius:99px;font-weight:600}
+.hours .addr{margin-top:24px;color:#D5DBC0}
+.hours .addr b{color:#fff;display:block}
+footer{background:#1C1210;color:#BFAE9C;font-size:14px;padding:30px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.callbar{display:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (max-width:900px){
+ nav a:not(.btn){display:none}
+ .hero .wrap{grid-template-columns:1fr;gap:28px;padding-top:16px}
+ .hero .txt{padding-bottom:0}
+ .arch img{aspect-ratio:1/1;border-radius:200px 200px 0 0}
+ .arch .stamp{left:auto;right:12px;top:24px;width:108px;height:108px;font-size:14px}
+ section{padding:72px 0}
+ .menu .wrap,.story,.visit .wrap{grid-template-columns:1fr;gap:36px}
+ .menu .side{position:static}
+ .menucard{padding:30px 24px}
+ .gal{grid-template-columns:1fr 1fr}.gal div:first-child{grid-column:span 2}.gal img{height:220px}
+ .story{margin-top:64px}
 }
+@media (max-width:560px){
+ .wrap{padding:0 20px}
+ nav .btn{display:none}
+ .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30}
+ .callbar a{flex:1;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+ footer{padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div class="demo">Sito dimostrativo realizzato da Neoverso: attività inventata, dati di fantasia</div>
-<header><div class="wrap"><a class="logo" href="#">Al Cortivo</a><nav><a href="#menu">Il menu</a><a href="#visita">Orari e dove siamo</a><a class="tel" href="#visita">Prenota</a></nav></div></header>
-<main>
+<div class="demo">Sito dimostrativo realizzato da Neoverso: attività di fantasia, dati inventati</div>
+<div class="top">
+<header><div class="wrap">
+ <a class="logo" href="#"><b>Al Cortivo</b><small>trattoria di famiglia</small></a>
+ <nav><a href="#menu">Il menu</a><a href="#cucina">La cucina</a><a href="#orari">Orari e dove siamo</a><a class="btn" href="#orari">Prenota</a></nav>
+</div></header>
 <div class="hero"><div class="wrap">
- <div>
-  <p class="kicker">Trattoria di famiglia in campagna</p>
-  <h1>Cucina veneta come la faceva la nonna</h1>
-  <p class="sub">Bigoli, baccalà e risotti di stagione, con le verdure dell'orto dietro casa. Pranzo e cena, con il cortile aperto d'estate.</p>
-  <a class="btn" href="#visita">Prenota un tavolo</a><a class="btn alt" href="#menu">Vedi il menu</a>
+ <div class="txt">
+  <span class="status rv" id="status">Oggi aperto a pranzo e a cena</span>
+  <h1 class="rv">Cucina veneta, come la faceva la nonna.</h1>
+  <p class="rv">Bigoli, baccalà e risotti di stagione, con le verdure dell'orto dietro casa. D'estate si mangia nel cortile, sotto il gelso.</p>
+  <div class="btns rv"><a class="btn" href="#orari"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Prenota un tavolo</a><a class="btn ghost" href="#menu">Guarda il menu</a></div>
  </div>
- <figure>
-  <img src="https://images.unsplash.com/photo-1788032008128-23291ef60c78?w=1100&q=70&auto=format&fit=crop" alt="Sala della trattoria con tavoli di legno e grandi finestre">
-  <div class="hours"><b>Oggi aperto</b>12:00–14:30 · 19:00–22:00</div>
- </figure>
+ <div class="arch rv">
+  <img src="https://images.unsplash.com/photo-1788032008128-23291ef60c78?w=1100&q=72&auto=format&fit=crop" alt="Sala della trattoria con tavoli di legno e grandi finestre">
+  <div class="stamp">Pasta fresca<br>fatta ogni<br>mattina</div>
+ </div>
 </div></div>
+</div>
+
+<main>
 <section class="menu" id="menu"><div class="wrap">
- <div>
+ <div class="side rv">
   <h2>Il menu di questa settimana</h2>
-  <p style="color:var(--muted)">Cambia con le stagioni e con quello che arriva dal mercato. I piatti del giorno ve li raccontiamo al tavolo.</p>
+  <p class="lead">Cambia con le stagioni e con quello che arriva dal mercato. I piatti del giorno ve li raccontiamo al tavolo.</p>
+  <p class="note">Prezzi di esempio. Chiedete pure per intolleranze e allergie: cuciniamo noi, possiamo adattare quasi tutto.</p>
  </div>
- <div>
-  <ul>
-   <li><div><b>Bigoli in salsa</b><span>Con cipolla stufata e acciughe</span></div><em>12 €</em></li>
-   <li><div><b>Risotto al radicchio</b><span>Mantecato con formaggio locale</span></div><em>13 €</em></li>
-   <li><div><b>Baccalà mantecato</b><span>Con polenta bianca abbrustolita</span></div><em>15 €</em></li>
-   <li><div><b>Tiramisù della casa</b><span>Fatto ogni mattina</span></div><em>6 €</em></li>
-  </ul>
-  <p class="note">Prezzi di esempio. Chiedete pure per intolleranze e allergie.</p>
- </div>
-</div></section>
-<section><div class="wrap">
- <h2>Dalla cucina</h2>
- <div class="gal">
-  <img loading="lazy" src="https://images.unsplash.com/photo-1644704001249-0d9dbb842238?w=1000&q=70&auto=format&fit=crop" alt="Piatto di pasta fresca">
-  <img loading="lazy" src="https://images.unsplash.com/photo-1594978583693-8dfdfc93f052?w=600&q=70&auto=format&fit=crop" alt="Bruschette con pomodoro">
-  <img loading="lazy" src="https://images.unsplash.com/photo-1762922425398-00c2c6635dc5?w=600&q=70&auto=format&fit=crop" alt="Pasta di pesce in una ciotola blu">
+ <div class="menucard rv">
+  <h3>Primi</h3>
+  <div class="dish"><b>Bigoli in salsa</b><em>12 €</em><span>Cipolla stufata lentamente e acciughe</span></div>
+  <div class="dish"><b>Risotto al radicchio</b><em>13 €</em><span>Mantecato con formaggio di malga</span></div>
+  <div class="dish"><b>Pasta e fagioli</b><em>10 €</em><span>Come si fa da noi, densa e con un filo d'olio crudo</span></div>
+  <h3>Secondi</h3>
+  <div class="dish"><b>Baccalà mantecato</b><em>15 €</em><span>Con polenta bianca abbrustolita</span></div>
+  <div class="dish"><b>Faraona al forno</b><em>16 €</em><span>Con patate e rosmarino dell'orto</span></div>
+  <h3>Dolci</h3>
+  <div class="dish"><b>Tiramisù della casa</b><em>6 €</em><span>Fatto ogni mattina</span></div>
  </div>
 </div></section>
-<section class="visit" id="visita"><div class="wrap">
- <div>
+
+<section id="cucina" style="padding-top:24px"><div class="wrap">
+ <div class="gal rv">
+  <div><img loading="lazy" src="https://images.unsplash.com/photo-1644704001249-0d9dbb842238?w=1000&q=72&auto=format&fit=crop" alt="Piatto di pasta fresca"></div>
+  <div><img loading="lazy" src="https://images.unsplash.com/photo-1594978583693-8dfdfc93f052?w=600&q=72&auto=format&fit=crop" alt="Bruschette con pomodoro"></div>
+  <div><img loading="lazy" src="https://images.unsplash.com/photo-1762922425398-00c2c6635dc5?w=600&q=72&auto=format&fit=crop" alt="Pasta di pesce in una ciotola blu"></div>
+ </div>
+ <div class="story">
+  <div class="rv"><h2>Tre generazioni ai fornelli</h2><p>La trattoria è nata come osteria del paese. Oggi in cucina c'è la nipote, ma le ricette sono quelle scritte a mano nel quaderno di famiglia.</p><p>Il pane lo facciamo noi, le verdure vengono dall'orto e il vino da cantine a pochi chilometri.</p></div>
+  <blockquote class="rv">Da noi non si viene di fretta. Si viene per stare bene, come a casa la domenica.</blockquote>
+ </div>
+</div></section>
+
+<section class="visit" id="orari"><div class="wrap">
+ <div class="rv">
   <h2>Prenotate con una telefonata</h2>
-  <p style="color:var(--muted)">Il sabato sera e la domenica a pranzo conviene chiamare qualche giorno prima.</p>
-  <a class="big" href="#visita">0423 000 000</a><br>
-  <a class="btn" href="#visita">Chiama ora</a>
-  <p style="margin-top:28px">Via dei Gelsi 4, Paese di Esempio (TV)<br>Parcheggio nel cortile</p>
+  <p class="lead">Il sabato sera e la domenica a pranzo conviene chiamare qualche giorno prima. Per gruppi e feste di famiglia chiedete pure: la sala è tutta per voi.</p>
+  <a class="big" href="#orari">0423 000 000</a><br>
+  <a class="btn" href="#orari">Chiama per prenotare</a>
  </div>
- <table>
-  <tr><td>Lunedì</td><td class="closed">Chiuso</td></tr>
-  <tr><td>Martedì – Venerdì</td><td>12–14:30 · 19–22</td></tr>
-  <tr><td>Sabato</td><td>19–23</td></tr>
-  <tr><td>Domenica</td><td>12–15</td></tr>
- </table>
+ <div class="hours rv">
+  <table id="hours">
+   <tr data-d="1"><td>Lunedì</td><td>Chiuso</td></tr>
+   <tr data-d="2,3,4,5"><td>Martedì – Venerdì</td><td>12–14:30 e 19–22</td></tr>
+   <tr data-d="6"><td>Sabato</td><td>19–23</td></tr>
+   <tr data-d="0"><td>Domenica</td><td>12–15</td></tr>
+  </table>
+  <p class="addr"><b>Via dei Gelsi 4, Paese di Esempio (TV)</b>Parcheggio nel cortile, sala al piano terra senza gradini.</p>
+ </div>
 </div></section>
 </main>
-<footer><div class="wrap">Trattoria Al Cortivo è un'attività inventata per mostrare un esempio di sito. Foto: Unsplash.</div></footer>
+
+<footer><div class="wrap"><span>Trattoria Al Cortivo è un'attività di fantasia, creata da Neoverso per mostrare un esempio di sito.</span><span>Foto: Unsplash</span></div></footer>
+<div class="callbar"><a class="btn wine" href="#orari">Chiama per prenotare</a></div>
+
+<script>
+(function(){
+ var d=new Date(),day=d.getDay(),t=d.getHours()+d.getMinutes()/60;
+ document.querySelectorAll('#hours tr').forEach(function(r){if(r.dataset.d.split(',').indexOf(String(day))>-1)r.classList.add('today');});
+ var s=document.getElementById('status');
+ if(day===1){s.textContent='Oggi chiuso: riapriamo domani a pranzo';s.classList.add('closed');}
+ else if(day===6){s.textContent='Oggi aperto a cena';}
+ else if(day===0){s.textContent='Oggi aperto a pranzo';}
+ var els=document.querySelectorAll('.rv');
+ if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in');});return;}
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px'});
+ els.forEach(function(e,i){e.style.transitionDelay=(i%4)*70+'ms';io.observe(e);});
+})();
+</script>
 </body>
 </html>
