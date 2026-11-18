@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Neoverso · Anteprima gratis, sito completo a 500 €</title>
+<meta name="description" content="Rifacciamo gratis la homepage della vostra attività e ve la mostriamo. Se vi piace, il sito completo costa 500&nbsp;€, con l'acconto solo dopo averla vista.">
+<meta property="og:title" content="Neoverso · Anteprima gratis, sito completo a 500 €">
+<meta property="og:description" content="Prima vedete il vostro nuovo sito, poi decidete. Prezzo fisso, dominio sempre vostro.">
+<meta property="og:image" content="og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#14213D">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/bodoni-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Bodoni Moda";src:url(assets/fonts/bodoni-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Bodoni Moda";src:url(assets/fonts/bodoni-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Figtree;src:url(assets/fonts/figtree-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Figtree;src:url(assets/fonts/figtree-600.woff2) format("woff2");font-weight:600;font-display:swap}
+:root{
+ --stone:#ECEAE5;--paper:#F8F7F4;--ink:#14213D;--ink2:#2A3754;--verde:#2B7A67;--verde-d:#1F5F50;
+ --rosso:#B4473A;--ocra:#D6A23E;--muted:#555C6B;--line:#D6D2CA;
+ --display:"Bodoni Moda",Didot,"Times New Roman",serif;--body:Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
+ --r:10px;--wrap:1180px
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:clip;background:var(--stone);color:var(--ink);font:400 18px/1.6 var(--body)}
+img,svg{display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:8px 14px;z-index:99}
+.skip:focus{left:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(34px,4.2vw,54px);line-height:1.05}
+h3{font-size:24px;line-height:1.2}
+p{margin:0}
+.lead{font-size:20px;color:var(--muted);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--verde);color:#fff;text-decoration:none;font-weight:600;font-size:17px;padding:16px 28px;border-radius:999px;transition:background .15s}
+.btn:hover{background:var(--verde-d)}
+.btn.light{background:#fff;color:var(--ink)}
+.btn.light:hover{background:var(--paper)}
+.alt{font-size:15px;color:var(--muted);margin-top:12px}
+.alt a{font-weight:600}
+.terrazzo{background:#E1DDD4 url(assets/terrazzo.svg) 0 0/600px}
+
+/* banner personalizzato */
+#mail-banner{display:none;background:var(--ink);color:#E8EBF2;font-size:16px}
+#mail-banner.on{display:block}
+#mail-banner .wrap{padding-top:14px;padding-bottom:14px}
+#mail-banner a{color:#fff;font-weight:600}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(236,234,229,.94);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-bottom-color:var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 25px/1 var(--display)}
+.logo svg{width:30px;height:30px}
+nav.main{display:flex;align-items:center;gap:30px}
+nav.main a{text-decoration:none;font-weight:600;font-size:16px}
+nav.main a:not(.btn):hover{color:var(--verde)}
+nav.main .btn{padding:11px 20px;font-size:15px}
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;font-weight:600;padding:10px 4px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav div{position:absolute;right:0;top:46px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:10px;min-width:220px;box-shadow:0 18px 40px rgba(20,33,61,.14)}
+.mnav div a{display:block;padding:12px 14px;text-decoration:none;font-weight:600}
+
+/* hero */
+.hero{padding:56px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,5.6vw,80px);line-height:1;margin-bottom:26px}
+.hero .lead{margin-bottom:32px}
+.hero .note{font-size:15px;color:var(--muted);margin-top:16px;max-width:40ch}
+.stage{position:relative;padding:44px 0 56px}
+.stage:before{content:"";position:absolute;inset:0 -28px 0 12%;border-radius:18px;background:#E1DDD4 url(assets/terrazzo.svg) 0 0/600px;box-shadow:inset 0 0 0 1px rgba(20,33,61,.06)}
+
+/* laptop + slider */
+.laptop{position:relative;z-index:1}
+.bezel{background:#1B2233;border-radius:14px 14px 4px 4px;padding:12px 12px 14px;box-shadow:0 30px 60px -20px rgba(20,33,61,.45)}
+.base{height:14px;margin:0 -5%;background:linear-gradient(#C9CCD3,#A9ADB7);border-radius:0 0 14px 14px;position:relative}
+.base:after{content:"";position:absolute;left:42%;right:42%;top:0;height:5px;background:#9297A2;border-radius:0 0 6px 6px}
+.screen{position:relative;aspect-ratio:16/10;overflow:hidden;background:#fff;border-radius:3px}
+.screen .layer{position:absolute;inset:0;overflow:hidden}
+.screen iframe,.phone iframe{border:0;transform-origin:0 0;pointer-events:none;display:block;background:#fff}
+.screen iframe{width:1280px;height:800px;transform:scale(var(--s,.45))}
+.ba{--x:50%}
+.ba .front{clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--x);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(20,33,61,.25);pointer-events:none}
+.ba .handle:after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314213D' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-5 6 5 6M15 6l5 6-5 6'/%3E%3C/svg%3E") center/22px no-repeat;box-shadow:0 4px 14px rgba(20,33,61,.35)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3}
+.ba:has(input:focus-visible) .handle:after{outline:3px solid var(--verde);outline-offset:2px}
+.tag{position:absolute;top:12px;z-index:2;font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;pointer-events:none}
+.tag.l{left:12px;background:var(--verde);color:#fff}
+.tag.r{right:12px;background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.caption{position:relative;z-index:1;font-size:14px;color:var(--ink2);margin:22px auto 0;width:fit-content;max-width:100%;text-align:center;background:var(--paper);padding:6px 14px;border-radius:999px}
+
+section{padding:104px 0}
+.head{margin-bottom:52px}
+.head .lead{margin-top:18px}
+
+/* problemi -> soluzioni */
+.fix{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fix .wrap{display:grid;grid-template-columns:4fr 8fr;gap:64px}
+.fix .head{position:sticky;top:120px;align-self:start;margin:0}
+.fix h2,.faq h2{font-size:clamp(32px,3.4vw,44px)}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:26px 0;border-top:1px solid var(--line)}
+.rows li:last-child{border-bottom:1px solid var(--line)}
+.rows div{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start}
+.rows svg{width:24px;height:24px;margin-top:3px}
+.rows .bad{color:var(--muted)}
+.rows .good b{display:block;font-weight:600}
+.rows .good span{color:var(--muted);font-size:16px}
+.rows .cols{display:contents}
+.colhead{display:grid;grid-template-columns:1fr 1fr;gap:32px;font-weight:600;font-size:15px;color:var(--muted);padding-bottom:12px}
+.colhead span:last-child{color:var(--verde)}
+
+/* esempi */
+.demo-row{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center;padding:40px 0}
+.demo-row+.demo-row{border-top:1px solid var(--line)}
+.demo-row:nth-child(even){grid-template-columns:5fr 7fr}
+.demo-row:nth-child(even) .mock{order:2}
+.mock{position:relative;padding:0 64px 36px 0}
+.phone{position:absolute;right:0;bottom:0;width:150px;background:#1B2233;border-radius:26px;padding:8px;box-shadow:0 24px 50px -16px rgba(20,33,61,.5);z-index:2}
+.phone .pscreen{position:relative;aspect-ratio:390/844;overflow:hidden;border-radius:19px;background:#fff}
+.phone iframe{width:390px;height:844px;transform:scale(var(--s,.34))}
+.demo-row .label{display:inline-block;font-size:14px;font-weight:600;color:var(--rosso);margin-bottom:14px}
+.demo-row h3{font-size:34px;margin-bottom:12px}
+.demo-row p{color:var(--muted)}
+.demo-row ul{margin:20px 0 26px;padding:0;list-style:none}
+.demo-row li{padding:6px 0 6px 26px;position:relative}
+.demo-row li:before{content:"";position:absolute;left:2px;top:15px;width:9px;height:9px;background:var(--ocra);clip-path:polygon(20% 0,100% 15%,85% 100%,0 70%)}
+.textlink{font-weight:600;color:var(--verde);text-decoration-thickness:1.5px;text-underline-offset:4px}
+
+/* come funziona */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.steps li{counter-increment:s;padding:28px 28px 0 0}
+.steps li:before{content:counter(s);display:block;font:500 64px/1 var(--display);color:var(--verde);margin-bottom:18px}
+.steps h3{margin-bottom:10px}
+.steps p{color:var(--muted);font-size:17px}
+.timing{margin-top:56px;display:flex;gap:16px 40px;flex-wrap:wrap;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px 28px}
+.timing b{font-family:var(--display);font-size:26px;font-weight:500}
+.timing span{color:var(--muted)}
+
+/* prezzi */
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.price{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:40px;display:flex;flex-direction:column}
+.price.best{background:var(--ink);color:#fff;border-color:var(--ink);position:relative;overflow:hidden}
+.price.best:after{content:"";position:absolute;right:-70px;bottom:-70px;width:220px;height:220px;border-radius:50%;background:url(assets/terrazzo-fitto.svg) 0 0/300px;opacity:.9}
+.pill{align-self:flex-start;font-size:14px;font-weight:600;background:var(--ocra);color:var(--ink);padding:5px 12px;border-radius:999px;margin-bottom:18px;position:relative;z-index:1}
+.price h3{font-size:28px;position:relative;z-index:1}
+.amount{font:500 76px/1 var(--display);margin:20px 0 6px;letter-spacing:-.02em}
+.amount small{font:400 18px var(--body);color:var(--muted);margin-left:6px;letter-spacing:0;white-space:nowrap}
+.best .amount small{color:#B9C1D3}
+.price .terms{color:var(--muted);font-size:16px}
+.best .terms{color:#C9D0DE}
+.price ul{list-style:none;padding:0;margin:26px 0 32px;flex:1}
+.price li{padding:9px 0 9px 32px;position:relative;border-top:1px solid var(--line);font-size:17px}
+.best li{border-top-color:rgba(255,255,255,.14)}
+.price li svg{position:absolute;left:0;top:12px;width:20px;height:20px}
+.price .btn{align-self:flex-start;position:relative;z-index:1}
+.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
+.extras div{padding:22px 0;border-top:1px solid var(--line)}
+.extras b{display:block;font-size:17px;margin-bottom:4px}
+.extras span{color:var(--muted);font-size:16px}
+
+/* sicurezza */
+.safe{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.safe .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
+.safe svg{width:44px;height:44px;margin-bottom:16px}
+.safe h3{font-size:22px;margin-bottom:8px}
+.safe p{color:var(--muted);font-size:16px}
+.about{display:grid;grid-template-columns:4fr 8fr;gap:64px;margin-top:96px;padding-top:56px;border-top:1px solid var(--line)}
+.about p+p{margin-top:14px}
+.about .lead{color:var(--ink2)}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:4fr 8fr;gap:64px}
+.faq .head{position:sticky;top:120px;align-self:start}
+details.q{border-top:1px solid var(--line)}
+details.q:last-child{border-bottom:1px solid var(--line)}
+details.q summary{list-style:none;cursor:pointer;padding:24px 48px 24px 0;font-weight:600;font-size:19px;position:relative}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary:after{content:"";position:absolute;right:6px;top:30px;width:14px;height:14px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);transition:transform .2s}
+details.q[open] summary:after{transform:rotate(-135deg);top:36px}
+details.q p{padding:0 48px 26px 0;color:var(--muted)}
+
+/* contatto */
+.cta{padding:96px 0}
+.cta .card{background:var(--ink);color:#fff;border-radius:20px;padding:64px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;box-shadow:0 30px 70px -30px rgba(20,33,61,.6)}
+.cta h2{color:#fff}
+.cta p{color:#C9D0DE;margin-top:16px;font-size:19px}
+.cta .side{text-align:left}
+.cta .alt{color:#B9C1D3}
+.cta .mail{font:500 30px/1.1 var(--display);color:#fff;text-decoration:none;display:inline-block;margin-top:6px}
+
+footer{background:var(--ink);color:#AEB6C8;font-size:15px;padding:36px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
+
+/* barra mobile */
+.mbar{display:none}
+
+@media (max-width:980px){
+ nav.main{display:none}.mnav{display:block}
+ .hero{padding:24px 0 64px}
+ .hero .wrap{grid-template-columns:minmax(0,1fr);gap:24px}
+ .stage{padding:28px 0 40px}
+ .stage:before{inset:0 -28px}
+ section{padding:72px 0}
+ .fix .wrap,.faq .wrap,.about{grid-template-columns:1fr;gap:28px}
+ .fix .head,.faq .head{position:static}
+ .demo-row,.demo-row:nth-child(even){grid-template-columns:1fr;gap:28px}
+ .demo-row:nth-child(even) .mock{order:0}
+ .steps{grid-template-columns:1fr 1fr;row-gap:20px}
+ .prices,.extras{grid-template-columns:1fr}
+ .safe .grid{grid-template-columns:1fr 1fr}
+ .cta .card{grid-template-columns:1fr;padding:40px 28px}
+}
+@media (max-width:680px){
+ body{font-size:17px}
+ .wrap{padding:0 20px}
+ .stage:before{inset:0 -20px}
+ .lead{font-size:18px}
+ .rows li{grid-template-columns:1fr;gap:12px}
+ .colhead{display:none}
+ .mock{padding:0;display:flex;justify-content:center}
+ .mock .laptop{display:none}
+ .phone{position:relative;width:230px;border-radius:34px;padding:10px}
+ .phone .pscreen{border-radius:25px}
+ .steps{grid-template-columns:1fr}
+ .steps li{padding-right:0}
+ .price{padding:30px 24px}
+ .amount{font-size:64px}
+ .amount small{display:block;margin:10px 0 0}
+ .price.best{order:-1}
+ .steps li{display:grid;grid-template-columns:52px 1fr;column-gap:8px;padding-top:22px}
+ .steps li:before{font-size:44px;margin:0;grid-row:span 2}
+ .phone{width:210px}
+ .safe .grid{grid-template-columns:1fr;gap:28px}
+ .about{margin-top:64px}
+ .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(248,247,244,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
+ .mbar.on{transform:none}
+ .mbar .btn{width:100%}
+ footer{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<div id="mail-banner" role="region" aria-label="La vostra anteprima"><div class="wrap"><p id="mail-txt"></p></div></div>
+
+<header id="top"><div class="wrap">
+ <a class="logo" href="#top" aria-label="Neoverso, torna all'inizio">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#14213D"/><polygon points="9,11 13,9 14,13 10,14" fill="#D6A23E"/><polygon points="19,8 23,10 21,13" fill="#fff"/><polygon points="20,18 25,17 24,22 20,22" fill="#B4473A"/><polygon points="9,19 13,18 14,23 10,24" fill="#2B7A67"/><polygon points="15,15 17,14 18,17 15,17" fill="#fff"/></svg>
+  Neoverso
+ </a>
+ <nav class="main" aria-label="Menu principale">
+  <a href="#esempi">Esempi</a><a href="#come">Come funziona</a><a href="#prezzi">Prezzi</a><a href="#domande">Domande</a>
+  <a class="btn js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
+ </nav>
+ <details class="mnav"><summary>Menu</summary><div>
+  <a href="#esempi">Esempi</a><a href="#come">Come funziona</a><a href="#prezzi">Prezzi</a><a href="#domande">Domande</a><a class="js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
+ </div></details>
+</div></header>
+
+<main id="contenuto">
+<div class="hero"><div class="wrap">
+ <div>
+  <h1>Il vostro sito, rifatto. Prima lo vedete, poi decidete.</h1>
+  <p class="lead">Rifacciamo gratis la homepage della vostra attività e ve la mostriamo. Se vi piace, il sito completo costa 500&nbsp;€, con l'acconto solo dopo averla vista.</p>
+  <a class="btn js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
+  <p class="note">Nessun pagamento finché non avete visto l'anteprima. Rispondiamo entro un giorno lavorativo.</p>
+ </div>
+ <div class="stage">
+  <div class="laptop">
+   <div class="bezel">
+    <div class="screen ba" data-w="1280">
+     <span class="tag l">Dopo</span><span class="tag r">Prima</span>
+     <div class="layer"><iframe src="../esempi/falegnameria-larice/prima.html" title="Esempio di sito datato: Falegnameria Larice" tabindex="-1" loading="eager"></iframe></div>
+     <div class="layer front"><iframe src="../esempi/falegnameria-larice/" title="Esempio di sito rifatto: Falegnameria Larice" tabindex="-1" loading="eager"></iframe></div>
+     <div class="handle"></div>
+     <input type="range" min="0" max="100" value="58" aria-label="Trascinate per confrontare il sito prima e dopo">
+    </div>
+   </div>
+   <div class="base"></div>
+  </div>
+  <p class="caption">Trascinate per confrontare. Esempio dimostrativo con un'attività inventata.</p>
+ </div>
+</div></div>
+
+<section class="fix" aria-labelledby="fix-t"><div class="wrap">
+ <div class="head">
+  <h2 id="fix-t">Un sito vecchio vi fa perdere clienti, anche se non ve ne accorgete</h2>
+  <p class="lead">Se vi riconoscete in almeno una di queste voci, l'anteprima vi mostra la differenza.</p>
+ </div>
+ <div>
+  <div class="colhead" aria-hidden="true"><span>Oggi</span><span>Con il nuovo sito</span></div>
+  <ul class="rows">
+   <li><div class="bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z" fill="#B4473A"/><path d="M12 10v4.5M12 17.2v.3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><span>Il browser scrive «Non sicuro» accanto al vostro indirizzo</span></div><div class="good"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2B7A67"/><path d="m7.5 12.5 3 3 6-6.5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>L'avviso sparisce</b><span>Connessione sicura inclusa: chi vi visita si fida.</span></p></div></li>
+   <li><div class="bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z" fill="#B4473A"/><path d="M12 10v4.5M12 17.2v.3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><span>Dal telefono bisogna ingrandire per leggere</span></div><div class="good"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2B7A67"/><path d="m7.5 12.5 3 3 6-6.5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>Si legge bene su ogni telefono</b><span>La maggior parte di chi vi cerca lo fa dal cellulare.</span></p></div></li>
+   <li><div class="bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z" fill="#B4473A"/><path d="M12 10v4.5M12 17.2v.3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><span>Per chiamarvi bisogna copiare il numero</span></div><div class="good"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2B7A67"/><path d="m7.5 12.5 3 3 6-6.5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>Vi chiamano con un tocco</b><span>Telefono, WhatsApp e indicazioni stradali sempre a portata di dito.</span></p></div></li>
+   <li><div class="bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z" fill="#B4473A"/><path d="M12 10v4.5M12 17.2v.3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><span>Orari, servizi o numeri non sono più giusti</span></div><div class="good"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2B7A67"/><path d="m7.5 12.5 3 3 6-6.5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>Informazioni sempre aggiornate</b><span>Con la manutenzione le cambiamo noi quando serve.</span></p></div></li>
+   <li><div class="bad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z" fill="#B4473A"/><path d="M12 10v4.5M12 17.2v.3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><span>Chi cerca il vostro servizio in zona trova prima gli altri</span></div><div class="good"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2B7A67"/><path d="m7.5 12.5 3 3 6-6.5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>Impostato come chiede Google</b><span>Titoli, descrizioni e indirizzo scritti per chi cerca nella vostra zona. Il primo posto non lo può garantire nessuno.</span></p></div></li>
+  </ul>
+ </div>
+</div></section>
+
+<section id="esempi" aria-labelledby="es-t"><div class="wrap">
+ <div class="head">
+  <h2 id="es-t">Tre esempi di come lavoriamo</h2>
+  <p class="lead">Sono attività inventate, così potete vedere il risultato senza esporre nessuno. Il vostro sito avrà i vostri testi, le vostre foto e il vostro carattere.</p>
+ </div>
+
+ <div class="demos">
+ <div class="demo-row">
+  <div class="mock">
+   <div class="laptop"><div class="bezel"><div class="screen" data-w="1280"><div class="layer"><iframe src="../esempi/falegnameria-larice/" title="Anteprima desktop: Falegnameria Larice" tabindex="-1" loading="lazy"></iframe></div></div></div><div class="base"></div></div>
+   <div class="phone"><div class="pscreen" data-w="390"><iframe src="../esempi/falegnameria-larice/" title="Anteprima telefono: Falegnameria Larice" tabindex="-1" loading="lazy"></iframe></div></div>
+  </div>
+  <div>
+   <span class="label">Esempio dimostrativo, attività inventata</span>
+   <h3>Falegnameria Larice</h3>
+   <p>Un artigiano che lavora su misura: il sito deve far vedere il legno e far chiedere un sopralluogo.</p>
+   <ul><li>Foto grandi dei lavori al posto dei testi lunghi</li><li>Come lavorano, in quattro passaggi</li><li>Telefono in evidenza su ogni pagina</li></ul>
+   <a class="textlink" href="../esempi/falegnameria-larice/" target="_blank" rel="noopener">Apri l'esempio</a>
+  </div>
+ </div>
+
+ <div class="demo-row">
+  <div class="mock">
+   <div class="laptop"><div class="bezel"><div class="screen" data-w="1280"><div class="layer"><iframe src="../esempi/trattoria-al-cortivo/" title="Anteprima desktop: Trattoria Al Cortivo" tabindex="-1" loading="lazy"></iframe></div></div></div><div class="base"></div></div>
+   <div class="phone"><div class="pscreen" data-w="390"><iframe src="../esempi/trattoria-al-cortivo/" title="Anteprima telefono: Trattoria Al Cortivo" tabindex="-1" loading="lazy"></iframe></div></div>
+  </div>
+  <div>
+   <span class="label">Esempio dimostrativo, attività inventata</span>
+   <h3>Trattoria Al Cortivo</h3>
+   <p>Una trattoria di famiglia: chi apre il sito vuole sapere cosa si mangia, quando siete aperti e come prenotare.</p>
+   <ul><li>Menu e orari leggibili dal telefono</li><li>Prenotazione con una telefonata</li><li>Indirizzo e parcheggio a colpo d'occhio</li></ul>
+   <a class="textlink" href="../esempi/trattoria-al-cortivo/" target="_blank" rel="noopener">Apri l'esempio</a>
+  </div>
+ </div>
+
+ <div class="demo-row">
+  <div class="mock">
+   <div class="laptop"><div class="bezel"><div class="screen" data-w="1280"><div class="layer"><iframe src="../esempi/officina-ventisette/" title="Anteprima desktop: Officina Ventisette" tabindex="-1" loading="lazy"></iframe></div></div></div><div class="base"></div></div>
+   <div class="phone"><div class="pscreen" data-w="390"><iframe src="../esempi/officina-ventisette/" title="Anteprima telefono: Officina Ventisette" tabindex="-1" loading="lazy"></iframe></div></div>
+  </div>
+  <div>
+   <span class="label">Esempio dimostrativo, attività inventata</span>
+   <h3>Officina Ventisette</h3>
+   <p>Un'officina meccanica: il cliente vuole fidarsi, capire i servizi e chiamare subito.</p>
+   <ul><li>Promessa chiara in apertura</li><li>Servizi spiegati in parole semplici</li><li>Revisione e orari sempre in vista</li></ul>
+   <a class="textlink" href="../esempi/officina-ventisette/" target="_blank" rel="noopener">Apri l'esempio</a>
+  </div>
+ </div>
+ </div>
+</div></section>
+
+<section id="come" aria-labelledby="come-t" style="padding-top:40px"><div class="wrap">
+ <div class="head"><h2 id="come-t">Come funziona</h2><p class="lead">Vedete il risultato prima di spendere un euro.</p></div>
+ <ol class="steps">
+  <li><h3>Anteprima gratuita</h3><p>Rifacciamo la homepage partendo dai contenuti del vostro sito attuale e vi mandiamo il link.</p></li>
+  <li><h3>Decidete voi</h3><p>Vi piace? Versate l'acconto di 250 € e ci mandate foto e informazioni. Non vi piace? Non dovete fare niente.</p></li>
+  <li><h3>Sito completo</h3><p>Realizziamo tutte le pagine. Potete chiedere modifiche due volte, comprese nel prezzo.</p></li>
+  <li><h3>Online</h3><p>Pubblichiamo il sito sul vostro dominio. Il saldo si paga solo alla consegna.</p></li>
+ </ol>
+ <div class="timing"><b>7 giorni</b><span>dal momento in cui riceviamo foto e informazioni.</span><b>48 ore</b><span>con la consegna express, +200 €.</span></div>
+</div></section>
+
+<section id="prezzi" aria-labelledby="pr-t" style="padding-top:24px"><div class="wrap">
+ <div class="head"><h2 id="pr-t">Un prezzo fisso, scritto qui</h2><p class="lead">Niente preventivi da rincorrere. Scegliete se gestire il sito da soli o lasciarlo a noi.</p></div>
+ <div class="prices">
+  <div class="price">
+   <h3>Sito completo</h3>
+   <div class="amount">500 €</div>
+   <p class="terms">250 € di acconto se l'anteprima vi piace, 250 € alla consegna</p>
+   <ul>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#2B7A67" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Homepage e tutte le pagine della vostra attività</li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#2B7A67" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Due giri di modifiche compresi</li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#2B7A67" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Il dominio resta intestato a voi</li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#2B7A67" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Vi consegniamo il sito in un file, pronto da caricare sul vostro spazio web</li>
+   </ul>
+   <a class="btn js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
+  </div>
+  <div class="price best">
+   <span class="pill">Consigliato</span>
+   <h3>Sito + 12 mesi di manutenzione</h3>
+   <div class="amount">700 €<small>invece di 800 €</small></div>
+   <p class="terms">Chiavi in mano: lo mettiamo online e ce ne occupiamo noi per un anno</p>
+   <ul>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#D6A23E" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Tutto quello del sito completo</li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#D6A23E" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Sito online e controllato da noi, voi non toccate niente</li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#D6A23E" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Un aggiornamento al mese: orari, prezzi, notizie</li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#D6A23E" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Acconto anche qui solo se l'anteprima vi piace</li>
+   </ul>
+   <a class="btn light js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20con%20manutenzione&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Voglio il pacchetto completo</a>
+  </div>
+ </div>
+ <div class="extras">
+  <div><b>Preferite pagare al mese?</b><span>Manutenzione a 29 € al mese, oppure 300 € all'anno. La mensile si disdice quando volete, senza preavviso.</span></div>
+  <div><b>Se disdite</b><span>Il servizio termina 30 giorni dopo l'ultimo pagamento: vi mandiamo il sito in un file e gli accessi al dominio.</span></div>
+  <div><b>Avete fretta?</b><span>Con la consegna express il sito è online in 48 ore, a 200 € in più.</span></div>
+ </div>
+</div></section>
+
+<section class="safe" aria-labelledby="safe-t"><div class="wrap">
+ <div class="head"><h2 id="safe-t">Pagate in sicurezza</h2></div>
+ <div class="grid">
+  <div><svg viewBox="0 0 34 34" aria-hidden="true"><rect x="3" y="7" width="28" height="20" rx="3" fill="none" stroke="#14213D" stroke-width="2"/><circle cx="17" cy="17" r="4.5" fill="#D6A23E"/></svg><h3>Prima vedete</h3><p>Nessun pagamento finché non avete visto l'anteprima del vostro sito.</p></div>
+  <div><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M6 17h22M6 17l6-6M6 17l6 6" stroke="#14213D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="24" y="12" width="6" height="10" rx="1.5" fill="#2B7A67"/></svg><h3>Saldo alla consegna</h3><p>Metà del prezzo la pagate solo quando il sito è pronto e vi piace.</p></div>
+  <div><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 4 6 8v8c0 7 5 12 11 14 6-2 11-7 11-14V8L17 4z" fill="none" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/><path d="m12 17 3.5 3.5L22 13" stroke="#B4473A" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Il dominio è vostro</h3><p>Sempre intestato a voi: se un giorno cambiate fornitore, lo portate con voi.</p></div>
+  <div><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M9 4h12l6 6v20H9z" fill="none" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/><path d="M13 17h10M13 22h7" stroke="#D6A23E" stroke-width="2.2" stroke-linecap="round"/></svg><h3>Tutto per iscritto</h3><p>Prima di iniziare ricevete un riepilogo con cosa è compreso e il prezzo, e fattura per ogni pagamento.</p></div>
+ </div>
+ <div class="about">
+  <h2 style="font-size:clamp(30px,3.4vw,42px)">Chi c'è dietro</h2>
+  <div>
+   <p class="lead">Neoverso è un progetto nuovo e piccolo, che lavora con attività del Veneto. Invece di un elenco di clienti, vi mostriamo il lavoro fatto sul vostro sito.</p>
+   <p class="lead">Vi risponde la persona che vi ha scritto, dall'anteprima alla pubblicazione, entro un giorno lavorativo.</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="domande" class="faq" aria-labelledby="faq-t"><div class="wrap">
+ <div class="head">
+  <h2 id="faq-t">Domande frequenti</h2>
+  <p class="lead" style="font-size:18px">Non trovate la vostra? Scrivete a <a href="mailto:info@neoverso.it">info@neoverso.it</a>.</p>
+ </div>
+ <div>
+  <details class="q"><summary>L'anteprima è davvero gratuita?</summary><p>Sì. Vi mostriamo la nuova homepage senza chiedervi nulla. Se non vi interessa, basta non rispondere.</p></details>
+  <details class="q"><summary>Come avete trovato il mio sito?</summary><p>Cercando su internet attività della vostra zona e del vostro settore: l'indirizzo email era pubblicato sul vostro sito. Vi scriviamo una volta sola e non vi ricontattiamo. Se preferite non ricevere più nulla, ditecelo e vi togliamo subito dalla lista.</p></details>
+  <details class="q"><summary>L'anteprima la vedono tutti?</summary><p>No. Ha la scritta «Bozza di proposta», non compare su Google e la cancelliamo dopo 30 giorni se non vi interessa. Se volete toglierla prima, basta un'email.</p></details>
+  <details class="q"><summary>Devo scrivere io i testi o fare le foto?</summary><p>No. Partiamo dai testi del vostro sito e li sistemiamo noi; a voi chiediamo di controllare che sia tutto giusto. Le vostre foto sono le migliori, anche fatte col telefono: se non le avete, usiamo immagini adatte al vostro lavoro.</p></details>
+  <details class="q"><summary>Il dominio e le email restano nostri?</summary><p>Sì. Il dominio è sempre intestato a voi e le vostre caselle email restano dove sono e funzionano come prima: cambia solo il sito.</p></details>
+  <details class="q"><summary>Quanto tempo ci vuole?</summary><p>Il sito completo è pronto in 7 giorni da quando riceviamo foto e informazioni. Con la consegna express (+200 €) è online in 48 ore.</p></details>
+  <details class="q"><summary>E se dopo vogliamo delle modifiche?</summary><p>Durante il lavoro avete due giri di modifiche compresi. Dopo la consegna, con la manutenzione è compreso un aggiornamento al mese; per lavori più grandi vi diciamo prima quanto costa.</p></details>
+  <details class="q"><summary>Cosa succede se non prendiamo la manutenzione, o la disdiciamo?</summary><p>Vi consegniamo il sito completo in un file pronto da caricare sul vostro spazio web, da voi o dal vostro tecnico. La manutenzione mensile si disdice senza preavviso: termina 30 giorni dopo l'ultimo pagamento e vi mandiamo il sito e gli accessi al dominio.</p></details>
+  <details class="q"><summary>Fate anche negozi online o prenotazioni?</summary><p>No: facciamo siti di presentazione per artigiani, studi, officine e ristoranti, ed è per questo che possiamo tenere un prezzo fisso.</p></details>
+ </div>
+</div></section>
+
+<div class="cta terrazzo"><div class="wrap">
+ <div class="card">
+  <div>
+   <h2 id="cta-t">Vi è piaciuta l'anteprima?</h2>
+   <p id="cta-p">Rispondete alla nostra email oppure scriveteci qui: vi spieghiamo i passi successivi, senza impegno.</p>
+  </div>
+  <div class="side">
+   <a class="btn light js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
+   <p class="alt">oppure scrivete a</p>
+   <a class="mail" href="mailto:info@neoverso.it">info@neoverso.it</a>
+  </div>
+ </div>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+ <span>© 2026 Neoverso. Siti per piccole attività del Veneto.</span>
+ <span><a href="mailto:info@neoverso.it">info@neoverso.it</a>&nbsp;&nbsp;&nbsp;<a href="privacy.html">Privacy e cookie</a></span>
+</div></footer>
+
+<div class="mbar" id="mbar"><a class="btn js-mail" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a></div>
+
+<script>
+(function(){
+ // scala gli iframe dentro le cornici
+ function fit(){document.querySelectorAll('[data-w]').forEach(function(el){el.style.setProperty('--s',el.clientWidth/+el.dataset.w);});}
+ fit(); if(window.ResizeObserver){var ro=new ResizeObserver(fit);document.querySelectorAll('[data-w]').forEach(function(el){ro.observe(el);});} else window.addEventListener('resize',fit);
+
+ // confronto prima/dopo
+ var ba=document.querySelector('.ba'),r=ba.querySelector('input');
+ function set(v){ba.style.setProperty('--x',v+'%');}
+ r.addEventListener('input',function(){set(r.value);});
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  var t0=null,from=8,to=58;set(from);
+  setTimeout(function(){requestAnimationFrame(function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1400,1),e=1-Math.pow(1-p,3);var v=from+(to-from)*e;set(v);r.value=v;if(p<1)requestAnimationFrame(step);});},900);
+ }
+
+ // header e barra mobile
+ var h=document.getElementById('top'),bar=document.getElementById('mbar'),hero=document.querySelector('.hero');
+ function onScroll(){var y=scrollY;h.classList.toggle('scrolled',y>8);bar.classList.toggle('on',y>hero.offsetHeight-120);}
+ addEventListener('scroll',onScroll,{passive:true});onScroll();
+ document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').removeAttribute('open');});});
+
+ // arrivo dall'email: ?a=nome-anteprima
+ var p=new URLSearchParams(location.search).get('a');
+ if(p&&/^[a-z0-9-]{2,60}$/.test(p)){
+  var t=document.getElementById('mail-txt');
+  t.textContent='Abbiamo preparato un’anteprima della nuova homepage per la vostra attività. ';
+  var a=document.createElement('a');a.href='https://iaki86.github.io/proposte/'+p+'/';a.textContent='Rivedete la vostra anteprima';t.appendChild(a);
+  t.appendChild(document.createTextNode('. Vi piace? Basta rispondere alla nostra email. Non vi interessa? Non dovete fare niente: non vi ricontatteremo e l’anteprima verrà cancellata entro 30 giorni.'));
+  document.getElementById('mail-banner').classList.add('on');
+ } else {
+  document.getElementById('cta-t').textContent='Volete vedere il vostro sito rifatto?';
+  document.getElementById('cta-p').textContent='Mandateci l’indirizzo del vostro sito: prepariamo gratis l’anteprima della nuova homepage e ve la mandiamo per email.';
+ }
+})();
+</script>
+</body>
+</html>
