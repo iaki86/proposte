@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>Neoverso · Anteprima gratis, sito completo a 500 €</title>
-<meta name="description" content="Rifacciamo gratis la homepage della vostra attività e ve la mostriamo. Se vi piace, il sito completo costa 500 €, con l'acconto solo dopo averla vista.">
+<title>Neoverso · Siti per piccole attività del Veneto, anteprima gratis</title>
+<meta name="description" content="Siti per artigiani, trattorie, officine e studi del Veneto. Rifacciamo gratis la pagina iniziale del vostro sito e ve la mostriamo. Se vi piace, il sito completo costa 500 €, con l'acconto solo dopo averla vista.">
 <meta property="og:title" content="Neoverso · Anteprima gratis, sito completo a 500 €">
 <meta property="og:description" content="Prima vedete il vostro nuovo sito, poi decidete. Prezzo fisso, dominio sempre vostro.">
 <meta property="og:image" content="og.png">
@@ -25,7 +25,7 @@
 @property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
 :root{
  --bg:#000;--line:rgba(255,255,255,.10);--line2:rgba(255,255,255,.18);
- --text:#F2F3F5;--muted:#9EA3AE;--dim:#6E7380;--teal:#7FE3D6;--gold:#F2C46D;
+ --text:#F2F3F5;--muted:#A9AEB8;--dim:#8A8F9B;--teal:#7FE3D6;--gold:#F2C46D;
  --f:Instrument,system-ui,-apple-system,"Segoe UI",sans-serif;--wrap:1160px
 }
 *{box-sizing:border-box}
@@ -34,12 +34,13 @@ body{margin:0;overflow-x:clip;background:var(--bg);color:var(--text);font:400 18
 a{color:inherit}
 img,svg,canvas{display:block}
 p{margin:0}
-h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.03em}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.03em;text-wrap:balance}
+p,li{text-wrap:pretty}
 :focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
 .skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:8px 14px;z-index:99}
 .skip:focus{left:8px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
-.silver{background:linear-gradient(180deg,#FFFFFF 20%,#B9BFCC 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.silver{background:linear-gradient(180deg,#FFFFFF 20%,#B9BFCC 95%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 h2{font-size:clamp(36px,5vw,64px);line-height:1.04}
 .lead{font-size:20px;color:var(--muted);max-width:56ch}
 .btn{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#000;text-decoration:none;font-weight:600;font-size:17px;padding:15px 28px;border-radius:999px;transition:transform .2s,box-shadow .2s}
@@ -72,28 +73,34 @@ nav.main .btn{color:#000;padding:9px 18px;font-size:14px}
 #lagoon{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:0;transition:opacity 2s ease}
 #lagoon.on{opacity:1}
 .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 40% at 50% 74%,rgba(70,120,160,.18),transparent 70%),#000}
-.hero .wrap{width:100%;padding-top:clamp(56px,11vh,120px);text-align:center}
-.hero h1{font-size:clamp(42px,6.4vw,92px);line-height:.98;letter-spacing:-.045em}
+.hero .wrap{width:100%;padding-top:clamp(28px,6vh,80px);padding-bottom:clamp(170px,26vh,280px);text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:#D9C9A8;margin-bottom:24px}
+.eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+.hero .lead b{color:#fff;font-weight:600}
+.hero h1{font-size:clamp(40px,5.9vw,86px);line-height:.98;letter-spacing:-.045em}
 .hero h1 span{display:block}
 .hero h1 .l2{color:#8D93A1}
-.hero .lead{margin:28px auto 34px;max-width:46ch;color:#B3B8C2}
-.hero .note{margin-top:16px}
-.rise{opacity:0;transform:translateY(18px);filter:blur(6px);animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards}
-.d1{animation-delay:.15s}.d2{animation-delay:.35s}.d3{animation-delay:.6s}.d4{animation-delay:.8s}
+.hero .lead{margin:24px auto 30px;max-width:54ch;color:#B3B8C2}
+.hero .note{margin-top:18px;font-size:16px;color:#B3B8C2;text-shadow:0 1px 14px #000}
+.hero .note a{color:#fff}
+@media (max-height:720px){.scrollhint{display:none}}
+.rise{opacity:0;transform:translateY(18px);filter:blur(6px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.d0{animation-delay:0s}.d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.38s}.d4{animation-delay:.5s}
 @keyframes rise{to{opacity:1;transform:none;filter:none}}
 .scrollhint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-size:13px;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:8px}
 .scrollhint i{width:1px;height:34px;background:linear-gradient(var(--teal),transparent);animation:drip 2.4s ease-in-out infinite}
 @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-.story{position:relative;height:420vh}
+.story{position:relative;height:320vh}
 .sticky{position:sticky;top:64px;height:calc(100svh - 64px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3.5vh,36px);overflow:hidden}
 .sticky:before{content:"";position:absolute;width:70vw;height:50vh;left:15vw;top:20vh;background:radial-gradient(closest-side,rgba(127,227,214,.10),transparent);filter:blur(30px);pointer-events:none}
 .story.p2 .sticky:before,.story.p3 .sticky:before{background:radial-gradient(closest-side,rgba(242,196,109,.13),transparent)}
 .win{--ww:min(980px,92vw);--wh:min(600px,56vw,58svh);position:relative;width:var(--ww);height:var(--wh);border-radius:16px;background:#1A1B20;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 40px 120px -30px rgba(127,227,214,.25),0 30px 80px rgba(0,0,0,.8);overflow:hidden;transition:width 1s cubic-bezier(.7,0,.2,1),height 1s cubic-bezier(.7,0,.2,1),border-radius 1s;display:flex;flex-direction:column}
-.story.p3 .win{--ww:min(290px,64vw);--wh:min(600px,62svh);border-radius:42px;box-shadow:0 0 0 1px rgba(255,255,255,.16),0 0 0 9px #16171C,0 0 0 10px rgba(255,255,255,.12),0 40px 120px -30px rgba(242,196,109,.35)}
+.story.p3 .win{--ww:calc(var(--wh) * .48);border-radius:42px;box-shadow:0 0 0 1px rgba(255,255,255,.16),0 0 0 9px #16171C,0 0 0 10px rgba(255,255,255,.12),0 40px 120px -30px rgba(242,196,109,.35)}
 .bar{flex:none;height:38px;display:flex;align-items:center;gap:14px;padding:0 14px;background:#202127;border-bottom:1px solid rgba(255,255,255,.06);transition:height .6s}
 .dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:#3A3B42}
-.addr{flex:1;max-width:460px;margin:0 auto;height:24px;border-radius:7px;background:#2B2C33;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:#A9AEB8;white-space:nowrap;overflow:hidden}
+.addr{flex:1;min-width:0;max-width:460px;margin:0 auto;height:24px;border-radius:7px;background:#2B2C33;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 10px;font-size:12px;color:#A9AEB8;white-space:nowrap;overflow:hidden}
+.url-old{overflow:hidden;text-overflow:ellipsis;min-width:0}
 .addr svg{width:13px;height:13px;flex:none}
 .warn{display:flex;align-items:center;gap:5px;color:#FF8A7A;font-weight:500}
 .lockico,.url-new{display:none}
@@ -108,7 +115,7 @@ nav.main .btn{color:#000;padding:9px 18px;font-size:14px}
 .keep span{font:500 1.9cqw/1 var(--f);color:#E8EAEE;padding:1.6cqh 2cqw;border-radius:99px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(127,227,214,.35),0 0 2.5cqw rgba(127,227,214,.15);opacity:0;transform:scale(.85) translateY(2cqh);transition:opacity .6s,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:0s}
 .story.p1 .keep span{opacity:1;transform:none;transition-delay:calc(.45s + var(--i)*.12s)}
 .keep span b{color:var(--teal);font-weight:600;margin-right:.8cqw}
-@container (max-width:420px){.keep{padding:0 8cqw}.keep span{font-size:4.6cqw}}
+@container (orientation:portrait){.keep{padding:0 8cqw}.keep span{font-size:4.6cqw}}
 
 .old{position:absolute;inset:0;font-family:Verdana,Arial,sans-serif;color:#333}
 .o{position:absolute;transition:transform 1.1s cubic-bezier(.6,0,.3,1),opacity .9s,filter .9s;transition-delay:var(--dl,0s)}
@@ -135,30 +142,30 @@ nav.main .btn{color:#000;padding:9px 18px;font-size:14px}
 .n-nav span{display:flex;gap:2.4cqw;align-items:center;color:#CDBFAE}
 .n-nav em{font-style:normal}
 .n-nav i{font-style:normal;background:#F6EFE6;color:#1A120B;padding:.8cqh 1.4cqw;border-radius:99px;font-weight:600}
-.n-h{font:500 5.8cqw/1 Bodoni,serif;letter-spacing:-.02em;margin-top:6cqh;max-width:12ch;--dl:.1s}
-.n-p{font-size:1.7cqw;color:#CDBFAE;margin-top:2.4cqh;max-width:40ch;--dl:.2s}
-.n-b{display:flex;gap:1.2cqw;margin-top:3.6cqh;font-size:1.45cqw;font-weight:600;--dl:.3s}
+.n-h{font:500 4.7cqw/1.02 Bodoni,serif;letter-spacing:-.02em;margin-top:5cqh;max-width:15ch;--dl:.1s}
+.n-p{font-size:1.7cqw;color:#CDBFAE;margin-top:2.4cqh;max-width:52ch;--dl:.2s}
+.n-b{display:flex;gap:1.2cqw;margin-top:3.6cqh;margin-bottom:4cqh;font-size:1.45cqw;font-weight:600;--dl:.3s}
 .n-b span{padding:1.5cqh 2.2cqw;border-radius:99px;background:#D88A45;color:#1A120B}
 .n-b span+span{background:transparent;color:#F6EFE6;box-shadow:inset 0 0 0 1px rgba(246,239,230,.4)}
 .n-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4cqw;margin-top:auto;--dl:.42s}
-.n-cards div{height:12cqh;border-radius:1.2cqw;padding:1.4cqh 1.2cqw;font-size:1.35cqw;font-weight:600;display:flex;align-items:flex-end;background:repeating-linear-gradient(97deg,rgba(255,255,255,.05) 0 .3cqw,transparent .3cqw 1.1cqw),linear-gradient(135deg,#5B3D25,#B9824F)}
+.n-cards div{height:13cqh;border-radius:1.2cqw;padding:1.4cqh 1.2cqw;font-size:1.35cqw;font-weight:600;display:flex;align-items:flex-end;background:repeating-linear-gradient(97deg,rgba(255,255,255,.05) 0 .3cqw,transparent .3cqw 1.1cqw),linear-gradient(135deg,#5B3D25,#B9824F)}
 .n-cards div:nth-child(2){background:repeating-linear-gradient(83deg,rgba(255,255,255,.05) 0 .3cqw,transparent .3cqw 1.3cqw),linear-gradient(135deg,#3F2C1E,#8C6440)}
 .n-cards div:nth-child(3){background:repeating-linear-gradient(101deg,rgba(255,255,255,.06) 0 .25cqw,transparent .25cqw 1cqw),linear-gradient(135deg,#6E4E30,#D2A673)}
 .n-call{display:none}
 .sweep{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.22) 48%,rgba(127,227,214,.15) 52%,transparent 65%);transform:translateX(-120%);opacity:0}
 .story.p2 .sweep{animation:sweep 1.4s .25s cubic-bezier(.5,0,.3,1)}
 @keyframes sweep{0%{transform:translateX(-120%);opacity:1}100%{transform:translateX(120%);opacity:1}}
-@container (max-width:420px){
+@container (orientation:portrait){
  .new{padding:5cqh 6cqw}
  .n-nav{font-size:4cqw}.n-nav b{font-size:6.4cqw}.n-nav em{display:none}.n-nav i{padding:1cqh 3.6cqw}
  .n-h{font-size:11.5cqw;margin-top:4cqh}
  .n-p{font-size:4.4cqw;margin-top:2cqh}
  .n-b{display:none}
- .n-cards{grid-template-columns:1fr 1fr;gap:3cqw;margin-top:4cqh}
- .n-cards div{height:10cqh;border-radius:4cqw;font-size:3.8cqw;padding:1.4cqh 3cqw}
+ .n-cards{grid-template-columns:1fr 1fr;gap:3cqw;margin-top:3cqh}
+ .n-cards div{height:9cqh;border-radius:4cqw;font-size:3.8cqw;padding:1.4cqh 3cqw}
  .n-cards div:nth-child(3){grid-column:span 2;height:7cqh}
  .n-call{display:flex;margin-top:auto;justify-content:center;align-items:center;gap:3cqw;background:#D88A45;color:#1A120B;font-weight:600;font-size:5.2cqw;padding:2.3cqh 0;border-radius:99px;position:relative;--dl:.55s}
- .n-call:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(216,138,69,.6);animation:ring 1.8s 1.2s infinite}
+ .n-call:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(216,138,69,.6);animation:ring 1.8s 1.2s 3}
  .n-call svg{width:5.4cqw;height:5.4cqw}
 }
 @keyframes ring{to{box-shadow:0 0 0 5cqw rgba(216,138,69,0)}}
@@ -169,9 +176,12 @@ nav.main .btn{color:#000;padding:9px 18px;font-size:14px}
 .pips{display:flex;gap:8px}
 .pips i{width:22px;height:3px;border-radius:2px;background:rgba(255,255,255,.18);transition:background .4s,width .4s}
 .story.p0 .pips i:nth-child(1),.story.p1 .pips i:nth-child(2),.story.p2 .pips i:nth-child(3),.story.p3 .pips i:nth-child(4){background:#fff;width:38px}
-.democap{position:absolute;bottom:14px;font-size:12px;color:var(--dim)}
+.democap{order:-1;font-size:14px;color:var(--muted)}
+.skipstory{position:absolute;right:24px;top:18px;font-size:14px;color:var(--muted);text-decoration:none}
+.skipstory:hover{color:#fff}
 
 section{position:relative;padding:130px 0}
+#esempi:before,#prezzi:before,.final:after{content:"";position:absolute;top:0;left:50%;width:min(760px,80%);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(160,190,255,.45),rgba(242,196,109,.35),transparent);box-shadow:0 0 18px rgba(127,180,255,.35)}
 .head{margin-bottom:64px}
 .head .lead{margin-top:20px}
 .center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
@@ -184,9 +194,9 @@ section{position:relative;padding:130px 0}
 .demo{padding:34px 30px 30px;display:flex;flex-direction:column;min-height:390px}
 .demo .glow{position:absolute;left:-20%;right:-20%;top:-60%;height:90%;background:radial-gradient(closest-side,var(--c),transparent);opacity:.35;filter:blur(20px);pointer-events:none;transition:opacity .4s}
 .demo:hover .glow{opacity:.6}
-.demo small{font-size:13px;color:var(--dim);position:relative}
+.demo small{font-size:14px;color:var(--muted);position:relative}
 .demo h3{font-size:30px;margin:14px 0 10px;position:relative;letter-spacing:-.02em}
-.demo p{color:var(--muted);font-size:16px;position:relative}
+.demo p{color:var(--muted);font-size:17px;line-height:1.55;position:relative}
 .demo ul{list-style:none;padding:0;margin:22px 0 28px;position:relative}
 .demo li{font-size:15px;color:#C9CDD5;padding:9px 0;border-top:1px solid var(--line)}
 .demo a{margin-top:auto;align-self:flex-start;position:relative;font-weight:600;font-size:16px;text-decoration:none;color:#fff;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:2px}
@@ -198,43 +208,48 @@ section{position:relative;padding:130px 0}
 .steps li{counter-increment:s}
 .steps li:before{content:counter(s);display:block;font-size:15px;font-weight:600;color:#000;background:#fff;width:30px;height:30px;border-radius:50%;text-align:center;line-height:30px;margin-bottom:22px}
 .steps h3{font-size:23px;margin-bottom:10px;letter-spacing:-.02em}
-.steps p{color:var(--muted);font-size:16px}
+.steps p{color:var(--muted);font-size:17px;line-height:1.55}
 .timing{display:flex;justify-content:center;gap:12px 56px;flex-wrap:wrap;margin-top:72px;text-align:center}
 .timing div b{display:block;font-size:clamp(44px,6vw,72px);line-height:1.05;letter-spacing:-.04em}
 .timing div span{color:var(--muted);font-size:16px}
 
-.prices{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.prices{position:relative;isolation:isolate;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.prices:before{content:"";position:absolute;left:10%;right:10%;top:-60px;height:420px;z-index:-1;background:radial-gradient(50% 55% at 62% 40%,rgba(242,196,109,.11),transparent 70%);filter:blur(10px)}
 .price{padding:44px 40px 40px;display:flex;flex-direction:column}
 .price h3{font-size:24px;letter-spacing:-.02em}
 .amount{font-size:clamp(64px,8vw,96px);font-weight:600;line-height:1.05;letter-spacing:-.05em;margin:22px 0 10px}
-.amount small{font-size:17px;font-weight:400;letter-spacing:0;color:var(--dim);-webkit-text-fill-color:var(--dim);margin-left:12px;white-space:nowrap;text-decoration:line-through}
-.terms{color:var(--muted);font-size:16px}
+.amount small{font-size:17px;font-weight:400;letter-spacing:0;color:#D9C9A8;-webkit-text-fill-color:#D9C9A8;margin-left:12px;white-space:nowrap}
+.terms{color:var(--muted);font-size:17px;line-height:1.55}
 .price ul{list-style:none;padding:0;margin:28px 0 34px;flex:1}
 .price li{padding:11px 0 11px 30px;border-top:1px solid var(--line);font-size:16px;position:relative;color:#D6D9DF}
 .price li:before{content:"";position:absolute;left:2px;top:19px;width:12px;height:7px;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
 .price .btn{align-self:flex-start}
 .best{border-color:transparent;background:linear-gradient(180deg,rgba(127,227,214,.07),rgba(255,255,255,.02))}
-.best:after{content:"";position:absolute;inset:0;border-radius:22px;padding:1px;background:conic-gradient(from var(--a),rgba(255,255,255,.12) 0 62%,var(--teal) 74%,var(--gold) 84%,rgba(255,255,255,.12) 94%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 7s linear infinite;pointer-events:none}
-@keyframes spin{to{--a:360deg}}
+.best:after{content:"";position:absolute;inset:0;border-radius:22px;padding:1px;--a:200deg;background:conic-gradient(from var(--a),rgba(255,255,255,.14) 0 62%,var(--teal) 74%,var(--gold) 84%,rgba(255,255,255,.14) 94%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.best.in:after{animation:spin 2.6s cubic-bezier(.6,0,.2,1) .4s 1 both}
+@keyframes spin{from{--a:-160deg}to{--a:200deg}}
 .best li:before{border-color:var(--gold)}
-.pill{align-self:flex-start;font-size:13px;font-weight:600;color:#000;background:linear-gradient(90deg,var(--teal),var(--gold));padding:5px 12px;border-radius:99px;margin-bottom:18px}
+.pill{position:absolute;top:40px;right:36px;font-size:14px;font-weight:600;color:#000;background:linear-gradient(90deg,var(--teal),var(--gold));padding:5px 12px;border-radius:99px}
 .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
 .extras div{padding:24px 0;border-top:1px solid var(--line)}
 .extras b{display:block;font-weight:600;font-size:17px;margin-bottom:4px}
-.extras span{color:var(--muted);font-size:16px}
+.extras span{color:var(--muted);font-size:17px;line-height:1.55}
 
 .safe{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .safe>div{padding:30px 26px}
 .safe svg{width:30px;height:30px;margin-bottom:22px}
 .safe h3{font-size:20px;margin-bottom:8px;letter-spacing:-.015em}
-.safe p{color:var(--muted);font-size:15.5px}
-.about{display:grid;grid-template-columns:5fr 7fr;gap:64px;margin-top:120px;align-items:start}
+.safe p{color:var(--muted);font-size:17px;line-height:1.55}
+.about{display:grid;grid-template-columns:1fr;gap:20px;max-width:720px;margin:120px auto 0;text-align:center}
+.about .lead{margin-left:auto;margin-right:auto}
 .about h2{font-size:clamp(32px,3.6vw,46px)}
 .about .lead{color:#C9CDD5}
 .about .lead+.lead{margin-top:16px}
 
 .faq{display:grid;grid-template-columns:5fr 7fr;gap:64px}
 .faq .head{position:sticky;top:110px;align-self:start}
+.copy{background:none;border:0;color:var(--muted);font:inherit;font-size:15px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;margin-left:6px}
+.copy:hover{color:#fff}
 details.q{border-top:1px solid var(--line)}
 details.q:last-child{border-bottom:1px solid var(--line)}
 details.q summary{list-style:none;cursor:pointer;padding:24px 44px 24px 0;font-weight:500;font-size:19px;position:relative}
@@ -246,7 +261,7 @@ details.q p{padding:0 44px 26px 0;color:var(--muted)}
 
 .final{padding:150px 0 140px;text-align:center;overflow:hidden}
 .final:before{content:"";position:absolute;left:50%;top:55%;width:min(1100px,140vw);height:520px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(127,227,214,.20),rgba(242,196,109,.08) 55%,transparent);filter:blur(10px);animation:breathe 9s ease-in-out infinite;pointer-events:none}
-@keyframes breathe{50%{transform:translate(-50%,-50%) scale(1.12);opacity:.75}}
+@keyframes breathe{50%{transform:translate(-50%,-50%) scale(1.06);opacity:.8}}
 .final h2{font-size:clamp(40px,6.4vw,84px);position:relative}
 .final .lead{margin:24px auto 36px;position:relative}
 .final .btn{position:relative}
@@ -276,15 +291,20 @@ footer a{color:#C9CDD5}
  body{font-size:17px}
  .wrap{padding:0 20px}
  .lead{font-size:18px}
- .hero .wrap{padding-top:48px}
+ .hero .wrap{padding-top:28px}
+ .eyebrow{display:block;font-size:14px}
+ .eyebrow:before{display:none}
  .demos,.safe{grid-template-columns:1fr}
  .steps{grid-template-columns:1fr}
  .price{padding:34px 26px 30px}
  .amount small{display:block;margin:10px 0 0}
  .caps{height:7.2em}
- .win{--wh:min(540px,54svh)}
+ .win{--wh:min(250px,62vw)}
+ .story.p3 .win{--wh:min(500px,56svh)}
+ .sticky{justify-content:flex-start;padding-top:22px;padding-bottom:calc(30px + env(safe-area-inset-bottom))}
+ .skipstory{top:auto;bottom:18px;right:20px}
  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(0,0,0,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
- .mbar.on{transform:none}
+ .mbar.on:not(.off){transform:none}
  .mbar .btn{width:100%}
  footer{padding-bottom:110px}
 }
@@ -309,10 +329,10 @@ footer a{color:#C9CDD5}
  </a>
  <nav class="main" aria-label="Menu principale">
   <a href="#story">Il metodo</a><a href="#esempi">Esempi</a><a href="#prezzi">Prezzi</a><a href="#domande">Domande</a>
-  <a class="btn" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
+  <a class="btn cta" href="mailto:info@neoverso.it?subject=Vorrei%20l%27anteprima%20gratuita&amp;body=Nome%20attivit%C3%A0%3A%0AIndirizzo%20del%20sito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Chiedete l'anteprima gratuita</a>
  </nav>
  <details class="mnav"><summary>Menu</summary><div>
-  <a href="#story">Il metodo</a><a href="#esempi">Esempi</a><a href="#prezzi">Prezzi</a><a href="#domande">Domande</a><a href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
+  <a href="#story">Il metodo</a><a href="#esempi">Esempi</a><a href="#prezzi">Prezzi</a><a href="#domande">Domande</a><a class="cta" href="mailto:info@neoverso.it?subject=Vorrei%20l%27anteprima%20gratuita&amp;body=Nome%20attivit%C3%A0%3A%0AIndirizzo%20del%20sito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Chiedete l'anteprima gratuita</a>
  </div></details>
 </div></header>
 
@@ -320,11 +340,12 @@ footer a{color:#C9CDD5}
 <div class="hero">
  <canvas id="lagoon" aria-hidden="true"></canvas>
  <div class="wrap">
+  <p class="eyebrow rise d0">Siti per artigiani, trattorie, officine e studi del Veneto</p>
   <h1><span class="silver rise d1">Il vostro sito, rifatto.</span><span class="l2 rise d2">Prima lo vedete, poi decidete.</span></h1>
-  <p class="lead rise d3">Rifacciamo gratis la homepage della vostra attività e ve la mostriamo. Se vi piace, il sito completo costa 500&nbsp;€, con l'acconto solo dopo averla vista.</p>
+  <p class="lead rise d3" id="hero-lead">Rifacciamo gratis la pagina iniziale del vostro sito e ve la mandiamo. Se vi piace, il sito completo costa <b>500&nbsp;€</b> e l'acconto si paga solo dopo averla vista.</p>
   <div class="rise d4">
-   <a class="btn" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
-   <p class="note">Nessun pagamento finché non avete visto l'anteprima. Rispondiamo entro un giorno lavorativo.</p>
+   <a class="btn cta" href="mailto:info@neoverso.it?subject=Vorrei%20l%27anteprima%20gratuita&amp;body=Nome%20attivit%C3%A0%3A%0AIndirizzo%20del%20sito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Chiedete l'anteprima gratuita</a>
+   <p class="note">Nessun impegno finché non decidete voi. Rispondiamo entro un giorno lavorativo.</p>
   </div>
  </div>
  <div class="scrollhint" aria-hidden="true">Scorrete<i></i></div>
@@ -367,37 +388,38 @@ footer a{color:#C9CDD5}
   </div>
   <div class="caps" aria-live="polite">
    <p><b>Oggi.</b> «Non sicuro» accanto all'indirizzo, testo minuscolo, il numero da copiare a mano. Così appare il sito di tante attività.</p>
-   <p><b>Lo smontiamo.</b> Teniamo quello che conta, i vostri testi e i vostri contatti, e togliamo tutto il resto.</p>
-   <p><b>Rifatto.</b> Sicuro, chiaro e veloce. Un sito che fa venire voglia di chiamarvi.</p>
-   <p><b>Sul telefono.</b> Da lì vi cerca quasi tutti: si legge senza ingrandire e vi chiamano con un tocco.</p>
+   <p><b>Lo smontiamo.</b> Teniamo quello che vi serve, cioè nome, lavori, telefono, indirizzo e orari, e togliamo quello che appesantisce.</p>
+   <p><b>Rifatto.</b> Chiaro, veloce, senza più «Non sicuro». Un sito che fa venire voglia di chiamarvi.</p>
+   <p><b>Sul telefono.</b> Ormai vi cercano soprattutto da lì: si legge senza ingrandire e vi chiamano con un tocco.</p>
   </div>
   <div class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-  <span class="democap">Esempio dimostrativo con un'attività inventata</span>
+  <span class="democap">Esempio dimostrativo con un'attività di fantasia</span>
+  <a class="skipstory" href="#esempi">Salta</a>
  </div>
 </section>
 
 <section id="esempi" aria-labelledby="es-t"><div class="wrap">
  <div class="head center reveal">
-  <h2 id="es-t" class="silver">Tre esempi, tre caratteri.</h2>
-  <p class="lead">Attività inventate, così potete vedere il risultato senza esporre nessuno. Il vostro sito avrà i vostri testi, le vostre foto e il vostro stile.</p>
+  <h2 id="es-t" class="silver">Tre mestieri, tre siti diversi.</h2>
+  <p class="lead">Sono attività di fantasia, create per mostrarvi lo stile. Il vostro sito avrà i vostri testi, le vostre foto e i vostri colori.</p>
  </div>
  <div class="demos">
   <article class="demo glass reveal" style="--c:#E39A55"><span class="glow"></span>
-   <small>Esempio dimostrativo, attività inventata</small>
+   <small>Esempio: artigiano</small>
    <h3>Falegnameria Larice</h3>
    <p>Un artigiano su misura: il sito deve far vedere il legno e far chiedere un sopralluogo.</p>
    <ul><li>Lavori in primo piano, pochi testi</li><li>Come lavorano, in quattro passaggi</li><li>Telefono in vista su ogni pagina</li></ul>
    <a href="../esempi/falegnameria-larice/" target="_blank" rel="noopener">Apri l'esempio</a>
   </article>
   <article class="demo glass reveal" style="--c:#C2525E"><span class="glow"></span>
-   <small>Esempio dimostrativo, attività inventata</small>
+   <small>Esempio: trattoria</small>
    <h3>Trattoria Al Cortivo</h3>
    <p>Una trattoria di famiglia: chi apre il sito vuole sapere cosa si mangia, quando siete aperti e come prenotare.</p>
    <ul><li>Menu e orari leggibili dal telefono</li><li>Prenotazione con una telefonata</li><li>Indirizzo e parcheggio subito chiari</li></ul>
    <a href="../esempi/trattoria-al-cortivo/" target="_blank" rel="noopener">Apri l'esempio</a>
   </article>
   <article class="demo glass reveal" style="--c:#F2C230"><span class="glow"></span>
-   <small>Esempio dimostrativo, attività inventata</small>
+   <small>Esempio: officina</small>
    <h3>Officina Ventisette</h3>
    <p>Un'officina meccanica: il cliente vuole fidarsi, capire i servizi e chiamare subito.</p>
    <ul><li>Una promessa chiara in apertura</li><li>Servizi spiegati in parole semplici</li><li>Revisione e orari sempre in vista</li></ul>
@@ -407,16 +429,16 @@ footer a{color:#C9CDD5}
 </div></section>
 
 <section id="come" aria-labelledby="come-t" style="padding-top:40px"><div class="wrap">
- <div class="head reveal"><h2 id="come-t" class="silver">Vedete il risultato prima di spendere un euro.</h2></div>
+ <div class="head center reveal"><h2 id="come-t" class="silver" style="max-width:16ch;margin:0 auto">Vedete il risultato prima di spendere un euro.</h2></div>
  <ol class="steps reveal" id="steps">
-  <li><h3>Anteprima gratuita</h3><p>Rifacciamo la homepage partendo dai contenuti del vostro sito attuale e vi mandiamo il link.</p></li>
-  <li><h3>Decidete voi</h3><p>Vi piace? Versate l'acconto di 250 € e ci mandate foto e informazioni. Non vi piace? Non dovete fare niente.</p></li>
+  <li><h3>Anteprima gratuita</h3><p>Rifacciamo la pagina iniziale partendo dai contenuti del vostro sito attuale e vi mandiamo il link.</p></li>
+  <li><h3>Decidete voi</h3><p>Vi piace? Versate l'acconto di 250&nbsp;€ e ci mandate foto e informazioni. Non vi piace? Non dovete fare niente.</p></li>
   <li><h3>Sito completo</h3><p>Realizziamo tutte le pagine. Potete chiedere modifiche due volte, comprese nel prezzo.</p></li>
-  <li><h3>Online</h3><p>Pubblichiamo il sito sul vostro dominio. Il saldo si paga solo alla consegna.</p></li>
+  <li><h3>Consegna</h3><p>Vi consegniamo il sito finito e pagate il saldo. Con la manutenzione lo mettiamo online noi, sul vostro dominio.</p></li>
  </ol>
  <div class="timing reveal">
-  <div><b class="silver">7 giorni</b><span>dal momento in cui riceviamo foto e informazioni</span></div>
-  <div><b class="silver">48 ore</b><span>con la consegna express, 200 € in più</span></div>
+  <div><b class="silver">7&nbsp;giorni</b><span>dal momento in cui riceviamo foto e informazioni</span></div>
+  <div><b class="silver">48&nbsp;ore</b><span>con la consegna express, 200&nbsp;€ in più</span></div>
  </div>
 </div></section>
 
@@ -425,50 +447,50 @@ footer a{color:#C9CDD5}
  <div class="prices">
   <div class="price glass reveal">
    <h3>Sito completo</h3>
-   <div class="amount silver">500 €</div>
-   <p class="terms">250 € di acconto se l'anteprima vi piace, 250 € alla consegna</p>
+   <div class="amount silver">500&nbsp;€</div>
+   <p class="terms">250&nbsp;€ di acconto se l'anteprima vi piace, 250&nbsp;€ alla consegna</p>
    <ul>
-    <li>Homepage e tutte le pagine della vostra attività</li>
+    <li>La pagina iniziale e le pagine che servono (servizi, lavori, contatti), concordate per iscritto prima di iniziare</li>
     <li>Due giri di modifiche compresi</li>
     <li>Il dominio resta intestato a voi</li>
-    <li>Il sito vi arriva in un file, pronto da caricare sul vostro spazio web</li>
+    <li>Vi consegniamo il sito in un file: lo mette online chi gestisce oggi il vostro sito. Se non volete pensarci, scegliete il pacchetto con manutenzione.</li>
    </ul>
-   <a class="btn ghost" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
+   <a class="btn ghost cta" href="mailto:info@neoverso.it?subject=Vorrei%20l%27anteprima%20gratuita&amp;body=Nome%20attivit%C3%A0%3A%0AIndirizzo%20del%20sito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Chiedete l'anteprima gratuita</a>
   </div>
   <div class="price glass best reveal">
    <span class="pill">Consigliato</span>
    <h3>Sito + 12 mesi di manutenzione</h3>
-   <div class="amount silver">700 €<small>800 €</small></div>
-   <p class="terms">Chiavi in mano: lo mettiamo online e ce ne occupiamo noi per un anno</p>
+   <div class="amount silver">700&nbsp;€<small>invece di 800&nbsp;€</small></div>
+   <p class="terms">500&nbsp;€ il sito + 300&nbsp;€ per un anno di manutenzione. Lo mettiamo online noi e ce ne occupiamo per 12 mesi.</p>
    <ul>
     <li>Tutto quello del sito completo</li>
-    <li>Sito online e controllato da noi, voi non toccate niente</li>
+    <li>Lo mettiamo online noi e lo teniamo in ordine: voi non dovete fare niente</li>
     <li>Un aggiornamento al mese: orari, prezzi, notizie</li>
     <li>Acconto anche qui solo se l'anteprima vi piace</li>
    </ul>
-   <a class="btn" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20con%20manutenzione&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Voglio il pacchetto completo</a>
+   <a class="btn cta700" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20con%20manutenzione&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Voglio il pacchetto completo</a>
   </div>
  </div>
  <div class="extras reveal">
-  <div><b>Preferite pagare al mese?</b><span>Manutenzione a 29 € al mese, oppure 300 € all'anno. La mensile si disdice quando volete, senza preavviso.</span></div>
+  <div><b>Solo la manutenzione</b><span>29&nbsp;€ al mese oppure 300&nbsp;€ all'anno, da aggiungere al sito completo. La mensile si disdice quando volete, senza preavviso.</span></div>
   <div><b>Se disdite</b><span>Il servizio termina 30 giorni dopo l'ultimo pagamento: vi mandiamo il sito in un file e gli accessi al dominio.</span></div>
-  <div><b>Avete fretta?</b><span>Con la consegna express il sito è online in 48 ore, a 200 € in più.</span></div>
+  <div><b>Avete fretta?</b><span>Con la consegna express il sito è pronto in 48 ore, a 200&nbsp;€ in più.</span></div>
  </div>
 </div></section>
 
 <section aria-labelledby="safe-t" style="padding-top:40px"><div class="wrap">
- <div class="head reveal"><h2 id="safe-t" class="silver">Pagate in sicurezza.</h2></div>
+ <div class="head center reveal"><h2 id="safe-t" class="silver">Pagate un passo alla volta.</h2></div>
  <div class="safe">
-  <div class="glass reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#7FE3D6" stroke-width="1.6" aria-hidden="true"><path d="M2 15s5-8 13-8 13 8 13 8-5 8-13 8S2 15 2 15z"/><circle cx="15" cy="15" r="4"/></svg><h3>Prima vedete</h3><p>Nessun pagamento finché non avete visto l'anteprima del vostro sito.</p></div>
-  <div class="glass reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#7FE3D6" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="24" height="16" rx="3"/><path d="M3 12h24M8 18h5"/></svg><h3>Saldo alla consegna</h3><p>Metà del prezzo la pagate solo quando il sito è pronto e vi piace.</p></div>
-  <div class="glass reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#7FE3D6" stroke-width="1.6" aria-hidden="true"><path d="M15 3 5 7v7c0 6.5 4.3 11 10 13 5.7-2 10-6.5 10-13V7z"/><path d="m10.5 15 3 3 6-6.5"/></svg><h3>Il dominio è vostro</h3><p>Sempre intestato a voi: se un giorno cambiate fornitore, lo portate con voi.</p></div>
-  <div class="glass reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#7FE3D6" stroke-width="1.6" aria-hidden="true"><path d="M8 3h10l6 6v18H8z"/><path d="M18 3v6h6M12 16h8M12 21h6"/></svg><h3>Tutto per iscritto</h3><p>Prima di iniziare ricevete un riepilogo con cosa è compreso e il prezzo, e fattura per ogni pagamento.</p></div>
+  <div class="glass reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#F2C46D" stroke-width="1.6" aria-hidden="true"><path d="M2 15s5-8 13-8 13 8 13 8-5 8-13 8S2 15 2 15z"/><circle cx="15" cy="15" r="4"/></svg><h3>Prima vedete</h3><p>Nessun pagamento finché non avete visto l'anteprima del vostro sito.</p></div>
+  <div class="glass reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#F2C46D" stroke-width="1.6" aria-hidden="true"><rect x="3" y="7" width="24" height="16" rx="3"/><path d="M3 12h24M8 18h5"/></svg><h3>Saldo alla consegna</h3><p>Metà del prezzo la pagate solo a lavoro finito, dopo i due giri di modifiche.</p></div>
+  <div class="glass reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#F2C46D" stroke-width="1.6" aria-hidden="true"><path d="M15 3 5 7v7c0 6.5 4.3 11 10 13 5.7-2 10-6.5 10-13V7z"/><path d="m10.5 15 3 3 6-6.5"/></svg><h3>Il dominio è vostro</h3><p>Sempre intestato a voi: se un giorno cambiate fornitore, lo portate con voi.</p></div>
+  <div class="glass reveal"><svg viewBox="0 0 30 30" fill="none" stroke="#F2C46D" stroke-width="1.6" aria-hidden="true"><path d="M8 3h10l6 6v18H8z"/><path d="M18 3v6h6M12 16h8M12 21h6"/></svg><h3>Tutto per iscritto</h3><p>Prima di iniziare ricevete un riepilogo con cosa è compreso e il prezzo, e fattura per ogni pagamento.</p></div>
  </div>
  <div class="about reveal">
   <h2 class="silver">Chi c'è dietro.</h2>
   <div>
-   <p class="lead">Neoverso è un progetto nuovo e piccolo, che lavora con attività del Veneto. Invece di un elenco di clienti, vi mostriamo il lavoro fatto sul vostro sito.</p>
-   <p class="lead">Vi risponde la persona che vi ha scritto, dall'anteprima alla pubblicazione, entro un giorno lavorativo.</p>
+   <p class="lead">Neoverso fa siti per piccole attività del Veneto. Non vi chiediamo di fidarvi sulla parola: il lavoro lo vedete prima, fatto sul vostro sito, e decidete dopo.</p>
+   <p class="lead">Vi segue sempre la stessa persona, dall'anteprima alla consegna, e vi risponde entro un giorno lavorativo.</p>
   </div>
  </div>
 </div></section>
@@ -479,14 +501,15 @@ footer a{color:#C9CDD5}
   <p class="lead" style="font-size:18px;margin-top:18px">Non trovate la vostra? Scrivete a <a href="mailto:info@neoverso.it">info@neoverso.it</a>.</p>
  </div>
  <div>
-  <details class="q"><summary>L'anteprima è davvero gratuita?</summary><p>Sì. Vi mostriamo la nuova homepage senza chiedervi nulla. Se non vi interessa, basta non rispondere.</p></details>
+  <details class="q"><summary>L'anteprima è davvero gratuita?</summary><p>Sì. Vi mostriamo la nuova pagina iniziale senza chiedervi nulla. Se non vi interessa, basta non rispondere.</p></details>
   <details class="q"><summary>Come avete trovato il mio sito?</summary><p>Cercando su internet attività della vostra zona e del vostro settore: l'indirizzo email era pubblicato sul vostro sito. Vi scriviamo una volta sola e non vi ricontattiamo. Se preferite non ricevere più nulla, ditecelo e vi togliamo subito dalla lista.</p></details>
   <details class="q"><summary>L'anteprima la vedono tutti?</summary><p>No. Ha la scritta «Bozza di proposta», non compare su Google e la cancelliamo dopo 30 giorni se non vi interessa. Se volete toglierla prima, basta un'email.</p></details>
-  <details class="q"><summary>Devo scrivere io i testi o fare le foto?</summary><p>No. Partiamo dai testi del vostro sito e li sistemiamo noi; a voi chiediamo di controllare che sia tutto giusto. Le vostre foto sono le migliori, anche fatte col telefono: se non le avete, usiamo immagini adatte al vostro lavoro.</p></details>
+  <details class="q"><summary>Devo scrivere io i testi o fare le foto?</summary><p>No. Partiamo dai testi del vostro sito e li sistemiamo noi; a voi chiediamo di controllare che sia tutto giusto. Le vostre foto sono le migliori, anche fatte col telefono: se non le avete, usiamo immagini di repertorio adatte al vostro lavoro, finché non ci mandate le vostre.</p></details>
   <details class="q"><summary>Il dominio e le email restano nostri?</summary><p>Sì. Il dominio è sempre intestato a voi e le vostre caselle email restano dove sono e funzionano come prima: cambia solo il sito.</p></details>
-  <details class="q"><summary>Quanto tempo ci vuole?</summary><p>Il sito completo è pronto in 7 giorni da quando riceviamo foto e informazioni. Con la consegna express (+200 €) è online in 48 ore.</p></details>
+  <details class="q"><summary>Quanto tempo ci vuole?</summary><p>Il sito completo è pronto in 7 giorni da quando riceviamo foto e informazioni. Con la consegna express (+200&nbsp;€) è pronto in 48 ore.</p></details>
   <details class="q"><summary>E se dopo vogliamo delle modifiche?</summary><p>Durante il lavoro avete due giri di modifiche compresi. Dopo la consegna, con la manutenzione è compreso un aggiornamento al mese; per lavori più grandi vi diciamo prima quanto costa.</p></details>
   <details class="q"><summary>Cosa succede se non prendiamo la manutenzione, o la disdiciamo?</summary><p>Vi consegniamo il sito completo in un file pronto da caricare sul vostro spazio web, da voi o dal vostro tecnico. La manutenzione mensile si disdice senza preavviso: termina 30 giorni dopo l'ultimo pagamento e vi mandiamo il sito e gli accessi al dominio.</p></details>
+  <details class="q"><summary>Il sito si troverà su Google?</summary><p>Il sito è fatto per essere letto bene anche da Google: nome, indirizzo, orari e servizi sono scritti in modo chiaro. Nessuno però può garantire la posizione nei risultati: diffidate di chi lo promette.</p></details>
   <details class="q"><summary>Fate anche negozi online o prenotazioni?</summary><p>No: facciamo siti di presentazione per artigiani, studi, officine e ristoranti, ed è per questo che possiamo tenere un prezzo fisso.</p></details>
  </div>
 </div></section>
@@ -495,7 +518,7 @@ footer a{color:#C9CDD5}
  <h2 id="cta-t" class="silver reveal">Vi è piaciuta l'anteprima?</h2>
  <p class="lead reveal" id="cta-p">Rispondete alla nostra email oppure scriveteci qui: vi spieghiamo i passi successivi, senza impegno.</p>
  <a class="btn reveal" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a>
- <p class="alt">oppure scrivete a <a href="mailto:info@neoverso.it">info@neoverso.it</a></p>
+ <p class="alt">oppure scrivete a <a href="mailto:info@neoverso.it">info@neoverso.it</a><button class="copy" type="button" id="copy">Copia l'indirizzo</button></p>
 </div></section>
 </main>
 
@@ -504,7 +527,7 @@ footer a{color:#C9CDD5}
  <span><a href="mailto:info@neoverso.it">info@neoverso.it</a>&nbsp;&nbsp;&nbsp;<a href="privacy.html">Privacy e cookie</a></span>
 </div></footer>
 
-<div class="mbar" id="mbar"><a class="btn" href="mailto:info@neoverso.it?subject=Mi%20interessa%20il%20sito%20completo&amp;body=Nome%20attivit%C3%A0%3A%0ASito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Mi interessa il sito</a></div>
+<div class="mbar" id="mbar"><a class="btn cta" href="mailto:info@neoverso.it?subject=Vorrei%20l%27anteprima%20gratuita&amp;body=Nome%20attivit%C3%A0%3A%0AIndirizzo%20del%20sito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Chiedete l'anteprima gratuita</a></div>
 
 <script>
 (function(){
@@ -516,10 +539,10 @@ footer a{color:#C9CDD5}
  if(gl){
   var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   var fs=[
-  'precision mediump float;uniform vec2 r;uniform float t;',
+  'precision mediump float;uniform vec2 r;uniform float t;uniform float hz;',
   'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
   'float fld(vec2 p,float t){vec2 q=p;for(int k=0;k<3;k++){float f=float(k);q+=.55*vec2(sin(q.y*1.3+t*.35+f*1.7),sin(q.x*1.1-t*.3+f*2.3));}return sin(q.x)*sin(q.y)+.35*sin((q.x+q.y)*.7+t*.2);}',
-  'void main(){vec2 uv=gl_FragCoord.xy/r;float hz=.33;float a=r.x/r.y;float cx=(uv.x-.5)*a;vec3 c=vec3(0.);',
+  'void main(){vec2 uv=gl_FragCoord.xy/r;float a=r.x/r.y;float cx=(uv.x-.5)*a;vec3 c=vec3(0.);',
   'float d=uv.y-hz;float wide=exp(-cx*cx*.9);',
   'c+=vec3(.45,.68,1.)*(exp(-abs(d)*60.)*.65+exp(-abs(d)*7.)*.10)*wide;',
   'if(d>0.){vec2 g=floor(gl_FragCoord.xy/1.5);float s=h(g);float tw=.6+.4*sin(t*1.5+s*40.);c+=vec3(.8,.85,1.)*step(.9975,s)*tw*smoothstep(0.,.25,d)*.8;}',
@@ -533,11 +556,12 @@ footer a{color:#C9CDD5}
   if(gl.getProgramParameter(pr,gl.LINK_STATUS)){
    gl.useProgram(pr);var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
    var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
-   var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t');
+   var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),uh=gl.getUniformLocation(pr,'hz'),noteEl=document.querySelector('.hero .note'),last=0;
+   function horizon(){var nb=noteEl.getBoundingClientRect().bottom-cv.getBoundingClientRect().top;return Math.min(.34,Math.max(.2,1-(nb+40)/cv.clientHeight));}
    var scale=Math.min(1,(window.devicePixelRatio||1))*(innerWidth<700?.6:.75),vis=true,raf=0,start=performance.now();
    function size(){var w=Math.max(1,Math.round(cv.clientWidth*scale)),h=Math.max(1,Math.round(cv.clientHeight*scale));if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;gl.viewport(0,0,w,h);}}
-   function draw(now){size();gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,(now-start)/1000+8.);gl.drawArrays(gl.TRIANGLES,0,3);}
-   function loop(now){draw(now);if(vis&&!document.hidden)raf=requestAnimationFrame(loop);else raf=0;}
+   function draw(now){size();gl.uniform1f(uh,horizon());gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,(now-start)/1000+8.);gl.drawArrays(gl.TRIANGLES,0,3);}
+   function loop(now){if(now-last>=32){last=now;draw(now);}if(vis&&!document.hidden)raf=requestAnimationFrame(loop);else raf=0;}
    function kick(){if(!raf&&!reduce)raf=requestAnimationFrame(loop);}
    if(reduce)draw(performance.now()+20000);else kick();
    new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)kick();}).observe(cv);
@@ -559,7 +583,9 @@ footer a{color:#C9CDD5}
 
  /* Header e barra mobile */
  var h=document.getElementById('top'),bar=document.getElementById('mbar'),hero=document.querySelector('.hero');
- function onScroll(){var y=scrollY;h.classList.toggle('scrolled',y>8);bar.classList.toggle('on',y>hero.offsetHeight*.7);if(!reduce)onStory();onSteps();}
+ var offZones=[st,document.getElementById('prezzi'),document.querySelector('.final')];
+ function inZone(){var m=innerHeight*.5;return offZones.some(function(z){var r=z.getBoundingClientRect();return r.top<m&&r.bottom>m;});}
+ function onScroll(){var y=scrollY;h.classList.toggle('scrolled',y>8);bar.classList.toggle('on',y>hero.offsetHeight*.7);bar.classList.toggle('off',inZone());if(!reduce)onStory();onSteps();}
  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
 
  /* Comparsa al passaggio */
@@ -571,17 +597,25 @@ footer a{color:#C9CDD5}
  document.querySelectorAll('.glass').forEach(function(g){g.addEventListener('pointermove',function(e){var r=g.getBoundingClientRect();g.style.setProperty('--mx',(e.clientX-r.left)+'px');g.style.setProperty('--my',(e.clientY-r.top)+'px');});});
  document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').removeAttribute('open');});});
 
+ /* Copia indirizzo (per chi non ha un programma di posta) */
+ var cp=document.getElementById('copy');
+ cp.addEventListener('click',function(){var done=function(){cp.textContent='Indirizzo copiato';};if(navigator.clipboard)navigator.clipboard.writeText('info@neoverso.it').then(done,function(){});else{var i=document.createElement('input');i.value='info@neoverso.it';document.body.appendChild(i);i.select();try{document.execCommand('copy');done();}catch(e){}i.remove();}});
+
  /* Arrivo dall'email: ?a=nome-anteprima */
  var q=new URLSearchParams(location.search).get('a');
  if(q&&/^[a-z0-9-]{2,60}$/.test(q)){
   var t=document.getElementById('mail-txt');
-  t.textContent='Abbiamo preparato un’anteprima della nuova homepage per la vostra attività. ';
-  var a=document.createElement('a');a.href='https://iaki86.github.io/proposte/'+q+'/';a.textContent='Rivedete la vostra anteprima';t.appendChild(a);
-  t.appendChild(document.createTextNode('. Vi piace? Basta rispondere alla nostra email. Non vi interessa? Non dovete fare niente: non vi ricontatteremo e l’anteprima verrà cancellata entro 30 giorni.'));
+  t.textContent='Siamo Neoverso, vi abbiamo scritto noi. La nuova pagina iniziale della vostra attività è pronta: ';
+  var a=document.createElement('a');a.href='https://iaki86.github.io/proposte/'+q+'/';a.textContent='guardate la vostra anteprima';t.appendChild(a);
+  t.appendChild(document.createTextNode('. Vi piace? Rispondete alla nostra email e vi spieghiamo i passi. Non vi interessa? Non dovete fare nulla: non vi riscriveremo.'));
   document.getElementById('mail-banner').classList.add('on');
+  document.getElementById('hero-lead').innerHTML='La vostra anteprima è già pronta. Se vi piace, il sito completo costa <b>500&nbsp;€</b>: 250&nbsp;€ di acconto per iniziare, 250&nbsp;€ alla consegna.';
+  var body=encodeURIComponent("Buongiorno, l'anteprima ci interessa. Vorremmo sapere come procedere.\nTelefono (facoltativo):\n");
+  document.querySelectorAll('.cta').forEach(function(el){el.href='mailto:info@neoverso.it?subject='+encodeURIComponent('Mi interessa il sito – anteprima '+q)+'&body='+body;el.textContent='Mi interessa il sito';});
+  document.querySelectorAll('.cta700').forEach(function(el){el.href='mailto:info@neoverso.it?subject='+encodeURIComponent('Mi interessa il pacchetto con manutenzione – anteprima '+q)+'&body='+body;});
  } else {
   document.getElementById('cta-t').textContent='Volete vedere il vostro sito rifatto?';
-  document.getElementById('cta-p').textContent='Mandateci l’indirizzo del vostro sito: prepariamo gratis l’anteprima della nuova homepage e ve la mandiamo per email.';
+  document.getElementById('cta-p').textContent='Mandateci l’indirizzo del vostro sito: prepariamo gratis l’anteprima della nuova pagina iniziale e ve la mandiamo per email.';
  }
 })();
 </script>
