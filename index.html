@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Neoverso · Siti per piccole attività in tutta Italia, anteprima gratis</title>
-<meta name="description" content="Siti per artigiani, trattorie, officine e studi in tutta Italia. Rifacciamo gratis la pagina iniziale del vostro sito e ve la mostriamo. Se vi piace, il sito completo costa 500 €, con l'acconto solo dopo averla vista.">
+<title>Neoverso · Siti per attività e aziende in tutta Italia, anteprima gratis</title>
+<meta name="description" content="Siti per artigiani, studi, ristoranti e aziende in tutta Italia. Rifacciamo gratis la pagina iniziale del vostro sito e ve la mostriamo. Se vi piace, il sito completo costa 500 €, con l'acconto solo dopo averla vista.">
 <meta property="og:title" content="Neoverso · Anteprima gratis, sito completo a 500 €">
 <meta property="og:description" content="Prima vedete il vostro nuovo sito, poi decidete. Prezzo fisso, dominio sempre vostro.">
 <meta property="og:image" content="https://neoverso.it/og.png">
@@ -52,6 +52,12 @@ h2{font-size:clamp(36px,5vw,64px);line-height:1.04}
 .btn.ghost:hover{box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
 .note{font-size:15px;color:var(--dim)}
 
+.bf-on{display:none}html.bf .bf-on{display:inline}html.bf .bf-off{display:none}
+#bf-banner{display:none;background:linear-gradient(90deg,#2a2112,#1a1610);border-bottom:1px solid rgba(242,196,109,.35);font-size:16px;color:#F3E2BF;text-align:center}
+html.bf #bf-banner{display:block}
+#bf-banner .wrap{padding-top:12px;padding-bottom:12px}
+#bf-banner a{color:#fff;font-weight:600;margin-left:6px}
+.amount s{opacity:.7}
 #mail-banner{display:none;background:#0E1A1D;border-bottom:1px solid rgba(127,227,214,.25);font-size:16px;color:#CFE9E5}
 #mail-banner.on{display:block}
 #mail-banner .wrap{padding-top:14px;padding-bottom:14px}
@@ -354,10 +360,12 @@ footer a{color:#C9CDD5}
  .pips{display:none}
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://neoverso.it/#org","name":"Neoverso","url":"https://neoverso.it/","logo":"https://neoverso.it/apple-touch-icon.png","email":"info@neoverso.it","areaServed":"IT"},{"@type":"Service","name":"Rifacimento sito web per piccole attività","provider":{"@id":"https://neoverso.it/#org"},"areaServed":"IT","description":"Anteprima gratuita della nuova pagina iniziale; sito completo a prezzo fisso.","offers":[{"@type":"Offer","name":"Sito completo","price":"500","priceCurrency":"EUR"},{"@type":"Offer","name":"Sito + 12 mesi di manutenzione","price":"700","priceCurrency":"EUR"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://neoverso.it/#org","name":"Neoverso","url":"https://neoverso.it/","logo":"https://neoverso.it/apple-touch-icon.png","email":"info@neoverso.it","areaServed":"IT"},{"@type":"Service","name":"Rifacimento sito web per attività e aziende","provider":{"@id":"https://neoverso.it/#org"},"areaServed":"IT","description":"Anteprima gratuita della nuova pagina iniziale; sito completo a prezzo fisso.","offers":[{"@type":"Offer","name":"Sito completo","price":"500","priceCurrency":"EUR"},{"@type":"Offer","name":"Sito + 12 mesi di manutenzione","price":"700","priceCurrency":"EUR"}]}]}</script>
+<script>(function(){if(Date.now()<Date.parse("2026-11-30T23:00:00Z"))document.documentElement.classList.add("bf");})();</script>
 </head>
 <body>
 <a class="skip" href="#contenuto">Vai al contenuto</a>
+<div id="bf-banner" role="region" aria-label="Black Friday"><div class="wrap"><p><b>Black Friday:</b> −20% sul sito completo e sul pacchetto con manutenzione per chi ci scrive entro lunedì 30 novembre. <a href="#prezzi">Vedi i prezzi</a></p></div></div>
 <div id="mail-banner" role="region" aria-label="La vostra anteprima"><div class="wrap"><p id="mail-txt"></p></div></div>
 
 <header id="top"><div class="wrap">
@@ -378,9 +386,9 @@ footer a{color:#C9CDD5}
 <div class="hero">
  <canvas id="lagoon" aria-hidden="true"></canvas>
  <div class="wrap">
-  <p class="eyebrow rise d0">Siti per artigiani, trattorie, officine e studi in tutta Italia</p>
+  <p class="eyebrow rise d0">Siti per artigiani, studi, ristoranti e aziende in tutta Italia</p>
   <h1><span class="silver rise d1">Il vostro sito, rifatto.</span><span class="l2 rise d2">Prima lo vedete, poi decidete.</span></h1>
-  <p class="lead rise d3" id="hero-lead">Rifacciamo gratis la pagina iniziale del vostro sito e ve la mandiamo. Se vi piace, il sito completo costa <b>500&nbsp;€</b> e l'acconto si paga solo dopo averla vista.</p>
+  <p class="lead rise d3" id="hero-lead">Rifacciamo gratis la pagina iniziale del vostro sito e ve la mandiamo. Se vi piace, il sito completo costa <b><span class="bf-off">500&nbsp;€</span><span class="bf-on">400&nbsp;€ invece di 500&nbsp;€ per il Black Friday</span></b> e l'acconto si paga solo dopo averla vista.</p>
   <div class="rise d4">
    <a class="btn cta" href="mailto:info@neoverso.it?subject=Vorrei%20l%27anteprima%20gratuita&amp;body=Nome%20attivit%C3%A0%3A%0AIndirizzo%20del%20sito%20attuale%3A%0ATelefono%20(facoltativo)%3A%0A">Chiedete l'anteprima gratuita</a>
    <p class="note">Nessun impegno finché non decidete voi. Rispondiamo entro un giorno lavorativo.</p>
@@ -493,8 +501,8 @@ footer a{color:#C9CDD5}
  <div class="prices">
   <div class="price glass reveal">
    <h3>Sito completo</h3>
-   <div class="amount silver">500&nbsp;€</div>
-   <p class="terms">250&nbsp;€ di acconto se l'anteprima vi piace, 250&nbsp;€ alla consegna</p>
+   <div class="amount silver"><span class="bf-off">500&nbsp;€</span><span class="bf-on">400&nbsp;€<small><s>500&nbsp;€</s> Black Friday −20%</small></span></div>
+   <p class="terms"><span class="bf-off">250&nbsp;€ di acconto se l'anteprima vi piace, 250&nbsp;€ alla consegna</span><span class="bf-on">200&nbsp;€ di acconto se l'anteprima vi piace, 200&nbsp;€ alla consegna. Per chi ci scrive entro il 30 novembre.</span></p>
    <ul>
     <li>La pagina iniziale e le pagine che servono (servizi, lavori, contatti), concordate per iscritto prima di iniziare</li>
     <li>Due giri di modifiche compresi</li>
@@ -506,8 +514,8 @@ footer a{color:#C9CDD5}
   <div class="price glass best reveal">
    <span class="pill">Consigliato</span>
    <h3>Sito + 12 mesi di manutenzione</h3>
-   <div class="amount silver">700&nbsp;€<small>invece di 800&nbsp;€</small></div>
-   <p class="terms">500&nbsp;€ il sito + 300&nbsp;€ per un anno di manutenzione. Lo mettiamo online noi e ce ne occupiamo per 12 mesi.</p>
+   <div class="amount silver"><span class="bf-off">700&nbsp;€<small>invece di 800&nbsp;€</small></span><span class="bf-on">560&nbsp;€<small><s>700&nbsp;€</s> Black Friday −20%</small></span></div>
+   <p class="terms"><span class="bf-off">500&nbsp;€ il sito + 300&nbsp;€ per un anno di manutenzione.</span><span class="bf-on">Il sito e un anno di manutenzione, 20% in meno per chi ci scrive entro il 30 novembre.</span> Lo mettiamo online noi e ce ne occupiamo per 12 mesi.</p>
    <ul>
     <li>Tutto quello del sito completo</li>
     <li>Lo mettiamo online noi e lo teniamo in ordine: voi non dovete fare niente</li>
@@ -535,7 +543,7 @@ footer a{color:#C9CDD5}
  <div class="about reveal">
   <h2 class="silver">Chi c'è dietro.</h2>
   <div>
-   <p class="lead">Neoverso fa siti per piccole attività in tutta Italia, lavorando a distanza: niente appuntamenti, ci si sente per email o al telefono. Non vi chiediamo di fidarvi sulla parola: il lavoro lo vedete prima, fatto sul vostro sito, e decidete dopo.</p>
+   <p class="lead">Neoverso fa siti per attività e aziende in tutta Italia, lavorando a distanza: niente appuntamenti, ci si sente per email o al telefono. Non vi chiediamo di fidarvi sulla parola: il lavoro lo vedete prima, fatto sul vostro sito, e decidete dopo.</p>
    <p class="lead">Vi segue sempre la stessa persona, dall'anteprima alla consegna, e vi risponde entro un giorno lavorativo.</p>
   </div>
  </div>
@@ -556,7 +564,8 @@ footer a{color:#C9CDD5}
   <details class="q"><summary>E se dopo vogliamo delle modifiche?</summary><p>Durante il lavoro avete due giri di modifiche compresi. Dopo la consegna, con la manutenzione è compreso un aggiornamento al mese; per lavori più grandi vi diciamo prima quanto costa.</p></details>
   <details class="q"><summary>Cosa succede se non prendiamo la manutenzione, o la disdiciamo?</summary><p>Vi consegniamo il sito completo in un file pronto da caricare sul vostro spazio web, da voi o dal vostro tecnico. La manutenzione mensile si disdice senza preavviso: termina 30 giorni dopo l'ultimo pagamento e vi mandiamo il sito e gli accessi al dominio.</p></details>
   <details class="q"><summary>Il sito si troverà su Google?</summary><p>Il sito è fatto per essere letto bene anche da Google: nome, indirizzo, orari e servizi sono scritti in modo chiaro. Nessuno però può garantire la posizione nei risultati: diffidate di chi lo promette.</p></details>
-  <details class="q"><summary>Fate anche negozi online o prenotazioni?</summary><p>No: facciamo siti di presentazione per artigiani, studi, officine e ristoranti, ed è per questo che possiamo tenere un prezzo fisso.</p></details>
+  <details class="q"><summary>Fate anche negozi online o prenotazioni?</summary><p>No: facciamo siti di presentazione, ed è per questo che possiamo tenere un prezzo fisso.</p></details>
+  <details class="q"><summary>Siamo un'azienda strutturata: fate siti anche per noi?</summary><p>Sì. Il prezzo fisso vale per un sito di presentazione con le pagine che servono. Se vi servono molte pagine, più lingue o funzioni particolari, guardiamo il vostro caso e vi diciamo subito se è fattibile e quanto costa, prima di iniziare. Anche per voi l'anteprima della pagina iniziale è gratuita.</p></details>
  </div>
 </div></section>
 
@@ -569,7 +578,7 @@ footer a{color:#C9CDD5}
 </main>
 
 <footer><div class="wrap">
- <span>© 2026 Neoverso. Siti per piccole attività in tutta Italia.</span>
+ <span>© 2026 Neoverso. Siti per attività e aziende in tutta Italia.</span>
  <span><a href="mailto:info@neoverso.it">info@neoverso.it</a>&nbsp;&nbsp;&nbsp;<a href="privacy.html">Privacy e cookie</a></span>
 </div></footer>
 
@@ -670,7 +679,8 @@ footer a{color:#C9CDD5}
   var a=document.createElement('a');a.href=q+'/';a.textContent='guardate la vostra anteprima';t.appendChild(a);
   t.appendChild(document.createTextNode('. Vi piace? Rispondete alla nostra email e vi spieghiamo i passi. Non vi interessa? Non dovete fare nulla: non vi riscriveremo.'));
   document.getElementById('mail-banner').classList.add('on');
-  document.getElementById('hero-lead').innerHTML='La vostra anteprima è già pronta. Se vi piace, il sito completo costa <b>500&nbsp;€</b>: 250&nbsp;€ di acconto per iniziare, 250&nbsp;€ alla consegna.';
+  var bf=document.documentElement.classList.contains('bf');
+  document.getElementById('hero-lead').innerHTML=bf?'La vostra anteprima è già pronta. Se vi piace, per il Black Friday il sito completo costa <b>400&nbsp;€ invece di 500&nbsp;€</b> se ci scrivete entro lunedì 30 novembre: 200&nbsp;€ di acconto per iniziare, 200&nbsp;€ alla consegna.':'La vostra anteprima è già pronta. Se vi piace, il sito completo costa <b>500&nbsp;€</b>: 250&nbsp;€ di acconto per iniziare, 250&nbsp;€ alla consegna.';
   var body=encodeURIComponent("Buongiorno, l'anteprima ci interessa. Vorremmo sapere come procedere.\nTelefono (facoltativo):\n");
   document.querySelectorAll('.cta').forEach(function(el){el.href='mailto:info@neoverso.it?subject='+encodeURIComponent('Mi interessa il sito – anteprima '+q)+'&body='+body;el.textContent='Mi interessa il sito';});
   document.querySelectorAll('.cta700').forEach(function(el){el.href='mailto:info@neoverso.it?subject='+encodeURIComponent('Mi interessa il pacchetto con manutenzione – anteprima '+q)+'&body='+body;});
