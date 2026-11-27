@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bozza di proposta · Termoidraulica Corali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14202b;--muted:#5a6672;--bg:#faf7f3;--paper:#fff;--navy:#16324a;--navy-2:#1f4563;--red:#d23a2a;--red-d:#b02c1e;--sand:#f1e9df;--line:#e7dfd5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Sora,sans-serif;line-height:1.14;letter-spacing:-.02em}
+[hidden]{display:none!important}
+.photo{object-fit:cover;filter:contrast(1.05) saturate(1.06)}
+.proposal{background:var(--ink);color:#e6e9ec;font-size:13px;text-align:center;padding:9px 16px}
+.proposal b{color:#fff}
+.proposal a{color:#fff;text-decoration:underline}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand img{height:46px;width:auto;max-width:56vw;object-fit:contain}
+.brand span{font:700 13px "Nunito Sans";color:var(--muted);letter-spacing:.08em;text-transform:uppercase;border-left:1px solid var(--line);padding-left:12px}
+.menu{display:flex;gap:28px;font-size:15px;font-weight:600}
+.menu a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-r{background:var(--red);color:#fff}.btn-r:hover{background:var(--red-d)}
+.btn-n{background:var(--navy);color:#fff}.btn-n:hover{background:var(--navy-2)}
+.btn-ghost{border:1.5px solid var(--navy);color:var(--navy)}.btn-ghost:hover{background:var(--navy);color:#fff}
+.btn-w{background:#fff;color:var(--navy)}
+.btn-line{border:1.5px solid rgba(255,255,255,.65);color:#fff}.btn-line:hover{background:rgba(255,255,255,.1)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px;color:var(--ink)}
+.burger svg{width:28px;height:28px}
+@media(max-width:940px){.menu{display:none}.burger{display:block}.nav .btn{padding:10px 14px;font-size:14px}
+.menu.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 14px 24px -14px rgba(0,0,0,.25)}
+.menu.open a{padding:16px 20px;border-top:1px solid var(--line)}}
+@media(max-width:600px){.brand span{display:none}.nav .btn .t{display:none}.brand img{height:40px}}
+
+/* HERO: split, chiaro, con pannello foto e badge */
+.hero{padding:72px 0 84px;background:linear-gradient(180deg,var(--paper) 0%,var(--bg) 100%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
+.hero h1{font-size:clamp(34px,5vw,60px);font-weight:800;margin:18px 0 20px;color:var(--navy)}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:540px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.chips span{background:var(--sand);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--navy)}
+.hero-media{position:relative}
+.hero-media .frame{border-radius:28px 28px 28px 120px;overflow:hidden;aspect-ratio:4/4.3;background:var(--sand)}
+.hero-media .frame img{width:100%;height:100%}
+.badge{position:absolute;left:-18px;bottom:28px;background:var(--navy);color:#fff;border-radius:18px;padding:18px 20px;max-width:260px;box-shadow:0 18px 36px -18px rgba(22,50,74,.6)}
+.badge b{display:block;font:700 17px Sora;margin-bottom:4px}
+.badge span{font-size:14px;color:#c9d6e2}
+@media(max-width:940px){.badge{left:12px;bottom:12px;right:12px;max-width:none}}
+.dot{position:absolute;top:-14px;right:-14px;width:84px;height:84px;border-radius:50%;background:var(--red);opacity:.9;z-index:-1}
+@media(max-width:600px){.dot{display:none}}
+
+section{padding:92px 0}
+.kick{color:var(--red);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;max-width:680px;color:var(--navy)}
+.sub{color:var(--muted);font-size:17px;max-width:600px;margin-top:14px}
+
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:46px}
+@media(max-width:820px){.svc{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:200px 1fr;transition:.25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 22px 40px -26px rgba(22,50,74,.45)}
+.card img{width:100%;height:100%;min-height:220px;background:var(--sand)}
+.card .bd{padding:24px}
+.card h3{font-size:21px;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{list-style:none;margin-top:12px;font-size:14px;display:grid;gap:6px}
+.card li{display:flex;gap:8px;align-items:flex-start}
+.card li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--red);margin-top:8px}
+@media(max-width:560px){.card{grid-template-columns:1fr}.card img{height:190px;min-height:0}}
+
+.prod{background:var(--navy);color:#fff}
+.prod .h2{color:#fff}
+.prod .sub{color:#b9c8d6}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
+@media(max-width:960px){.prod-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.prod-grid{grid-template-columns:1fr}}
+.pi{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px}
+.pi svg{width:34px;height:34px;color:#ff8a7a;margin-bottom:12px}
+.pi b{display:block;font:700 17px Sora;margin-bottom:4px}
+.pi span{font-size:14px;color:#c3d1de}
+.brands{margin-top:34px;font-size:14px;color:#b9c8d6}
+.brands strong{color:#fff;font-weight:700}
+
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+@media(max-width:940px){.why-grid{grid-template-columns:1fr;gap:34px}}
+.points{display:grid;gap:16px;margin-top:30px}
+.pt{display:flex;gap:16px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px}
+.pt .ic{flex:none;width:46px;height:46px;border-radius:14px;background:#fbe7e4;color:var(--red);display:grid;place-items:center}
+.pt .ic svg{width:22px;height:22px}
+.pt b{display:block;font-size:17px;color:var(--navy)}
+.pt span{color:var(--muted);font-size:15px}
+.fin{background:var(--sand);border-radius:22px;padding:34px}
+.fin h3{font-size:24px;color:var(--navy);margin-bottom:10px}
+.fin p{color:var(--muted);font-size:15px}
+.fin ul{list-style:none;margin:16px 0 22px;display:grid;gap:8px;font-size:15px}
+.fin li{display:flex;gap:10px}
+.fin li::before{content:"✓";color:var(--red);font-weight:800}
+.fin small{display:block;color:var(--muted);font-size:13px;margin-top:14px}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:42px}
+@media(max-width:820px){.gal{grid-template-columns:1fr 1fr}}
+.gal img{width:100%;aspect-ratio:4/3;border-radius:16px;background:var(--sand)}
+.gal-note{color:var(--muted);font-size:14px;margin-top:14px}
+
+.cta{background:linear-gradient(120deg,var(--red),var(--red-d));color:#fff;border-radius:26px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.cta h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;max-width:560px}
+.cta p{color:#ffe1dc;margin-top:10px;max-width:540px}
+.cta .ctas{margin-top:0}
+@media(max-width:560px){.cta{padding:32px 22px}}
+
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:46px}
+@media(max-width:940px){.contact{grid-template-columns:1fr}}
+.row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row span{width:96px;flex:none;color:var(--muted);font-size:14px}
+.row a{color:var(--navy);font-weight:700}
+.row div{min-width:0;overflow-wrap:anywhere}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:360px}
+.map iframe{width:100%;height:100%;min-height:360px;border:0}
+
+footer{background:var(--ink);color:#a7b2bc;font-size:14px;padding:38px 0 90px;margin-top:92px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(min-width:941px){footer{padding-bottom:38px}}
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;background:var(--red);color:#fff;border-radius:999px;padding:14px 20px;font-weight:700;box-shadow:0 10px 28px -8px rgba(0,0,0,.45);align-items:center;gap:8px}
+.fab svg{width:18px;height:18px}
+@media(max-width:940px){.fab{display:inline-flex}}
+
+.wip{min-height:70vh;display:grid;place-items:center;text-align:center;padding:80px 20px}
+.wip .ic{width:72px;height:72px;margin:0 auto 12px;border-radius:20px;background:#fbe7e4;color:var(--red);display:grid;place-items:center}
+.wip .ic svg{width:36px;height:36px}
+.wip h1{font-size:clamp(34px,5vw,56px);font-weight:800;margin:6px 0 14px;color:var(--navy)}
+.wip p{color:var(--muted);max-width:520px;margin:0 auto 28px;font-size:17px}
+.wip .ctas{justify-content:center}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></g></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3.3.4 1.4 1.4 2.3 2.5 2.8z"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+  <symbol id="i-panel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 4h16l-2 12H6z"/><path d="M5 10h14M12 4v12M9 20h6M12 16v4"/></g></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10zM2 21c0-3 1.9-5.4 5.1-6"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 2.7 6.3 8.4a8 8 0 1 0 11.4 0z"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 14l4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></g></symbol>
+  <symbol id="i-pellet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><rect x="8" y="8" width="8" height="7" rx="1"/><path d="M8 18h8"/></g></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></g></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+
+<div class="proposal">Bozza di proposta realizzata da Neoverso per il nuovo sito di <b>Termoidraulica Corali</b> · Non è il sito ufficiale · <a href="https://neoverso.it/?a=termoidraulica-corali">Chi siamo</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><img src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/Corali-Logo.png" alt="Termoidraulica Corali"><span>Impianti tecnologici</span></a>
+    <nav class="menu" id="menu">
+      <a href="#p-servizi">Servizi</a>
+      <a href="#p-prodotti">Prodotti</a>
+      <a href="#p-finanziamenti">Finanziamenti</a>
+      <a href="#p-contatti">Contatti</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a class="btn btn-r" href="tel:+390457901874"><svg><use href="#i-phone"/></svg><span class="t">045 7901874</span></a>
+      <button class="burger" aria-label="Apri il menu" onclick="document.getElementById('menu').classList.toggle('open')"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Villafranca di Verona</div>
+      <h1>Riscaldamento, fotovoltaico e impianti idraulici, <em>dalla vendita all'installazione</em></h1>
+      <p class="lead">Siamo specializzati nella realizzazione di impianti tecnologici. Vendiamo e installiamo caldaie, pannelli solari, pannelli fotovoltaici, climatizzatori e stufe a pellet nelle province di Verona e Mantova.</p>
+      <div class="ctas">
+        <a class="btn btn-r" href="tel:+390457901874"><svg><use href="#i-phone"/></svg>Chiama per un preventivo</a>
+        <a class="btn btn-ghost" href="mailto:info@termoidraulicacorali.it?subject=Richiesta%20informazioni"><svg><use href="#i-mail"/></svg>Scrivici</a>
+      </div>
+      <div class="chips"><span>Caldaie</span><span>Climatizzatori</span><span>Fotovoltaico</span><span>Solare termico</span><span>Pompe di calore</span><span>Stufe a pellet</span></div>
+    </div>
+    <div class="hero-media">
+      <div class="dot"></div>
+      <div class="frame"><img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/corali-termoidraulica-verona-riscaldamento-pavimento-11.jpg" alt="Impianto di riscaldamento a pavimento" loading="eager"></div>
+      <div class="badge"><b>Verona e Mantova</b><span>Operiamo da Villafranca in tutte e due le province.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servizi">
+  <div class="wrap">
+    <div class="kick">Servizi</div>
+    <h2 class="h2">Quattro tipi di impianto, un unico interlocutore</h2>
+    <p class="sub">Progettiamo, installiamo e manteniamo gli impianti di casa: dal riscaldamento all'acqua calda, fino all'energia dal sole.</p>
+    <div class="svc">
+      <div class="card"><img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/termoidraulica-corali-impianti-riscaldamento-verona.jpg" alt="Impianti di riscaldamento" loading="lazy">
+        <div class="bd"><h3>Impianti di riscaldamento</h3><p>Centrali termiche con caldaie modulari a condensazione o a premiscelazione.</p>
+        <ul><li>Riscaldamento a radiatori</li><li>Riscaldamento a pavimento, a bassa temperatura</li><li>Impianti abbinati ai pannelli solari</li></ul></div></div>
+      <div class="card"><img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/termoidraulica-corali-impianti-fotovoltaici-verona.jpg" alt="Impianti fotovoltaici" loading="lazy">
+        <div class="bd"><h3>Impianti fotovoltaici</h3><p>Installazione chiavi in mano, comprensiva di certificazione, collaudo e prima accensione.</p>
+        <ul><li>Pannelli fotovoltaici</li><li>Abbinamento con pompe di calore</li></ul></div></div>
+      <div class="card"><img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/termoidraulica-corali-impianti-idrosanitari-verona.jpg" alt="Impianti idrosanitari" loading="lazy">
+        <div class="bd"><h3>Impianti idrosanitari</h3><p>Progettazione, installazione e manutenzione, con assistenza durante i lavori e dopo la vendita.</p>
+        <ul><li>Impianti idraulici per la casa</li><li>Addolcitori ad alta efficienza</li><li>Manutenzione</li></ul></div></div>
+      <div class="card"><img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/termoidraulica-corali-impianti-solare-termico-verona.jpg" alt="Impianti solari termici" loading="lazy">
+        <div class="bd"><h3>Impianti solari termici</h3><p>Acqua calda sanitaria scaldata dal sole, senza usare gas o elettricità.</p>
+        <ul><li>Progettazione</li><li>Installazione</li><li>Manutenzione</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="prod" id="prodotti">
+  <div class="wrap">
+    <div class="kick" style="color:#ff8a7a">Prodotti</div>
+    <h2 class="h2">Vendiamo e installiamo</h2>
+    <p class="sub">Scegli l'apparecchio insieme a noi: lo forniamo e lo installiamo, e restiamo il tuo riferimento anche dopo.</p>
+    <div class="prod-grid">
+      <div class="pi"><svg><use href="#i-flame"/></svg><b>Caldaie</b><span>A condensazione, con rimozione e smaltimento della vecchia caldaia e lavaggio dell'impianto.</span></div>
+      <div class="pi"><svg><use href="#i-snow"/></svg><b>Climatizzatori</b><span>Fornitura, installazione e assistenza post vendita.</span></div>
+      <div class="pi"><svg><use href="#i-pellet"/></svg><b>Stufe a pellet</b><span>Poca manutenzione, anche con finanziamento.</span></div>
+      <div class="pi"><svg><use href="#i-leaf"/></svg><b>Pompe di calore</b><span>Per l'acqua calda sanitaria, abbinabili al fotovoltaico.</span></div>
+      <div class="pi"><svg><use href="#i-sun"/></svg><b>Pannelli solari termici</b><span>Per scaldare l'acqua di casa con il sole.</span></div>
+      <div class="pi"><svg><use href="#i-panel"/></svg><b>Pannelli fotovoltaici</b><span>Per produrre l'energia elettrica di casa.</span></div>
+      <div class="pi"><svg><use href="#i-gauge"/></svg><b>Valvole termostatiche</b><span>Fasce orarie programmabili stanza per stanza.</span></div>
+      <div class="pi"><svg><use href="#i-drop"/></svg><b>Addolcitori</b><span>Installati a monte dell'impianto di casa contro il calcare.</span></div>
+    </div>
+    <p class="brands">Tra i marchi presenti sul sito: <strong>Immergas</strong> · <strong>Daikin</strong> · <strong>Maxa</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap why-grid">
+    <div>
+      <div class="kick">Perché Corali</div>
+      <h2 class="h2">Dal preventivo all'accensione, ci pensiamo noi</h2>
+      <div class="points">
+        <div class="pt"><span class="ic"><svg><use href="#i-key"/></svg></span><div><b>Installazione chiavi in mano</b><span>Per caldaie e fotovoltaico curiamo tutto: rimozione del vecchio apparecchio, certificazione, collaudo e prima accensione.</span></div></div>
+        <div class="pt"><span class="ic"><svg><use href="#i-tool"/></svg></span><div><b>Vendita e installazione insieme</b><span>Forniamo il prodotto e lo installiamo noi, con assistenza dopo la vendita.</span></div></div>
+        <div class="pt"><span class="ic"><svg><use href="#i-pin"/></svg></span><div><b>Vicini a te</b><span>Sede a Villafranca di Verona, interventi nelle province di Verona e Mantova.</span></div></div>
+      </div>
+    </div>
+    <div class="fin">
+      <div class="kick">Finanziamenti</div>
+      <h3>Il nuovo impianto, anche a rate</h3>
+      <p>I prodotti che installiamo si possono finanziare a tasso agevolato.</p>
+      <ul><li>Durata a 36 o 48 mesi</li><li>Con contratto assicurativo danni incluso</li><li>Per caldaie, impianti di riscaldamento e climatizzatori</li></ul>
+      <a class="btn btn-n" href="tel:+390457901874"><svg><use href="#i-phone"/></svg>Chiedi le condizioni</a>
+      <small>Condizioni da verificare al momento della richiesta.</small>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kick">Galleria</div>
+    <h2 class="h2">Riscaldamento a pavimento e fotovoltaico</h2>
+    <div class="gal">
+      <img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/corali-termoidraulica-verona-riscaldamento-pavimento-21.jpg" alt="Riscaldamento a pavimento" loading="lazy">
+      <img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/corali-termoidraulica-verona-riscaldamento-pavimento-31.jpg" alt="Riscaldamento a pavimento" loading="lazy">
+      <img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/corali-termoidraulica-verona-riscaldamento-pavimento-41.jpg" alt="Riscaldamento a pavimento" loading="lazy">
+      <img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/corali-termoidraulica-verona-riscaldamento-pavimento-51.jpg" alt="Riscaldamento a pavimento" loading="lazy">
+      <img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/corali-termoidraulica-verona-riscaldamento-pavimento-61.jpg" alt="Riscaldamento a pavimento" loading="lazy">
+      <img class="photo" src="https://www.termoidraulicacorali.it/wp-content/uploads/2014/12/termoidraulica-corali-verona-impianti-fotovoltaici-1.jpg" alt="Impianto fotovoltaico" loading="lazy">
+    </div>
+    <p class="gal-note">Immagini tratte dal sito attuale di Termoidraulica Corali.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cta">
+    <div><h2>Vuoi cambiare la caldaia o installare il fotovoltaico?</h2><p>Chiamaci o scrivici: ti diamo informazioni e un preventivo.</p></div>
+    <div class="ctas"><a class="btn btn-w" href="tel:+390457901874"><svg><use href="#i-phone"/></svg>045 7901874</a><a class="btn btn-line" href="tel:+393292949610"><svg><use href="#i-phone"/></svg>329 2949610</a></div>
+  </div>
+</div>
+
+<section id="contatti">
+  <div class="wrap contact">
+    <div>
+      <div class="kick">Contatti</div>
+      <h2 class="h2" style="margin-bottom:22px">Dove siamo</h2>
+      <div class="row"><span>Indirizzo</span><div>Via Ortigara 38 F<br>37069 Villafranca di Verona (VR)</div></div>
+      <div class="row"><span>Telefono</span><div><a href="tel:+390457901874">045 7901874</a></div></div>
+      <div class="row"><span>Cellulare</span><div><a href="tel:+393292949610">329 2949610</a></div></div>
+      <div class="row"><span>Email</span><div><a href="mailto:info@termoidraulicacorali.it">info@termoidraulicacorali.it</a></div></div>
+      <div class="row"><span>Zona</span><div>Province di Verona e Mantova</div></div>
+    </div>
+    <div class="map"><iframe title="Mappa Termoidraulica Corali" loading="lazy" src="https://www.google.com/maps?q=Via+Ortigara+38F,+37069+Villafranca+di+Verona+VR&output=embed"></iframe></div>
+  </div>
+</section>
+
+</main>
+
+<main id="wip" class="wip" hidden>
+  <div>
+    <div class="ic"><svg><use href="#i-tool"/></svg></div>
+    <div class="kick" id="wip-k">Termoidraulica Corali</div>
+    <h1>Pagina in costruzione</h1>
+    <p>Questa sezione sarà disponibile nel nuovo sito completo. Nel frattempo chiamaci o scrivici per informazioni e preventivi.</p>
+    <div class="ctas"><a class="btn btn-n" href="#">← Torna alla home</a><a class="btn btn-r" href="tel:+390457901874"><svg><use href="#i-phone"/></svg>045 7901874</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Termoidraulica Corali · Via Ortigara 38 F, 37069 Villafranca di Verona (VR) · P.IVA 03879400236</div>
+    <div>Bozza di proposta grafica · non è il sito ufficiale</div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+390457901874"><svg><use href="#i-phone"/></svg>Chiama</a>
+
+<script>
+(function(){
+  var titles={"p-servizi":"Servizi","p-prodotti":"Prodotti","p-finanziamenti":"Finanziamenti","p-contatti":"Contatti"};
+  var home=document.getElementById('home'),wip=document.getElementById('wip'),menu=document.getElementById('menu');
+  function route(){var h=location.hash.slice(1);menu.classList.remove('open');
+    if(titles[h]){home.hidden=true;wip.hidden=false;document.getElementById('wip-k').textContent=titles[h];window.scrollTo(0,0);}
+    else{home.hidden=false;wip.hidden=true;}}
+  window.addEventListener('hashchange',route);route();
+})();
+</script>
+</body>
+</html>

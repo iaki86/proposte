@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bozza di proposta · Sartori Impianti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14231c;--muted:#5a6b62;--bg:#f6f4ee;--paper:#fff;--green:#1e5b41;--green-d:#143f2d;--green-l:#e3efe8;--sun:#f4b400;--sun-d:#d99b00;--line:#e4e2d9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+svg{display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:Sora,sans-serif;line-height:1.12;letter-spacing:-.025em}
+[hidden]{display:none!important}
+.proposal{background:#0e1712;color:#d9e2dc;font-size:13px;text-align:center;padding:9px 16px}
+.proposal a{color:var(--sun);text-decoration:underline}
+
+header{position:sticky;top:0;z-index:50;background:rgba(246,244,238,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{flex:none;width:42px;height:42px;border-radius:12px;background:var(--green);display:grid;place-items:center}
+.brand b{display:block;font:800 18px Sora,sans-serif;letter-spacing:.01em}
+.brand small{display:block;font-size:12px;color:var(--muted)}
+.menu{display:flex;gap:26px;font-size:15px;font-weight:500}
+.menu a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-s{background:var(--sun);color:#1b1500}.btn-s:hover{background:var(--sun-d)}
+.btn-g{background:var(--green);color:#fff}.btn-g:hover{background:var(--green-d)}
+.btn-o{border:1.5px solid var(--ink);color:var(--ink)}.btn-o:hover{background:var(--ink);color:#fff}
+.btn-ow{border:1.5px solid rgba(255,255,255,.6);color:#fff}.btn-ow:hover{background:rgba(255,255,255,.1)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px;color:var(--ink)}
+@media(max-width:940px){.menu{display:none}.burger{display:block}.nav .btn{padding:10px 14px;font-size:14px}
+.menu.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 24px -14px rgba(0,0,0,.25)}
+.menu.open a{padding:16px 22px;border-top:1px solid var(--line)}}
+@media(max-width:520px){.brand small{display:none}.nav .btn .t{display:none}}
+
+/* hero: split, testo + pannello tipografico */
+.hero{padding:76px 0 84px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero{padding:52px 0 64px}}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--green-l);color:var(--green);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:22px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--sun);display:inline-block}
+.hero h1{font-size:clamp(36px,5.6vw,64px);font-weight:800}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(244,180,0,.55) 62%)}
+.hero p{font-size:18px;color:var(--muted);max-width:560px;margin:20px 0 30px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.panel{background:var(--green);color:#fff;border-radius:28px;padding:30px;position:relative;overflow:hidden}
+.panel::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:var(--sun);opacity:.9}
+.panel h3{font-size:15px;font-weight:600;color:#bfe0cf;position:relative;z-index:1;letter-spacing:.06em;text-transform:uppercase}
+.panel .big{font:800 clamp(44px,6vw,64px) Sora,sans-serif;line-height:1;margin:14px 0 6px;position:relative;z-index:1}
+.panel .big small{font-size:.38em;font-weight:600;display:block;margin-top:8px;color:#e6f2eb}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px;position:relative;z-index:1}
+.chips span{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:11px 12px;font-size:14px;font-weight:500}
+.chips svg{flex:none;width:18px;height:18px;color:var(--sun)}
+
+section{padding:88px 0}
+.kick{color:var(--green);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.h2{font-size:clamp(30px,3.8vw,44px);font-weight:800;max-width:660px}
+.lead{color:var(--muted);font-size:17px;max-width:580px;margin-top:14px}
+
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+@media(max-width:1000px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.svc{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(20,35,28,.45);border-color:#cfd9d2}
+.card .ic{width:48px;height:48px;border-radius:14px;background:var(--green-l);color:var(--green);display:grid;place-items:center;margin-bottom:16px}
+.card .ic svg{width:24px;height:24px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+
+.why{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+@media(max-width:940px){.why-grid{grid-template-columns:1fr;gap:36px}}
+.points{display:grid;gap:16px}
+.pt{display:flex;gap:16px;background:var(--bg);border-radius:18px;padding:20px}
+.pt .n{flex:none;width:42px;height:42px;border-radius:50%;background:var(--sun);color:#1b1500;display:grid;place-items:center;font:800 16px Sora,sans-serif}
+.pt b{display:block;font-size:17px;font-family:Sora;font-weight:700}
+.pt span{color:var(--muted);font-size:15px}
+.zone{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.zone span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:14px}
+
+.cta{background:var(--green-d);color:#fff;border-radius:28px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;left:-40px;bottom:-80px;width:220px;height:220px;border-radius:50%;border:28px solid rgba(244,180,0,.22)}
+.cta>*{position:relative}
+.cta h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;max-width:560px}
+.cta p{color:#c7dcd0;margin-top:10px;max-width:520px}
+@media(max-width:560px){.cta{padding:34px 24px}}
+
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+@media(max-width:940px){.contact{grid-template-columns:1fr}}
+.row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row span{width:96px;flex:none;color:var(--muted);font-size:14px}
+.row div{min-width:0;overflow-wrap:anywhere}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:360px}
+.map iframe{width:100%;height:100%;min-height:360px;border:0}
+
+footer{background:#0e1712;color:#9fb2a7;font-size:14px;padding:36px 0;margin-top:88px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;background:var(--sun);color:#1b1500;border-radius:999px;padding:14px 20px;font-weight:700;box-shadow:0 10px 28px -8px rgba(0,0,0,.45);align-items:center;gap:8px}
+.fab svg{width:18px;height:18px}
+@media(max-width:940px){.fab{display:inline-flex}}
+
+.wip{min-height:70vh;display:grid;place-items:center;text-align:center;padding:80px 22px}
+.wip .ic{width:64px;height:64px;border-radius:18px;background:var(--green-l);color:var(--green);display:grid;place-items:center;margin:0 auto 14px}
+.wip .ic svg{width:32px;height:32px}
+.wip h1{font-size:clamp(34px,5vw,56px);font-weight:800;margin:6px 0 14px}
+.wip p{color:var(--muted);max-width:520px;margin:0 auto 28px;font-size:17px}
+.wip .ctas{justify-content:center}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/><path d="m9 12 2 2 4-4" stroke-linecap="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><circle cx="12" cy="14" r="2"/></symbol>
+  <symbol id="i-temp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 14V5a2 2 0 1 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M18 6h3M18 10h3"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/></symbol>
+  <symbol id="i-build" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 21V5l8-3v19M12 9h8v12"/><path d="M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2" stroke-linecap="round"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+
+<div class="proposal">Bozza di proposta realizzata da Neoverso per il nuovo sito di Sartori Impianti · Non è il sito ufficiale · <a href="https://neoverso.it/?a=sartori-impianti">Chi siamo</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="mark"><svg width="22" height="22" style="color:#f4b400"><use href="#i-bolt"/></svg></span><span><b>SARTORI IMPIANTI</b><small>Camposampiero · Padova</small></span></a>
+    <nav class="menu" id="menu">
+      <a href="#p-azienda">Azienda</a>
+      <a href="#p-servizi">Servizi</a>
+      <a href="#p-rinnovabili">Rinnovabili</a>
+      <a href="#p-industriale">Settore industriale</a>
+      <a href="#p-contatti">Contatti</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:6px">
+      <a class="btn btn-s" href="tel:+393349991572"><svg><use href="#i-phone"/></svg><span class="t">334 999 1572</span></a>
+      <button class="burger" aria-label="Apri il menu" onclick="document.getElementById('menu').classList.toggle('open')"><svg width="26" height="26"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill"><i></i> Camposampiero e Alta Padovana</div>
+      <h1>Impianti elettrici <em>di nuova generazione</em>, su misura per la tua casa</h1>
+      <p>Impianti elettrici, fotovoltaico, pompa di calore, VMC, antifurto e domotica: un'unica ditta per l'impianto elettrico, termico e il condizionamento.</p>
+      <div class="ctas">
+        <a class="btn btn-g" href="tel:+393349991572"><svg><use href="#i-phone"/></svg>Chiama per informazioni</a>
+        <a class="btn btn-o" href="mailto:sartori.impianti@gmail.com?subject=Richiesta%20informazioni"><svg><use href="#i-mail"/></svg>Scrivici</a>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Esperienza</h3>
+      <div class="big">20+ anni<small>di esperienza, affidabilità e professionalità</small></div>
+      <div class="chips">
+        <span><svg><use href="#i-bolt"/></svg>Impianti elettrici</span>
+        <span><svg><use href="#i-sun"/></svg>Fotovoltaico</span>
+        <span><svg><use href="#i-temp"/></svg>Pompa di calore</span>
+        <span><svg><use href="#i-shield"/></svg>Antifurto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servizi" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kick">Cosa facciamo</div>
+    <h2 class="h2">Tutti gli impianti della casa, con un solo interlocutore</h2>
+    <p class="lead">Dall'impianto elettrico al risparmio energetico, dalla sicurezza alle reti: progettiamo e installiamo impianti per abitazioni, condomini e aziende.</p>
+    <div class="svc">
+      <div class="card"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h3>Impianti elettrici</h3><p>Impianti elettrici di nuova generazione, quadri elettrici e illuminazione, citofoni e sensori.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-sun"/></svg></div><h3>Energie rinnovabili</h3><p>Impianti fotovoltaici per il risparmio energetico, pompe di calore Clivet e ventilazione meccanica controllata (VMC).</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-temp"/></svg></div><h3>Riscaldamento e clima</h3><p>Riscaldamento, raffrescamento e condizionamento in pompa di calore, con controllo energetico.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Sicurezza</h3><p>Antifurto perimetrale a protezione totale e videocontrollo, con centrali d'allarme costruite completamente in Italia.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-home"/></svg></div><h3>Domotica e automazioni</h3><p>Domotica, sistemi di controllo e automazione cancelli.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-wifi"/></svg></div><h3>TV, rete e telefonia</h3><p>Impianti TV e satellitari, telefonia, Wi-Fi e reti internet.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-build"/></svg></div><h3>Condomini</h3><p>Manutenzione condomini, pompe di sollevamento, impianti citofonici e automazione cancelli.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-tool"/></svg></div><h3>Ristrutturazioni e industria</h3><p>Impianti per ristrutturazioni, settore industriale e impianti a biocelle per il compostaggio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="kick">Perché Sartori</div>
+      <h2 class="h2">Un'unica ditta per l'impianto elettrico, termico e il clima</h2>
+      <p class="lead">Impianti elettrici, termici e di condizionamento in pompa di calore, con il controllo energetico: Sartori Impianti segue tutto direttamente.</p>
+      <div class="zone" aria-label="Zone servite">
+        <span>Camposampiero</span><span>Loreggia</span><span>Santa Giustina in Colle</span><span>Villa del Conte</span><span>San Martino di Lupari</span><span>Cittadella</span><span>Campodarsego</span><span>Borgoricco</span><span>Trebaseleghe</span><span>Piazzola sul Brenta</span><span>Castelfranco Veneto</span><span>Resana</span><span>Noale</span><span>e dintorni</span>
+      </div>
+    </div>
+    <div class="points">
+      <div class="pt"><span class="n">1</span><div><b>Più di vent'anni di esperienza</b><span>Affidabilità e professionalità maturate sul campo nell'Alta Padovana.</span></div></div>
+      <div class="pt"><span class="n">2</span><div><b>Impianti di nuova generazione</b><span>Fotovoltaico, pompa di calore e VMC per abbassare i consumi e aumentare il comfort.</span></div></div>
+      <div class="pt"><span class="n">3</span><div><b>Sicurezza fatta in Italia</b><span>Centrali d'allarme costruite completamente in Italia, sensori perimetrali e videocontrollo.</span></div></div>
+      <div class="pt"><span class="n">4</span><div><b>Anche per condomini e aziende</b><span>Manutenzione condomini, pompe di sollevamento e impianti per il settore industriale.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="cta">
+      <div><h2>Vuoi installare il fotovoltaico o rifare l'impianto?</h2><p>Chiama Sartori Impianti per informazioni: valutiamo insieme la soluzione più adatta alla tua casa.</p></div>
+      <div class="ctas"><a class="btn btn-s" href="tel:+393349991572"><svg><use href="#i-phone"/></svg>334 999 1572</a><a class="btn btn-ow" href="mailto:sartori.impianti@gmail.com"><svg><use href="#i-mail"/></svg>Scrivi una email</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="contatti">
+  <div class="wrap contact">
+    <div>
+      <div class="kick">Contatti</div>
+      <h2 class="h2" style="margin-bottom:22px">Dove siamo</h2>
+      <div class="row"><span>Indirizzo</span><div>Via T. Vecellio<br>Camposampiero (PD)</div></div>
+      <div class="row"><span>Telefono</span><div><a href="tel:+393349991572"><b>334 999 1572</b></a></div></div>
+      <div class="row"><span>Email</span><div><a href="mailto:sartori.impianti@gmail.com">sartori.impianti@gmail.com</a></div></div>
+      <div class="row"><span>Zona</span><div>Camposampiero, Alta Padovana e province di Padova, Treviso, Vicenza e Venezia</div></div>
+    </div>
+    <div class="map"><iframe title="Mappa" loading="lazy" src="https://www.google.com/maps?q=Via+Tiziano+Vecellio,+Camposampiero+PD&output=embed"></iframe></div>
+  </div>
+</section>
+
+</main>
+
+<main id="wip" class="wip" hidden>
+  <div>
+    <div class="ic"><svg><use href="#i-tool"/></svg></div>
+    <div class="kick" id="wip-k">Sartori Impianti</div>
+    <h1>Pagina in costruzione</h1>
+    <p>Questa sezione sarà disponibile nel nuovo sito completo. Nel frattempo chiamaci o scrivici per informazioni.</p>
+    <div class="ctas"><a class="btn btn-o" href="#">← Torna alla home</a><a class="btn btn-s" href="tel:+393349991572"><svg><use href="#i-phone"/></svg>334 999 1572</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Sartori Impianti · Via T. Vecellio, Camposampiero (PD)</div>
+    <div>Bozza di proposta grafica · non è il sito ufficiale</div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+393349991572"><svg><use href="#i-phone"/></svg>Chiama</a>
+
+<script>
+(function(){
+  var titles={"p-azienda":"Azienda","p-servizi":"Servizi","p-rinnovabili":"Rinnovabili","p-industriale":"Settore industriale","p-contatti":"Contatti"};
+  var home=document.getElementById('home'),wip=document.getElementById('wip'),menu=document.getElementById('menu');
+  function route(){var h=location.hash.slice(1);menu.classList.remove('open');
+    if(titles[h]){home.hidden=true;wip.hidden=false;document.getElementById('wip-k').textContent=titles[h];window.scrollTo(0,0);}
+    else{home.hidden=false;wip.hidden=true;}}
+  window.addEventListener('hashchange',route);route();
+})();
+</script>
+</body>
+</html>

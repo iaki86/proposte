@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bozza di proposta · Padana Impianti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1d24;--muted:#5f6571;--bg:#f4f3f0;--paper:#fff;--char:#20242c;--char-2:#2b303a;--amber:#f2a516;--amber-d:#d48b00;--amber-l:#fdf1d8;--line:#e3e1db}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+svg{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;line-height:1.02;letter-spacing:-.005em;text-transform:uppercase}
+[hidden]{display:none!important}
+.photo{filter:contrast(1.05) saturate(1.06)}
+.proposal{background:#000;color:#ddd;font-size:13px;text-align:center;padding:9px 16px}
+.proposal a{color:var(--amber);text-decoration:underline}
+
+header{position:sticky;top:0;z-index:50;background:var(--char);color:#fff;border-bottom:3px solid var(--amber)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{flex:none;width:40px;height:40px;background:var(--amber);color:var(--char);display:grid;place-items:center;clip-path:polygon(25% 0,100% 0,75% 100%,0 100%)}
+.brand b{display:block;font:800 22px "Barlow Condensed",sans-serif;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+.brand small{display:block;font-size:12px;color:#aab1bd;margin-top:3px}
+.menu{display:flex;gap:26px;font-size:15px;font-weight:600;color:#d4d8df}
+.menu a:hover{color:var(--amber)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:4px;font-weight:700;font-size:15px;transition:.2s;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-a{background:var(--amber);color:var(--char)}.btn-a:hover{background:var(--amber-d)}
+.btn-d{background:var(--char);color:#fff}.btn-d:hover{background:#000}
+.btn-l{border:2px solid var(--char);color:var(--char)}.btn-l:hover{background:var(--char);color:#fff}
+.btn-lw{border:2px solid rgba(255,255,255,.55);color:#fff}.btn-lw:hover{background:rgba(255,255,255,.08)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px;color:#fff}
+@media(max-width:960px){.menu{display:none}.burger{display:block}.nav .btn{padding:10px 14px;font-size:14px}
+.menu.open{display:flex;position:absolute;top:73px;left:0;right:0;flex-direction:column;gap:0;background:var(--char);border-bottom:3px solid var(--amber)}
+.menu.open a{padding:16px 22px;border-top:1px solid rgba(255,255,255,.08)}}
+@media(max-width:520px){.brand small{display:none}.nav .btn .t{display:none}}
+
+/* hero: tipografico centrato su fondo chiaro, fascia numeri sotto */
+.hero{padding:84px 0 0;background:radial-gradient(circle at 85% 10%,var(--amber-l) 0,transparent 45%),var(--bg)}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-d);margin-bottom:20px}
+.hero .eyebrow::before{content:"";width:34px;height:3px;background:var(--amber)}
+.hero h1{font-size:clamp(36px,8vw,104px);font-weight:800;max-width:980px;overflow-wrap:break-word}
+.hero h1 span{color:var(--amber-d)}
+.hero p{font-size:19px;color:var(--muted);max-width:640px;margin:24px 0 32px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.strip{margin-top:70px;background:var(--char);color:#fff;display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:28px 26px;border-right:1px solid rgba(255,255,255,.08)}
+.strip div:last-child{border-right:0}
+.strip b{display:block;font:800 34px "Barlow Condensed",sans-serif;color:var(--amber);text-transform:uppercase;line-height:1.05}
+.strip span{font-size:14px;color:#c3c8d1}
+@media(max-width:860px){.strip{grid-template-columns:1fr 1fr}.strip div:nth-child(2){border-right:0}.strip div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}}
+@media(max-width:420px){.strip div{padding:22px 16px}.strip b{font-size:28px}}
+
+section{padding:92px 0}
+.kick{color:var(--amber-d);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.h2{font-size:clamp(36px,4.6vw,56px);font-weight:800;max-width:720px}
+.lead{color:var(--muted);font-size:17px;max-width:600px;margin-top:14px}
+
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+@media(max-width:960px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(26,29,36,.5)}
+.card .ph{height:150px;width:100%;object-fit:cover;background:linear-gradient(135deg,var(--char-2),var(--char))}
+.card .bd{padding:22px;flex:1;display:flex;flex-direction:column;border-top:3px solid var(--amber)}
+.card h3{font-size:26px;font-weight:700;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.more{margin-top:26px;background:var(--paper);border:1px dashed #cfccc3;border-radius:6px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
+.more svg{flex:none;width:26px;height:26px;color:var(--amber-d);margin-top:2px}
+.more p{color:var(--muted);font-size:15px}
+.more b{color:var(--ink)}
+
+.dark{background:var(--char);color:#fff}
+.dark .lead{color:#b9bfca}
+.dark-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+@media(max-width:960px){.dark-grid{grid-template-columns:1fr;gap:40px}}
+.points{display:grid;gap:14px;margin-top:30px}
+.pt{display:flex;gap:16px;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:6px;background:var(--char-2)}
+.pt .ic{flex:none;width:44px;height:44px;border-radius:4px;background:var(--amber);color:var(--char);display:grid;place-items:center}
+.pt .ic svg{width:22px;height:22px}
+.pt b{display:block;font-size:17px}
+.pt span{color:#b9bfca;font-size:15px}
+.clients{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.clients span{border:1px solid rgba(255,255,255,.18);border-radius:3px;padding:8px 14px;font-size:14px;color:#e4e7ec}
+.quote{margin-top:34px;padding-left:20px;border-left:3px solid var(--amber);font:600 24px "Barlow Condensed",sans-serif;color:#fff;line-height:1.25}
+
+.cta{background:var(--amber);color:var(--char);border-radius:6px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.cta h2{font-size:clamp(32px,4vw,48px);font-weight:800;max-width:600px}
+.cta p{margin-top:10px;max-width:540px;font-weight:500}
+@media(max-width:560px){.cta{padding:34px 24px}}
+
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+@media(max-width:960px){.contact{grid-template-columns:1fr}}
+.row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row span{width:100px;flex:none;color:var(--muted);font-size:14px}
+.row div{min-width:0;overflow-wrap:anywhere}
+.badge{display:inline-block;background:var(--amber);color:var(--char);font:700 12px Barlow,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-left:6px;vertical-align:middle}
+.map{border-radius:6px;overflow:hidden;border:1px solid var(--line);min-height:360px}
+.map iframe{width:100%;height:100%;min-height:360px;border:0}
+
+footer{background:var(--char);color:#a3aab6;font-size:14px;padding:36px 0;margin-top:92px;border-top:3px solid var(--amber)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;background:var(--amber);color:var(--char);border-radius:999px;padding:14px 20px;font-weight:700;box-shadow:0 10px 28px -8px rgba(0,0,0,.45);align-items:center;gap:8px}
+.fab svg{width:18px;height:18px}
+@media(max-width:960px){.fab{display:inline-flex}}
+
+.wip{min-height:70vh;display:grid;place-items:center;text-align:center;padding:80px 22px}
+.wip .ic{width:64px;height:64px;background:var(--amber);color:var(--char);display:grid;place-items:center;margin:0 auto 14px;clip-path:polygon(25% 0,100% 0,75% 100%,0 100%)}
+.wip .ic svg{width:30px;height:30px}
+.wip h1{font-size:clamp(40px,6vw,68px);font-weight:800;margin:6px 0 14px}
+.wip p{color:var(--muted);max-width:520px;margin:0 auto 28px;font-size:17px}
+.wip .ctas{justify-content:center}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
+  <symbol id="i-gov" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-cycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.6-4.5M4 13a8 8 0 0 0 14.6 4.5"/><path d="M5 3v4h4M19 21v-4h-4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8z"/></symbol>
+</svg>
+
+<div class="proposal">Bozza di proposta realizzata da Neoverso per il nuovo sito di Padana Impianti · Non è il sito ufficiale · <a href="https://neoverso.it/?a=padana-impianti">Chi siamo</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="mark"><svg width="20" height="20"><use href="#i-bolt"/></svg></span><span><b>Padana Impianti</b><small>Impianti elettrici · Conselve (PD)</small></span></a>
+    <nav class="menu" id="menu">
+      <a href="#p-azienda">Azienda</a>
+      <a href="#p-servizi">Servizi</a>
+      <a href="#p-realizzazioni">Realizzazioni</a>
+      <a href="#p-certificazioni">Certificazioni</a>
+      <a href="#p-contatti">Contatti</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:6px">
+      <a class="btn btn-a" href="tel:+390495352188"><svg><use href="#i-phone"/></svg><span class="t">049 535 2188</span></a>
+      <button class="burger" aria-label="Apri il menu" onclick="document.getElementById('menu').classList.toggle('open')"><svg width="26" height="26"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Conselve · Padova e provincia</div>
+    <h1>Impianti elettrici civili e industriali, <span>dal progetto alla manutenzione</span></h1>
+    <p>Da oltre trent'anni realizziamo impianti elettrici, fotovoltaici, di sicurezza, domotica e illuminazione pubblica per privati, aziende ed enti pubblici.</p>
+    <div class="ctas">
+      <a class="btn btn-d" href="tel:+390495352188"><svg><use href="#i-phone"/></svg>Chiama lo 049 535 2188</a>
+      <a class="btn btn-l" href="mailto:info@padanaimpianti.com?subject=Richiesta%20informazioni"><svg><use href="#i-mail"/></svg>Scrivici</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="strip">
+      <div><b>30+ anni</b><span>di attività nel settore elettrico</span></div>
+      <div><b>SOA</b><span>abilitati ai lavori pubblici</span></div>
+      <div><b>ICM · IQNET</b><span>certificazioni di qualità</span></div>
+      <div><b>11 servizi</b><span>dal fotovoltaico alla rete LAN</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servizi">
+  <div class="wrap">
+    <div class="kick">Servizi</div>
+    <h2 class="h2">Tutto l'impianto, seguito da un'unica impresa</h2>
+    <p class="lead">Seguiamo ogni impianto dalla progettazione alla manutenzione ordinaria, con attenzione ai consumi energetici.</p>
+    <div class="svc">
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/blog-image-1.jpg" alt="" loading="lazy"><div class="bd"><h3>Impianti elettrici</h3><p>Impianti civili e industriali, illuminazione, quadri di comando e protezione, linee di distribuzione e canalizzazioni.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/fotovoltaico.jpg" alt="" loading="lazy"><div class="bd"><h3>Fotovoltaico</h3><p>Installazione, pratiche di allacciamento alla rete e assistenza per le richieste di incentivi.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/domotica.jpg" alt="" loading="lazy"><div class="bd"><h3>Domotica</h3><p>Controllo centralizzato degli impianti di casa o ufficio, in loco o da remoto.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/allarme.jpg" alt="" loading="lazy"><div class="bd"><h3>Impianti d'allarme</h3><p>Antifurto per diversi livelli di rischio: via radio, satellitari e con sistemi nebbiogeni.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/videosorveglianza.jpg" alt="" loading="lazy"><div class="bd"><h3>Videosorveglianza</h3><p>Telecamere analogiche e IP, con accesso alle immagini anche da remoto.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/automazione.jpg" alt="" loading="lazy"><div class="bd"><h3>Automazioni e accessi</h3><p>Cancelli, basculanti, porte automatiche, sbarre, chiusure industriali, parcheggi e controllo accessi.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/rilevazione_fumi.jpg" alt="" loading="lazy"><div class="bd"><h3>Rilevazione fumi e gas</h3><p>Impianti di rilevazione progettati dopo un'analisi dell'ambiente da proteggere.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/retelan.jpg" alt="" loading="lazy"><div class="bd"><h3>Reti LAN e telefonia</h3><p>Reti dati, condivisione delle periferiche e centralini telefonici analogici e IP.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/satellite.jpg" alt="" loading="lazy"><div class="bd"><h3>Impianti satellitari</h3><p>TV satellitare analogica e digitale, impianti centralizzati e cablaggio strutturato.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/illuminazione.jpg" alt="" loading="lazy"><div class="bd"><h3>Illuminazione pubblica</h3><p>Illuminazione pubblica, impianti semaforici e sicurezza stradale, con consulenza su inquinamento luminoso e risparmio energetico.</p></div></div>
+      <div class="card"><img class="ph photo" src="https://www.padanaimpianti.com/images/blog-image-2.jpg" alt="" loading="lazy"><div class="bd"><h3>Progettazione e manutenzione</h3><p>Seguiamo l'impianto dal progetto iniziale alla manutenzione ordinaria, puntando su consumi ridotti.</p></div></div>
+    </div>
+    <div class="more"><svg><use href="#i-plus"/></svg><p><b>Inoltre:</b> impianti idraulici, piccole opere edili, sostituzione caldaie, prove fumi e analisi di combustione, riparazione tubature, installazione e ricarica condizionatori, ristrutturazioni, intonaci e piastrellature.</p></div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap dark-grid">
+    <div>
+      <div class="kick">Perché Padana Impianti</div>
+      <h2 class="h2">Esperienza nata nei grandi cantieri</h2>
+      <p class="lead">Abbiamo iniziato collaborando con imprese più grandi su cantieri importanti, come la sede Generali di Mogliano Veneto, gli uffici delle Poste a Mestre e parte dell'impianto elettrico dell'Aeroporto di Bologna.</p>
+      <div class="points">
+        <div class="pt"><span class="ic"><svg><use href="#i-clock"/></svg></span><div><b>Oltre trent'anni di attività</b><span>Tra le prime imprese del settore a lavorare con tecnologie informatizzate.</span></div></div>
+        <div class="pt"><span class="ic"><svg><use href="#i-gov"/></svg></span><div><b>Abilitati ai lavori pubblici</b><span>Attestazione SOA e certificazioni di qualità ICM e IQNET.</span></div></div>
+        <div class="pt"><span class="ic"><svg><use href="#i-award"/></svg></span><div><b>Sicurezza certificata</b><span>Impianti d'allarme con certificazioni ISO 9001 e IMQ Allarme.</span></div></div>
+        <div class="pt"><span class="ic"><svg><use href="#i-cycle"/></svg></span><div><b>Dal progetto alla manutenzione</b><span>Seguiamo l'impianto dalla progettazione alla manutenzione ordinaria.</span></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="kick">Alcuni clienti</div>
+      <h2 class="h2" style="font-size:clamp(30px,3.4vw,42px)">Enti pubblici e aziende del territorio</h2>
+      <div class="clients">
+        <span>A.T.E.R. di Padova</span><span>Comune di Conselve</span><span>Comune di Tribano</span><span>Comune di Casalserugo</span><span>Isokit S.r.l.</span><span>Coop. sociale Alambicco</span><span>Legatoria Berto</span><span>Impresa edile Lollo</span><span>Romagnosi</span><span>TFM Group</span><span>Officine Codogno</span>
+      </div>
+      <p class="quote">“La più importante qualità di una casa è la luce.”</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="cta">
+      <div><h2>Un impianto da progettare o da sistemare?</h2><p>Chiamaci o scrivici per informazioni e preventivi su impianti nuovi, manutenzioni e interventi.</p></div>
+      <div class="ctas"><a class="btn btn-d" href="tel:+390495352188"><svg><use href="#i-phone"/></svg>049 535 2188</a><a class="btn btn-l" href="mailto:info@padanaimpianti.com"><svg><use href="#i-mail"/></svg>info@padanaimpianti.com</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="contatti">
+  <div class="wrap contact">
+    <div>
+      <div class="kick">Contatti</div>
+      <h2 class="h2" style="margin-bottom:22px">Dove siamo <span class="badge">Nuova sede</span></h2>
+      <div class="row"><span>Indirizzo</span><div>Via Mascagni, 51<br>35026 Conselve (PD)</div></div>
+      <div class="row"><span>Telefono</span><div><a href="tel:+390495352188"><b>049 535 2188</b></a></div></div>
+      <div class="row"><span>Email</span><div><a href="mailto:info@padanaimpianti.com">info@padanaimpianti.com</a></div></div>
+      <div class="row"><span>Referenti</span><div>Claudio Boccardo · Pierangelo Boscaro</div></div>
+    </div>
+    <div class="map"><iframe title="Mappa" loading="lazy" src="https://www.google.com/maps?q=Via+Mascagni+51,+35026+Conselve+PD&output=embed"></iframe></div>
+  </div>
+</section>
+
+</main>
+
+<main id="wip" class="wip" hidden>
+  <div>
+    <div class="ic"><svg><use href="#i-tool"/></svg></div>
+    <div class="kick" id="wip-k">Padana Impianti</div>
+    <h1>Pagina in costruzione</h1>
+    <p>Questa sezione sarà disponibile nel nuovo sito completo. Nel frattempo chiamaci o scrivici per un preventivo.</p>
+    <div class="ctas"><a class="btn btn-l" href="#">← Torna alla home</a><a class="btn btn-a" href="tel:+390495352188"><svg><use href="#i-phone"/></svg>049 535 2188</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Padana Impianti · Via Mascagni 51, 35026 Conselve (PD) · P.IVA 02148660281</div>
+    <div>Bozza di proposta grafica · non è il sito ufficiale</div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+390495352188"><svg><use href="#i-phone"/></svg>Chiama</a>
+
+<script>
+(function(){
+  var titles={"p-azienda":"Azienda","p-servizi":"Servizi","p-realizzazioni":"Realizzazioni","p-certificazioni":"Certificazioni","p-contatti":"Contatti"};
+  var home=document.getElementById('home'),wip=document.getElementById('wip'),menu=document.getElementById('menu');
+  function route(){var h=location.hash.slice(1);menu.classList.remove('open');
+    if(titles[h]){home.hidden=true;wip.hidden=false;document.getElementById('wip-k').textContent=titles[h];window.scrollTo(0,0);}
+    else{home.hidden=false;wip.hidden=true;}}
+  window.addEventListener('hashchange',route);route();
+})();
+document.querySelectorAll('img.ph').forEach(function(i){i.addEventListener('error',function(){i.style.visibility='hidden';});});
+</script>
+</body>
+</html>
